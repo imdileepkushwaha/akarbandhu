@@ -1,0 +1,172 @@
+/* Admin file upload — Akar Bandhu */
+
+body.ab-portal .ab-file {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+    border: 1px dashed #c5d0dc;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.ab-portal .ab-file:hover,
+body.ab-portal .ab-file.is-dragover {
+    border-color: #e67e22;
+    background: rgba(230, 126, 34, 0.04);
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+body.ab-portal .ab-file-preview {
+    width: 76px;
+    height: 76px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    color: #6b7c8f;
+}
+
+body.ab-portal .ab-file-preview img,
+body.ab-portal .ab-file-preview .ab-logo-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+body.ab-portal .ab-file-preview i,
+body.ab-portal .ab-file-empty {
+    font-size: 1.35rem;
+    color: #e67e22;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+body.ab-portal .ab-file-empty i {
+    font-size: 1.35rem;
+}
+
+body.ab-portal .ab-file-main {
+    flex: 1;
+    min-width: 200px;
+}
+
+body.ab-portal .ab-file-title {
+    display: block;
+    font-family: "Outfit", "DM Sans", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f1a28;
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+}
+
+body.ab-portal .ab-file-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: #6b7c8f;
+    margin-bottom: 0.75rem;
+}
+
+body.ab-portal .ab-file-pick {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+body.ab-portal .ab-file-input {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+}
+
+body.ab-portal .ab-file-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.95rem;
+    border-radius: 10px;
+    background: #0b1c33;
+    color: #fff;
+    font-size: 0.84rem;
+    font-weight: 700;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.ab-portal .ab-file-btn i {
+    font-size: 0.9rem;
+}
+
+body.ab-portal .ab-file-pick:hover .ab-file-btn,
+body.ab-portal .ab-file:hover .ab-file-btn {
+    background: #e67e22;
+}
+
+body.ab-portal .ab-file-name {
+    font-size: 0.8rem;
+    color: #6b7c8f;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body.ab-portal .ab-file-name.has-file {
+    color: #0f1a28;
+    font-weight: 600;
+}
+
+/* Fallback for plain file inputs (not using .ab-file wrapper) */
+body.ab-portal .pcoded-content input[type="file"]:not(.ab-file-input) {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    padding: 0.7rem 0.85rem;
+    border: 1px dashed #c5d0dc;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+    color: #6b7c8f;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.ab-portal .pcoded-content input[type="file"]:not(.ab-file-input):hover {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+@media (max-width: 575px) {
+    body.ab-portal .ab-file {
+        padding: 0.9rem;
+    }
+
+    body.ab-portal .ab-file-name {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+}

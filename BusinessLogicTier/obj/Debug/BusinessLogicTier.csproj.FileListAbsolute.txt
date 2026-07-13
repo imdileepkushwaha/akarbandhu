@@ -372,3 +372,11 @@ D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
 D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
 C:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
 C:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Debug\DataTier.dll
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Debug\DataTier.pdb
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.csproj.AssemblyReference.cache
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.csproj.CoreCompileInputs.cache
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\obj\Debug\Business.2FDD14DE.Up2Date

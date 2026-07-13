@@ -3,72 +3,76 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentHeader" runat="Server">
-    		 <li class="breadcrumb-item"><a href="Dashboard.aspx"><i class="feather icon-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Villa Fund Income Report</a></li>
+    <li class="breadcrumb-item"><a href="Dashboard.aspx"><i class="feather icon-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="#">Villa Fund Income Report</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentData" runat="Server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
-              <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+    <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
         <ProgressTemplate>
             <div class="modal2">
-                <div class="center2">
-                    <img alt="" src="loader.gif" />
+                <div class="center2 ab-ajax-loader">
+                    <div class="ab-spinner" aria-hidden="true"></div>
+                    <span class="ab-ajax-loader-text">Please wait…</span>
                 </div>
             </div>
         </ProgressTemplate>
     </asp:UpdateProgress>
-             </ContentTemplate>
-    </asp:UpdatePanel>
-            <div class="card">
-        <div class="card-header">
-            <strong>Search Criteria</strong>
-        </div>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <div class="ab-wm">
+                <div class="ab-page-head">
+                    <h2>Villa Fund Income Report</h2>
+                    <p>Search and view villa fund income records.</p>
+                </div>
 
-        <div class="card-body">
-                            
-                                  <div class="row form-group">
-                                    <div class="col-md-2">From Date</div>
-                                    <div class="col-md-2">
-                                        <asp:TextBox ID="txtfromdate" CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
-                                    </div>
-                                    <div class="col-md-2">To Date</div>
-                                    <div class="col-md-2">
-                                        <asp:TextBox ID="txttodate"  CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
-                                    </div>
-                                        <div class="col-md-2">Associate Id</div>
-                                    <div class="col-md-2">
-                                      <asp:TextBox ID="txtuserid" Enabled="false"  CssClass="form-control" runat="server"></asp:TextBox>
-                                    </div>
-                                </div>
-                               
-                               
-                                <hr />
-                                <div class="row form-group">
-                                    <div class="col-md-12">
-                                        <asp:Button ID="btnSubmit"  CssClass="btn btn-success" runat="server" Text="Search" OnClick="btnSubmit_Click" />
-                                        <asp:Button ID="btnCancel" CssClass="btn btn-danger" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
-                                    </div>
-                                </div>
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-search"></i></span>
+                        <div>
+                            <h3>Search Criteria</h3>
+                            <span>Filter by date range and associate id</span>
                         </div>
                     </div>
+                    <div class="ab-section-body">
+                        <div class="row">
+                            <div class="col-md-4 ab-field">
+                                <label>From Date</label>
+                                <asp:TextBox ID="txtfromdate" CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-4 ab-field">
+                                <label>To Date</label>
+                                <asp:TextBox ID="txttodate" CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-4 ab-field">
+                                <label>Associate Id</label>
+                                <asp:TextBox ID="txtuserid" Enabled="false" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab-actions">
+                        <asp:Button ID="btnSubmit" CssClass="btn btn-primary" runat="server" Text="Search" OnClick="btnSubmit_Click" />
+                        <asp:Button ID="btnCancel" CssClass="btn btn-danger" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                    </div>
+                </div>
 
-           <div class="card">
-        <div class="card-header">
-            <strong>Villa Fund  Income Report</strong>
-        </div>
-
-        <div class="card-body">
-
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-list"></i></span>
+                        <div>
+                            <h3>Villa Fund Income List</h3>
+                            <span>Matching villa fund income records</span>
+                        </div>
+                    </div>
+                    <div class="ab-section-body ab-section-body--flush">
                         <div class="table-responsive">
-
-                            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-hover" Width="100%" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand">
+                            <asp:GridView ID="GridView1" runat="server" CssClass="table ab-table table-striped" Width="100%" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand" GridLines="None">
                                <Columns>
                                     <asp:TemplateField HeaderText="#">
                                         <ItemTemplate>
                                             <%#Container.DataItemIndex+1 %>
                                         </ItemTemplate>
+                                        <HeaderStyle Width="60px" />
                                     </asp:TemplateField>
                                        <asp:TemplateField HeaderText="Closing Date">
                                         <ItemTemplate>
@@ -106,7 +110,6 @@
                                             <asp:Label ID="lblamoagdsunt" runat="server" Text='<%#Eval("admindeduction") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>      
-                                        
                                    <asp:TemplateField HeaderText="Final Amt">
                                         <ItemTemplate>
                                             <asp:Label ID="lblfinalamt" runat="server" Text='<%#Eval("finalamount") %>'></asp:Label>
@@ -122,17 +125,16 @@
                                             <asp:Label ID="lbldate" runat="server" Text='<%#Eval("mentiondate","{0:dd/MM/yyyy}") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>  
-                                   
-                                                                    
                                 </Columns>
                             </asp:GridView>
                         </div>
                     </div>
                 </div>
-       
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
 
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="contentScript" runat="Server">
      
 </asp:Content>
-

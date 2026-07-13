@@ -2315,6 +2315,44 @@ option (maxrecursion 0)
 
 
         }
+
+        /// <summary>
+        /// Lookup mobile for forgot-password. role: "user" or "Associate".
+        /// Returns DataTable with UserId, Mobile; empty if not found.
+        /// </summary>
+        public DataTable GetForgotPasswordContact(clsUser objUser, string role)
+        {
+            DataTable dt = null;
+            ObjData.StartConnection();
+            try
+            {
+                string roleValue = string.IsNullOrEmpty(role) ? "user" : role;
+                string userId = (objUser.UserId ?? "").Replace("'", "''");
+                string str_query;
+
+                if (string.Equals(roleValue, "Associate", StringComparison.OrdinalIgnoreCase))
+                {
+                    str_query = "SELECT ud.Associateid AS UserId, ud.Mobile FROM Associatedetail ud WITH (nolock) " +
+                                "INNER JOIN LoginDetail ld WITH (nolock) ON ud.Associateid = ld.Username AND ld.role = 'Associate' " +
+                                "WHERE ud.Associateid = '" + userId + "'";
+                }
+                else
+                {
+                    str_query = "SELECT ud.userid AS UserId, ud.Mobile FROM UserDetail ud WITH (nolock) " +
+                                "INNER JOIN LoginDetail ld WITH (nolock) ON ud.UserId = ld.Username AND ld.role = 'user' " +
+                                "WHERE ud.userid = '" + userId + "'";
+                }
+
+                dt = ObjData.RunDataTable(str_query);
+            }
+            catch (Exception)
+            {
+                dt = null;
+            }
+            ObjData.EndConnection();
+            return dt;
+        }
+
         public string senddms()
         {
             string url = "http://www.apihub.online/api/Services/transact?token=ce4f9f4c676718405d7033ddb36dee00&skey=SST&to=8957737107&sender=ETOPUP&smstext=ttt&smsformat=TEXT&format=json";

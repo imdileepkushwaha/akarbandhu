@@ -415,43 +415,73 @@ ul { list-style: none; }
 .nav-login-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: var(--orange-accent);
-    color: var(--white);
-    border: none;
-    border-radius: 50px;
-    padding: 12px 20px;
+    gap: 10px;
+    background: #0b1c33;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 9px 14px 9px 10px;
     font-family: inherit;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 700;
+    letter-spacing: 0.02em;
     white-space: nowrap;
     cursor: pointer;
-    transition: var(--transition);
-    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3);
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    box-shadow: none;
+}
+.nav-login-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(230, 126, 34, 0.18);
+    color: #e67e22;
+    flex-shrink: 0;
+}
+.nav-login-icon svg {
+    width: 15px;
+    height: 15px;
+}
+.nav-login-label {
+    line-height: 1;
 }
 .nav-login-btn:hover,
 .nav-login.open .nav-login-btn {
-    background: #ea580c;
-    box-shadow: 0 6px 24px rgba(249, 115, 22, 0.4);
+    background: #122847;
+    border-color: rgba(230, 126, 34, 0.45);
+    color: #fff;
+    box-shadow: none;
+    transform: translateY(-1px);
+}
+.nav-login.open .nav-login-icon,
+.nav-login-btn:hover .nav-login-icon {
+    background: #e67e22;
+    color: #fff;
 }
 .nav-login-caret {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.25s ease;
+    width: 14px;
+    height: 14px;
+    opacity: 0.75;
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
 .nav-login.open .nav-login-caret {
     transform: rotate(180deg);
+    opacity: 1;
+    color: #e67e22;
 }
 .nav-login-menu {
     position: absolute;
     top: calc(100% + 10px);
     right: 0;
-    min-width: 200px;
+    min-width: 240px;
     padding: 8px;
     background: #fff;
-    border: 1px solid #ebebeb;
-    border-radius: 14px;
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+    border: 1px solid rgba(11, 28, 51, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(11, 28, 51, 0.16);
     opacity: 0;
     visibility: hidden;
     transform: translateY(6px);
@@ -464,18 +494,60 @@ ul { list-style: none; }
     transform: translateY(0);
 }
 .nav-login-item {
-    display: block;
-    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
     border-radius: 10px;
-    color: #1a1a1a;
+    color: #0f1a28;
     text-decoration: none;
     font-size: 0.92rem;
     font-weight: 600;
     transition: background 0.2s ease, color 0.2s ease;
 }
+.nav-login-item-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f7fb;
+    color: #0b1c33;
+    flex-shrink: 0;
+}
+.nav-login-item-icon svg {
+    width: 16px;
+    height: 16px;
+}
+.nav-login-item span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+.nav-login-item strong {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: inherit;
+    line-height: 1.2;
+}
+.nav-login-item small {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #6b7c8f;
+    line-height: 1.2;
+}
 .nav-login-item:hover {
-    background: rgba(249, 115, 22, 0.1);
-    color: var(--orange-accent);
+    background: rgba(230, 126, 34, 0.1);
+    color: #0b1c33;
+}
+.nav-login-item:hover .nav-login-item-icon {
+    background: #e67e22;
+    color: #fff;
+}
+.nav-login-item:hover small {
+    color: #8a6a4a;
 }
 .nav-login-links {
     display: flex;
@@ -487,15 +559,15 @@ ul { list-style: none; }
     align-items: center;
     justify-content: center;
     padding: 14px 18px;
-    border-radius: 12px;
-    background: var(--orange-accent);
+    border-radius: 10px;
+    background: #0b1c33;
     color: #fff !important;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.95rem;
 }
 .nav-login-link:last-child {
-    background: #111;
+    background: #e67e22;
 }
 
 /* Mobile toggle */
@@ -3508,7 +3580,8 @@ ul { list-style: none; }
     .nav-infobar { gap: 16px; }
     .nav-info-item { font-size: 0.75rem; }
     .nav-link { padding: 6px 10px; font-size: 0.85rem; }
-    .nav-login-btn { padding: 10px 16px; font-size: 0.82rem; }
+    .nav-login-btn { padding: 8px 12px 8px 8px; font-size: 0.82rem; }
+    .nav-login-icon { width: 28px; height: 28px; }
 }
 @media (max-width: 1024px) {
     .hero-layout { grid-template-columns: 1fr; gap: 48px; }
@@ -3769,4 +3842,174 @@ ul { list-style: none; }
         border-radius: 16px;
     }
     .doc-modal-header h2 { font-size: 0.9rem; }
+}
+
+/* Uploaded brand logo */
+.nav-brand-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+.nav-brand-logo--sm {
+    width: 32px;
+    height: 32px;
+}
+
+/* WhatsApp floating button */
+.wa-float {
+    position: fixed;
+    right: 20px;
+    bottom: 22px;
+    z-index: 1200;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wa-float svg { width: 28px; height: 28px; }
+.wa-float:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.5);
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .wa-float { right: 14px; bottom: 16px; width: 50px; height: 50px; }
+    .wa-float svg { width: 24px; height: 24px; }
+}
+
+/* ===== Homepage admin popup ===== */
+.ab-site-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+.ab-site-popup.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.ab-site-popup-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 28, 51, 0.62);
+    backdrop-filter: blur(4px);
+}
+
+.ab-site-popup-dialog {
+    position: relative;
+    z-index: 1;
+    width: min(560px, 100%);
+    max-height: min(88vh, 760px);
+    overflow: auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 24px 60px rgba(11, 28, 51, 0.35);
+    animation: ab-site-popup-in 0.35s ease both;
+}
+
+@keyframes ab-site-popup-in {
+    from { opacity: 0; transform: translateY(18px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.ab-site-popup-close {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.75);
+    color: #fff;
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ab-site-popup-close:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
+
+.ab-site-popup-media {
+    display: block;
+    width: 100%;
+}
+
+.ab-site-popup-media img,
+.ab-site-popup-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.ab-site-popup-body {
+    padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.ab-site-popup-title {
+    margin: 0 0 0.55rem;
+    font-family: ""Outfit"", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    padding-right: 2rem;
+}
+
+.ab-site-popup-content {
+    margin: 0;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.ab-site-popup-body--image-only {
+    display: none;
+}
+
+.ab-site-popup--no-image .ab-site-popup-body {
+    padding-top: 1.5rem;
+}
+
+.ab-site-popup--no-image .ab-site-popup-title {
+    padding-right: 2.5rem;
+}
+
+@media (max-width: 575px) {
+    .ab-site-popup-dialog {
+        border-radius: 14px;
+    }
+    .ab-site-popup-media img,
+    .ab-site-popup-image {
+        max-height: 280px;
+        border-radius: 14px 14px 0 0;
+    }
 }

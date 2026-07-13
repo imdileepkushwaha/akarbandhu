@@ -22,6 +22,7 @@ public partial class admin_MasterPage : System.Web.UI.MasterPage
         {
           //  ltuserimage.Text = @"<img src=""../admin/userimage/" + Session["userimage"].ToString() + @""" class=""profile-img-circle box-center"" alt=""User"">";
             lbluseridmaster.Text = Session["userid"].ToString();
+            lblsidebaruserid.Text = Session["userid"].ToString();
             lblusernamemaster.Text = Session["username"].ToString();
             ltimage.Text = @" <img class=""img-radius"" src=""assets/images/user/default.png"" alt=""profile-img-circle box-center"">";
           

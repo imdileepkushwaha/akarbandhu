@@ -1,4 +1,4 @@
-﻿<%@ Page Title="User Upgrade Report" Language="C#" MasterPageFile="adminmaster.master" AutoEventWireup="true" CodeFile="UserTopupReport.aspx.cs" Inherits="admin_UserReport" %>
+<%@ Page Title="User Upgrade Report" Language="C#" MasterPageFile="adminmaster.master" AutoEventWireup="true" CodeFile="UserTopupReport.aspx.cs" Inherits="admin_UserReport" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -18,8 +18,9 @@
      <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
         <ProgressTemplate>
             <div class="modal2">
-                <div class="center2">
-                    <img alt="" src="loader.gif" />
+                <div class="center2 ab-ajax-loader">
+                    <div class="ab-spinner" aria-hidden="true"></div>
+                    <span class="ab-ajax-loader-text">Please wait…</span>
                 </div>
             </div>
         </ProgressTemplate>

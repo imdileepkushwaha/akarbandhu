@@ -119,6 +119,11 @@ public partial class admin_EPinAdd : System.Web.UI.Page
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-
+        txtplanname.Text = "";
+        ddplantype.SelectedValue = "0";
+        txtbookingamount.Text = "";
+        txtdepositterm.Text = "";
+        txtdepositterm.Enabled = true;
+        txtbookingamount.Enabled = true;
     }
 }

@@ -1,154 +1,7 @@
 ﻿<%@ Page Title="Edit Profile" Language="C#" MasterPageFile="usermaster.master" AutoEventWireup="true" CodeFile="UserEdit.aspx.cs" Inherits="admin_UserEdit" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style>
-        .ab-edit {
-            --ab-navy: #0b1c33;
-            --ab-navy-mid: #122847;
-            --ab-orange: #e67e22;
-            --ab-orange-deep: #d35400;
-            --ab-muted: #6b7c8f;
-            --ab-ink: #0f1a28;
-            --ab-border: #e2e8f0;
-            --ab-surface: #f4f7fb;
-        }
-
-        .ab-edit .ab-page-head {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 0.85rem;
-            margin-bottom: 1.15rem;
-        }
-
-        .ab-edit .ab-page-head h2 {
-            font-family: "Outfit", sans-serif;
-            font-weight: 700;
-            font-size: 1.45rem;
-            color: var(--ab-ink);
-            margin: 0 0 0.2rem;
-            letter-spacing: -0.02em;
-        }
-
-        .ab-edit .ab-page-head p {
-            margin: 0;
-            color: var(--ab-muted);
-            font-size: 0.9rem;
-        }
-
-        .ab-edit .ab-section {
-            background: #fff;
-            border: 1px solid var(--ab-border);
-            border-radius: 14px;
-            box-shadow: 0 8px 24px rgba(11, 28, 51, 0.05);
-            margin-bottom: 1.15rem;
-            overflow: hidden;
-        }
-
-        .ab-edit .ab-section-head {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 1.25rem;
-            background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
-            border-bottom: 1px solid var(--ab-border);
-        }
-
-        .ab-edit .ab-section-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-            display: inline-flex!important;
-            align-items: center;
-            justify-content: center;
-            background: rgba(230, 126, 34, 0.12);
-            color: var(--ab-orange);
-            flex-shrink: 0;
-        }
-
-        .ab-edit .ab-section-icon i {
-            font-size: 1rem;
-        }
-
-        .ab-edit .ab-section-head h3 {
-            font-family: "Outfit", sans-serif !important;
-            font-size: 1.05rem !important;
-            font-weight: 700 !important;
-            color: var(--ab-ink) !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            border: none !important;
-        }
-
-        .ab-edit .ab-section-head span {
-            display: block;
-            font-size: 0.78rem;
-            color: var(--ab-muted);
-            margin-top: 0.1rem;
-        }
-
-        .ab-edit .ab-section-body {
-            padding: 1.25rem;
-        }
-
-        .ab-edit .ab-field {
-            margin-bottom: 1rem;
-        }
-
-        .ab-edit .ab-field label {
-            display: block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--ab-ink);
-            margin-bottom: 0.4rem;
-        }
-
-        .ab-edit .ab-field label .req {
-            color: var(--ab-orange);
-            margin-left: 2px;
-        }
-
-        .ab-edit .ab-field .hint {
-            display: block;
-            margin-top: 0.3rem;
-            font-size: 0.75rem;
-            color: var(--ab-muted);
-        }
-
-        .ab-edit .ab-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            align-items: center;
-            padding: 1.1rem 1.25rem;
-            background: #f8fafc;
-            border-top: 1px solid var(--ab-border);
-            border-radius: 0 0 14px 14px;
-            margin: 0;
-        }
-
-        .ab-edit .ab-actions .btn {
-            min-width: 120px;
-        }
-
-        .ab-edit .ab-note {
-            margin-left: auto;
-            font-size: 0.78rem;
-            color: var(--ab-muted);
-        }
-
-        @media (max-width: 767px) {
-            .ab-edit .ab-note {
-                margin-left: 0;
-                width: 100%;
-            }
-
-            .ab-edit .ab-actions .btn {
-                flex: 1;
-            }
-        }
-    </style>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link rel="stylesheet" href="assets/css/ab-edit.css" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contentHeader" Runat="Server">
@@ -161,8 +14,9 @@
     <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
         <ProgressTemplate>
             <div class="modal2">
-                <div class="center2">
-                    <img alt="" src="loader.gif" />
+                <div class="center2 ab-ajax-loader">
+                    <div class="ab-spinner" aria-hidden="true"></div>
+                    <span class="ab-ajax-loader-text">Please wait…</span>
                 </div>
             </div>
         </ProgressTemplate>
@@ -179,7 +33,6 @@
                     </div>
                 </div>
 
-                <!-- Personal -->
                 <div class="ab-section">
                     <div class="ab-section-head">
                         <span class="ab-section-icon"><i class="feather icon-user"></i></span>
@@ -237,7 +90,6 @@
                     </div>
                 </div>
 
-                <!-- Bank -->
                 <div class="ab-section">
                     <div class="ab-section-head">
                         <span class="ab-section-icon"><i class="feather icon-credit-card"></i></span>
@@ -276,7 +128,6 @@
                     </div>
                 </div>
 
-                <!-- Security + Actions -->
                 <div class="ab-section" style="margin-bottom:0;">
                     <div class="ab-section-head">
                         <span class="ab-section-icon"><i class="feather icon-lock"></i></span>
@@ -287,15 +138,20 @@
                     </div>
                     <div class="ab-section-body">
                         <div class="row">
-                            <div class="col-md-6 ab-field" style="margin-bottom:0;">
+                            <div class="col-md-6 ab-field ab-password-narrow" style="margin-bottom:0;">
                                 <label>Password <span class="req">*</span></label>
-                                <asp:TextBox ID="txtuserpassword" TextMode="Password" CssClass="form-control" placeholder="Enter current password" runat="server"></asp:TextBox>
+                                <div class="ab-password">
+                                    <asp:TextBox ID="txtuserpassword" TextMode="Password" CssClass="form-control" placeholder="Enter current password" runat="server" autocomplete="current-password"></asp:TextBox>
+                                    <button type="button" class="ab-password-toggle" data-target="<%= txtuserpassword.ClientID %>" aria-label="Show password" title="Show / hide">
+                                        <i class="feather icon-eye"></i>
+                                    </button>
+                                </div>
                                 <span class="hint">OTP will be sent after password verification</span>
                             </div>
                         </div>
                     </div>
                     <div class="ab-actions">
-                        <asp:Button ID="btnSubmit" OnClientClick="return validate();" CssClass="btn btn-success" runat="server" Text="Save Changes" OnClick="btnSubmit_Click" />
+                        <asp:Button ID="btnSubmit" OnClientClick="return validate();" CssClass="btn btn-primary" runat="server" Text="Save Changes" OnClick="btnSubmit_Click" />
                         <asp:Button ID="btnCancel" OnClick="btnCancel_Click" CssClass="btn btn-danger" runat="server" Text="Cancel" />
                         <span class="ab-note">Changes apply after OTP confirmation</span>
                     </div>
@@ -309,20 +165,29 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="contentScript" runat="Server">
     <asp:UpdatePanel runat="server" ID="uplMaster">
         <ContentTemplate>
-            <div id="myModal" class="modal fade">
-                <div class="modal-dialog">
+            <div id="myModal" class="modal fade ab-modal">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Verify OTP</h4>
+                            <div class="ab-modal-head">
+                                <span class="ab-modal-head-icon"><i class="feather icon-shield"></i></span>
+                                <div>
+                                    <h4 class="modal-title">Verify OTP</h4>
+                                    <span class="ab-modal-id">Enter the OTP sent to your registered contact</span>
+                                </div>
+                            </div>
+                            <button type="button" class="ab-modal-close" data-dismiss="modal" aria-label="Close">
+                                <i class="feather icon-x"></i>
+                            </button>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group ab-field" style="margin-bottom:0;">
-                                <label for="<%= txtotp.ClientID %>">Enter OTP</label>
-                                <asp:TextBox runat="server" class="form-control" ID="txtotp" placeholder="Enter OTP sent to your mobile"></asp:TextBox>
+                            <div class="ab-field">
+                                <label for="<%= txtotp.ClientID %>">OTP</label>
+                                <asp:TextBox runat="server" CssClass="form-control" ID="txtotp" placeholder="Enter OTP sent to your mobile"></asp:TextBox>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <asp:Button ID="btnSend" runat="server" Text="Submit" OnClientClick="return validate2();" CssClass="btn btn-success" OnClick="btnSend_Click" />
+                        <div class="modal-footer ab-actions" style="justify-content:flex-end;border-top:1px solid #e2e8f0;margin:0;padding:1rem 1.25rem;">
+                            <asp:Button ID="btnSend" runat="server" Text="Submit OTP" OnClientClick="return validate2();" CssClass="btn btn-primary" OnClick="btnSend_Click" />
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -373,9 +238,12 @@
                 document.getElementById("<%=txtcityname.ClientID%>").focus();
                 return false;
             }
+            if (document.getElementById("<%=txtuserpassword.ClientID%>").value == "") {
+                toastr.warning('Warning', 'Enter Password');
+                document.getElementById("<%=txtuserpassword.ClientID%>").focus();
+                return false;
+            }
         }
-    </script>
-    <script type="text/javascript">
         function validate2() {
             if (document.getElementById("<%=txtotp.ClientID%>").value == "") {
                 alert("Enter OTP");
@@ -383,16 +251,40 @@
                 return false;
             }
         }
-    </script>
-    <script type="text/javascript">
         function showModal() {
-            $('#myModal').modal({ backdrop: 'static', keyboard: false })
+            $('#myModal').modal({ backdrop: 'static', keyboard: false });
         }
         function Closepopup() {
             $('#myModal').modal('hide');
             $('body').removeClass('modal-open');
             $('body').css('padding-right', '0');
             $('.modal-backdrop').remove();
+        }
+
+        function bindPasswordToggles(root) {
+            var scope = root || document;
+            scope.querySelectorAll('.ab-password-toggle').forEach(function (btn) {
+                if (btn._abPwBound) return;
+                btn._abPwBound = true;
+                btn.addEventListener('click', function () {
+                    var id = btn.getAttribute('data-target');
+                    var input = id ? document.getElementById(id) : null;
+                    if (!input) return;
+                    var show = input.type === 'password';
+                    input.type = show ? 'text' : 'password';
+                    var icon = btn.querySelector('i');
+                    if (icon) {
+                        icon.className = show ? 'feather icon-eye-off' : 'feather icon-eye';
+                    }
+                    btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+                });
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function () { bindPasswordToggles(document); });
+        if (typeof Sys !== 'undefined' && Sys.WebForms && Sys.WebForms.PageRequestManager) {
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                bindPasswordToggles(document);
+            });
         }
     </script>
 </asp:Content>

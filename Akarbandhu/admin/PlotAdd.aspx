@@ -3,125 +3,106 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentHeader" runat="server">
-   <li class="breadcrumb-item"><a href="Dashboard.aspx"><i class="feather icon-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Add Plot</a></li>
+    <li class="breadcrumb-item"><a href="Dashboard.aspx"><i class="feather icon-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="#">Add Plot</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentData" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+            <div class="ab-wm">
+                <div class="ab-page-head">
+                    <h2>Plot Master</h2>
+                    <p>Add plots in bulk for a project block.</p>
+                </div>
 
-   	<div class="card">
-							<div class="card-header">
-								<strong>Add Plot </strong>
-							</div>
-
-							<div class="card-body">
-                                       
-                                        <div class="row form-group">
-                                            <div class="col-md-3">
-                                                <label class="control-label">Select Proejct </label>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <asp:DropDownList ID="ddproject" AutoPostBack="true" OnSelectedIndexChanged="ddproject_SelectedIndexChanged" CssClass="form-control" runat="server">
-                                                    <asp:ListItem Value="0">Select Project</asp:ListItem>
-                                                </asp:DropDownList>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <label for="exampleInputEmail1">Block Name</label>
-                                            </div>
-                                            <div class="col-md-3">
-                                              <asp:DropDownList ID="ddblock" CssClass="form-control" runat="server">
-                                                    <asp:ListItem Value="0">Select Block</asp:ListItem>
-                                                </asp:DropDownList>
-
-                                            </div>
-                                        </div>
-                                 <div class="row form-group">
-                            <div class="col-md-3">
-                                <label for="exampleInputEmail1">Plot No From :</label>
-                            </div>
-                            <div class="col-md-3">
-
-                              <asp:TextBox ID="txtplotnofrom"  onkeypress="return isNumberKey(event);"  CssClass="form-control" runat="server"></asp:TextBox>
-
-                            </div>
-                            <div class="col-md-3">
-                                <label for="exampleInputEmail1">Plot No To :</label>
-                            </div>
-                            <div class="col-md-3">
-                                 <asp:TextBox ID="txtplotnoto"  onkeypress="return isNumberKey(event);"  CssClass="form-control" runat="server"></asp:TextBox>
-                                
-                            </div>
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-map"></i></span>
+                        <div>
+                            <h3>Add Plot</h3>
+                            <span>Select project, block and plot details</span>
                         </div>
-                        <div class="row form-group">
-                            <div class="col-md-3">
-                                <label for="exampleInputEmail1">Landarea(Sqft) :</label>
+                    </div>
+                    <div class="ab-section-body">
+                        <div class="row">
+                            <div class="col-md-6 ab-field">
+                                <label>Select Proejct</label>
+                                <asp:DropDownList ID="ddproject" AutoPostBack="true" OnSelectedIndexChanged="ddproject_SelectedIndexChanged" CssClass="form-control" runat="server">
+                                    <asp:ListItem Value="0">Select Project</asp:ListItem>
+                                </asp:DropDownList>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
+                                <label>Block Name</label>
+                                <asp:DropDownList ID="ddblock" CssClass="form-control" runat="server">
+                                    <asp:ListItem Value="0">Select Block</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Plot No From</label>
+                                <asp:TextBox ID="txtplotnofrom" onkeypress="return isNumberKey(event);" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Plot No To</label>
+                                <asp:TextBox ID="txtplotnoto" onkeypress="return isNumberKey(event);" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Landarea (Sqft)</label>
                                 <asp:TextBox ID="txtlandarea" CssClass="form-control" onkeypress="return isNumberKey(event);" runat="server"></asp:TextBox>
                             </div>
-                            <div class="col-md-3">
-                                <label for="exampleInputEmail1">Dimension :</label>
-                            </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
+                                <label>Dimension</label>
                                 <asp:TextBox ID="txtdimension" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
                         </div>
+                    </div>
+                    <div class="ab-actions">
+                        <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-primary" Text="Submit" OnClientClick="return validate();" OnClick="btnSubmit_Click" />
+                        <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-danger" Text="Cancel" OnClick="btnCancel_Click" />
+                    </div>
+                </div>
 
-                                        <div class="row form-group">
-                                            <div class="col-md-3">
-                                                <label class="control-label"></label>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <asp:Button ID="btnSubmit" runat="server" class="btn btn-primary" Text="Submit" OnClientClick="return validate();" OnClick="btnSubmit_Click" />
-                                              
-                                                <asp:Button ID="btnCancel" runat="server" class="btn btn-danger" Text="Cancel" OnClick="btnCancel_Click" />
-                                            </div>
-                                        </div>
-                                    </div>
-           </div>
-    
-   	<div class="card">
-							<div class="card-header">
-								<strong>Block List </strong>
-							</div>
-
-							<div class="card-body">
-                                    <div class="form-horizontal">
-                                        <asp:GridView AutoGenerateColumns="False" CssClass="table table-striped table-bordered bootstrap-datatable datatable"
-                                            runat="server" OnRowCommand="GridView1_RowCommand" ID="GridView1" AllowSorting="True">
-                                            <Columns>
-                                                <asp:TemplateField HeaderText="#">
-                                                    <ItemTemplate>
-                                                        <%#Container.DataItemIndex+1 %>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Proejct Name">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblblockid" Visible="false" runat="server" Text='<%# Eval("blockid") %>'></asp:Label>
-                                                        <asp:Label ID="lblporjectname" runat="server" Text='<%# Eval("proejctname") %>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>
-                                                <asp:TemplateField HeaderText="Block Name">
-                                                    <ItemTemplate>
-                                                        <asp:Label ID="lblblockname" runat="server" Text='<%# Eval("Blockname") %>'></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>                                               
-                                               <%-- <asp:TemplateField HeaderText="Action">
-                                                    <ItemTemplate>
-                                                        <asp:LinkButton ID="btnEdit" CssClass="fa fa-pencil-alt btn btn-warning btn-xs" runat="server"
-                                                            title="Edit Profile"  />
-                                                        <asp:Label ID="lblid" runat="server" Text='<%# Eval("blockid") %>' Visible="False"></asp:Label>
-                                                    </ItemTemplate>
-                                                </asp:TemplateField>--%>
-                                            </Columns>
-                                        </asp:GridView>
-                                    </div>
-                            </div>
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-list"></i></span>
+                        <div>
+                            <h3>Block List</h3>
+                            <span>Plots grouped by project and block</span>
                         </div>
+                    </div>
+                    <div class="ab-section-body ab-section-body--flush">
+                        <div class="table-responsive">
+                            <asp:GridView AutoGenerateColumns="False" CssClass="table ab-table table-striped"
+                                runat="server" OnRowCommand="GridView1_RowCommand" ID="GridView1" AllowSorting="True" GridLines="None">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="#">
+                                        <ItemTemplate>
+                                            <%#Container.DataItemIndex+1 %>
+                                        </ItemTemplate>
+                                        <HeaderStyle Width="70px" />
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Proejct Name">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblblockid" Visible="false" runat="server" Text='<%# Eval("blockid") %>'></asp:Label>
+                                            <asp:Label ID="lblporjectname" runat="server" Text='<%# Eval("proejctname") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Block Name">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblblockname" runat="server" Text='<%# Eval("Blockname") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="contentScript" runat="server">
     <script type="text/javascript">
         function isNumber(evt) {
             evt = (evt) ? evt : window.event;
@@ -162,12 +143,7 @@
                 toastr.warning('Warning', 'Enter Dimension');
                 document.getElementById("<%=txtdimension.ClientID%>").focus();
                 return false;
-             }
+            }
         }
     </script>
 </asp:Content>
-
-<asp:Content ID="Content4" ContentPlaceHolderID="contentScript" runat="server">
-</asp:Content>
-
-

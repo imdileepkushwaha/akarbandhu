@@ -1,15 +1,13 @@
 ﻿using BusinessLogicTier;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 public partial class admin_NewsAdd : System.Web.UI.Page
 {
     clsNews objnews = new clsNews();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -24,78 +22,104 @@ public partial class admin_NewsAdd : System.Web.UI.Page
             }
         }
     }
+
     void loaddata()
     {
-        DataTable dt = new DataTable();
-        dt = objnews.getNews();
+        DataTable dt = objnews.getNews();
         GridView1.DataSource = dt;
         GridView1.DataBind();
     }
 
-    protected void btnUpdate_Click(object sender, EventArgs e)
+    void ClearForm()
     {
-        objnews.NewsDetail = txtnewsedit.Text;
-        objnews.NewsId = lblnewsid.Text;
-        string res = objnews.Update_News(objnews);
-        if (res == "t")
-        {
-            string popupScript = "toastr.success('Success', 'News Edited Successfully');";
-            ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(), popupScript, true);
-            string popupScript2 = "Closepopup();";
-            ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(), popupScript2, true);
-            loaddata();
-        }
+        lblnewsid.Text = "";
+        txtnews.Text = "";
+        btnSubmit.Text = "Submit";
+        ltFormTitle.Text = "Add News";
     }
+
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        objnews.NewsDetail = txtnews.Text;
-        objnews.MentionBy = Session["useradmin"].ToString();
-        string res = objnews.Insert_News(objnews);
-        if (res == "t")
+        if (string.IsNullOrWhiteSpace(txtnews.Text))
+            return;
+
+        // Edit mode
+        if (!string.IsNullOrWhiteSpace(lblnewsid.Text))
         {
-            string popupScript = "toastr.success('Success', 'News Added Successfully');";
-            ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(), popupScript, true);
-            txtnews.Text = "";
-            loaddata();
-        }
-        else
-            if (res == "f")
+            objnews.NewsDetail = txtnews.Text.Trim();
+            objnews.NewsId = lblnewsid.Text;
+            string res = objnews.Update_News(objnews);
+            if (res == "t")
             {
-                string popupScript = "toastr.error('Error', 'News already exists.');";
-                ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(), popupScript, true);
+                ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(),
+                    "toastr.success('Success', 'News updated successfully');", true);
+                ClearForm();
+                loaddata();
             }
             else
             {
-                string popupScript = "toastr.error('Error', 'Unknow error occurred');";
-                ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(), popupScript, true);
+                ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(),
+                    "toastr.error('Error', 'Unable to update news');", true);
             }
+            return;
+        }
 
+        // Add mode
+        objnews.NewsDetail = txtnews.Text.Trim();
+        objnews.MentionBy = Session["useradmin"].ToString();
+        string insertRes = objnews.Insert_News(objnews);
+        if (insertRes == "t")
+        {
+            ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(),
+                "toastr.success('Success', 'News Added Successfully');", true);
+            ClearForm();
+            loaddata();
+        }
+        else if (insertRes == "f")
+        {
+            ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(),
+                "toastr.error('Error', 'News already exists.');", true);
+        }
+        else
+        {
+            ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(),
+                "toastr.error('Error', 'Unknown error occurred');", true);
+        }
     }
+
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         if (e.CommandName == "edt")
         {
             int index = Convert.ToInt32(e.CommandArgument.ToString());
             Label lblid = (Label)GridView1.Rows[index].FindControl("lblid");
-            Label lblbankname = (Label)GridView1.Rows[index].FindControl("lblnews");
+            Label lblnews = (Label)GridView1.Rows[index].FindControl("lblnews");
+            if (lblid == null || lblnews == null)
+                return;
+
             lblnewsid.Text = lblid.Text;
-            txtnewsedit.Text = lblbankname.Text;
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "showModal();", true);
+            txtnews.Text = lblnews.Text;
+            btnSubmit.Text = "Update";
+            ltFormTitle.Text = "Edit News";
         }
-        if (e.CommandName == "mydel")
+        else if (e.CommandName == "mydel")
         {
             int index = Convert.ToInt32(e.CommandArgument.ToString());
             Label lblid = (Label)GridView1.Rows[index].FindControl("lblid");
+            if (lblid == null)
+                return;
+
             objnews.NewsId = lblid.Text;
             objnews.Delete_News(objnews);
+            ClearForm();
             loaddata();
-            string popupScript = "toastr.success('Success', 'News Deleted Successfully');";
-            ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(), popupScript, true);
-           
+            ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), Guid.NewGuid().ToString(),
+                "toastr.success('Success', 'News Deleted Successfully');", true);
         }
     }
+
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Dashboard.aspx");
+        ClearForm();
     }
 }

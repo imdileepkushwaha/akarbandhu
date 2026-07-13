@@ -29,7 +29,7 @@ public partial class admin_Dashboard : System.Web.UI.Page
            // TxtRightLink.Text = "https://maniraya.com/" + "/Register.aspx?UserId=" + Session["userid"].ToString() + "&standingposition=2";
             
             GetAllIncome();
-            ltimage.Text = @" <img class=""img-circle circle-border m-b-md"" src=""../admin/userimage/" + Session["associateimage"].ToString() + @"""  alt=""profile-img-circle box-center "  + @"""  Style=""height:100px"" ""  >";
+            ltimage.Text = @"<img class=""img-circle"" src=""../admin/userimage/" + Session["associateimage"].ToString() + @""" alt=""Profile"" />";
 
         }
         else

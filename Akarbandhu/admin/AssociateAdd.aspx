@@ -1,288 +1,231 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="adminmaster.master" AutoEventWireup="true" CodeFile="AssociateAdd.aspx.cs" Inherits="admin_UserAdd" %>
+<%@ Page Title="Add Associate" Language="C#" MasterPageFile="adminmaster.master" AutoEventWireup="true" CodeFile="AssociateAdd.aspx.cs" Inherits="admin_UserAdd" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-
-    <script>
-  function ageCalculation() {
-
-      var input = document.getElementById("txtdateofbirth").value;
-
-var dob = new Date(input);
-
-var month_diff = Date.now() - txtdateofbirth.getTime();
-
-var age_d = new Date(month_diff);
-
-var year = age_d.getUTCFullYear();
-
-var cal_age = Math.abs(year - 1970);
-
-return document.getElementById("result").innerHTML ="Calulated Age is: " + cal_age + "years.";
-
-}
-    
-		 
-		 
-    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentHeader" runat="Server">
-      <li class="breadcrumb-item"><a href="Dashboard.aspx"><i class="feather icon-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Add Associate</a></li>
+    <li class="breadcrumb-item"><a href="Dashboard.aspx"><i class="feather icon-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="#">Add Associate</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentData" runat="Server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
         <ProgressTemplate>
             <div class="modal2">
-                <div class="center2">
-                    <img alt="" src="loader.gif" />
+                <div class="center2 ab-ajax-loader">
+                    <div class="ab-spinner" aria-hidden="true"></div>
+                    <span class="ab-ajax-loader-text">Please wait…</span>
                 </div>
             </div>
         </ProgressTemplate>
     </asp:UpdateProgress>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
+            <div class="ab-wm">
+                <div class="ab-page-head">
+                    <h2>Add Associate</h2>
+                    <p>Register a new associate with personal, sponsor, nominee and login details.</p>
+                </div>
 
-            <div class="card">
-        <div class="card-header">
-            <strong>Add Associate</strong>
-        </div>
-        <div class="card-body">
-                            
-                                  <%-- <div class="row">
-                            <div class="col-md-2">Select Plan</div>
-                            <div class="col-md-3">
-                                <asp:DropDownList ID="ddplan" AutoPostBack="true" OnSelectedIndexChanged="ddplan_SelectedIndexChanged" CssClass="form-control" runat="server">
-                                    <asp:ListItem Value="0">Select Plan</asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
-                            <div class="col-md-1"></div>
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-user"></i></span>
+                        <div>
+                            <h3>Personal Details</h3>
+                            <span>Basic associate information</span>
                         </div>
-                                   <div class="row">
-                            <div class="col-md-2">Select E-Pin</div>
-                            <div class="col-md-3">
-                                <asp:DropDownList ID="ddepin"  CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddepin_SelectedIndexChanged" runat="server">
-                                    <asp:ListItem Value="0">Select E-Pin</asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
-                             <div class="col-md-1"></div>
-                               <div class="col-md-2">E-Pin Amount</div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtamount" Enabled="false" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="ab-section-body">
+                        <div class="row" style="display: none;">
+                            <div class="col-md-6 ab-field">
+                                <asp:TextBox ID="lable2" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
                         </div>
-                        </div>--%>
-                         <%-- <div class="row form-group">
-                            <div class="col-md-2">Standing Position</div>
-                            <div class="col-md-3">
-                                <asp:RadioButtonList ID="rbstandingposition" RepeatDirection="Horizontal" runat="server" style="width:100%;">
-                                    <asp:ListItem Selected="True">Left</asp:ListItem>
-                                    <asp:ListItem>Right</asp:ListItem>
-                                </asp:RadioButtonList>
-                            </div>
-                              </div>--%>
-                      <div class="row form-group">
-                            <div class="col-md-2">Name</div>
-                            <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-6 ab-field">
+                                <label>Name</label>
                                 <asp:TextBox ID="txtname" oninput="this.value = this.value.toUpperCase()" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
-							
-							<div class="col-md-1"></div>
-                            <div class="col-md-2">Gender</div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
+                                <label>Gender</label>
                                 <asp:DropDownList ID="ddgender" CssClass="form-control" runat="server">
                                     <asp:ListItem Value="0">Select Gender</asp:ListItem>
                                     <asp:ListItem Value="Male">Male</asp:ListItem>
                                     <asp:ListItem Value="Female">Female</asp:ListItem>
                                 </asp:DropDownList>
                             </div>
-							
-							
-                          
-                        </div>
-          
-              <div class="row form-group">
-                            <div class="col-md-2">S/o, D/o, W/o<br><p>(use capital letters as per bak account)<p></div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtfathername" oninput="this.value = this.value.toUpperCase()" CssClass="form-control" runat="server"></asp:TextBox>
+                            <div class="col-md-6 ab-field">
+                                <label>S/o, D/o, W/o</label>
+                                <asp:TextBox ID="txtfathername" oninput="this.value = this.value.toUpperCase()" CssClass="form-control" runat="server" placeholder="As per bank account"></asp:TextBox>
+                                <span class="hint">Use capital letters as per bank account</span>
                             </div>
-                            <div class="col-md-1"></div>
-                            
-                        </div>
-                        <div class="row form-group" style="display: none;">
-                            <div class="col-md-2">Email</div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="lable2" CssClass="form-control" runat="server"></asp:TextBox>
+                            <div class="col-md-6 ab-field">
+                                <label>Date Of Birth</label>
+                                <asp:TextBox ID="txtdateofbirth" CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
                             </div>
-                            
-                        </div>
-			
-			            <div class="row form-group">
-                            <div class="col-md-2"> Date Of Birth</div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtdateofbirth" CssClass="form-control form_date" runat="server"></asp:TextBox>
-                            </div>
-                          
-
-              
-
-                            <div class="col-md-1"></div>
-                            <div class="col-md-2">Age</div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
+                                <label>Age</label>
                                 <asp:TextBox ID="txtareaname" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
-
-                        </div>
-			
-			<div class="row form-group">
-                            <div class="col-md-2">Occupation</div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
+                                <label>Occupation</label>
                                 <asp:TextBox ID="txtlandmark" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
-
-                        </div>
-			
-			                        <div class="row form-group">
-                                    <div class="col-md-2">Nominee Name</div>
-                                    <div class="col-md-3">
-                                        <asp:TextBox ID="txtnomineename" oninput="this.value = this.value.toUpperCase()" CssClass="form-control" runat="server"></asp:TextBox>
-                                    </div>
-										
-							<div class="col-md-1"></div>
-                            <div class="col-md-2">Nominee Age</div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtnomineenameAge" CssClass="form-control" runat="server"></asp:TextBox>
-                            </div>
-			</div>
-                                 <div class="row form-group">
-                                     <div class="col-md-2">Relationship</div>
-                                    <div class="col-md-3">
-                                        <asp:TextBox ID="txtnomineerelation" CssClass="form-control" runat="server"></asp:TextBox>
-                                    </div>
-			</div>
-                             
-			
-                        <div class="row form-group">
-                            <div class="col-md-2">Address</div>
-                            <div class="col-md-9">
-                                <asp:TextBox ID="txtaddress" oninput="this.value = this.value.toUpperCase()" TextMode="MultiLine" CssClass="form-control" runat="server"></asp:TextBox>
-                            </div>
-                        </div>
-
-     
-			
-			<div class="row form-group">
-                            <div class="col-md-2">Mobile No.</div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
+                                <label>Mobile No.</label>
                                 <asp:TextBox ID="txtmobile" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
-                            
-                        </div>
-			
-			<div class="row form-group">
-                            <div class="col-md-2">Email</div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
+                                <label>Email</label>
                                 <asp:TextBox ID="txtemail" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
-                            
+                            <div class="col-md-12 ab-field">
+                                <label>Address</label>
+                                <asp:TextBox ID="txtaddress" oninput="this.value = this.value.toUpperCase()" TextMode="MultiLine" Rows="2" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
                         </div>
-			
-			<div class="row form-group" >
-                            <div class="col-md-2">Pan card No.</div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtpanno"  CssClass="form-control" runat="server"></asp:TextBox>
-                            </div>
-				<div class="col-md-1"></div>
-                            <div class="col-md-2">Adhaar card No.</div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtadhar"  CssClass="form-control" runat="server" maxlength="12"></asp:TextBox>
-                            </div>
-                              </div>
-			
-	    <div class="row form-group">
-                                    <div class="col-md-2">Sponser Id</div>
-                                    <div class="col-md-3">
-                                        <asp:TextBox ID="txtsponserid" AutoPostBack="true" OnTextChanged="txtsponserid_TextChanged" CssClass="form-control" runat="server"></asp:TextBox>
-                                    </div>
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-2">Sponser Name</div>
-                                    <div class="col-md-3">
-                                        <asp:TextBox ID="txtsponsername" Enabled="false" CssClass="form-control" runat="server"></asp:TextBox>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
 
-                          <div class="row">
-                            <div class="col-md-2"> Level</div>
-                            <div class="col-md-3">
-                                <asp:DropDownList ID="ddlevel"  CssClass="form-control" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddlevel_SelectedIndexChanged" >
-                                    <asp:ListItem Value="0">Select </asp:ListItem>
-                                </asp:DropDownList>
-                            </div>
-                             <div class="col-md-2">Rank </div>
-                            <div class="col-md-3"><asp:TextBox ID="txtIncome" Enabled="false" CssClass="form-control" runat="server"></asp:TextBox></div>
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-shield"></i></span>
+                        <div>
+                            <h3>KYC</h3>
+                            <span>PAN and Aadhaar details</span>
                         </div>
-			
-			
-                        <div class="row"  style="display: none;">
-                            <div class="col-md-2"> Country</div>
-                            <div class="col-md-3">
+                    </div>
+                    <div class="ab-section-body">
+                        <div class="row">
+                            <div class="col-md-6 ab-field">
+                                <label>PAN Card No.</label>
+                                <asp:TextBox ID="txtpanno" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Aadhaar Card No.</label>
+                                <asp:TextBox ID="txtadhar" CssClass="form-control" runat="server" MaxLength="12"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-users"></i></span>
+                        <div>
+                            <h3>Sponsor &amp; Level</h3>
+                            <span>Network placement details</span>
+                        </div>
+                    </div>
+                    <div class="ab-section-body">
+                        <div class="row" style="display: none;">
+                            <div class="col-md-6 ab-field">
                                 <asp:DropDownList ID="ddcountry" AutoPostBack="true" CssClass="form-control" runat="server" OnSelectedIndexChanged="ddcountry_SelectedIndexChanged">
-                                    <asp:ListItem Value="0"> Select Country</asp:ListItem>
+                                    <asp:ListItem Value="0">Select Country</asp:ListItem>
                                 </asp:DropDownList>
                             </div>
-                            <div class="col-md-1"></div>
-                            <div class="col-md-2"> State</div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
                                 <asp:DropDownList ID="ddstate" CssClass="form-control" runat="server">
-                                    <asp:ListItem Value="0"> Select State</asp:ListItem>
+                                    <asp:ListItem Value="0">Select State</asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                         </div>
-            
-                             
-                        <div class="row form-group">
-                            <div class="col-md-2">Team Name</div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtteamname"  autocomplete="off"  CssClass="form-control" runat="server"></asp:TextBox>
+                        <div class="row">
+                            <div class="col-md-6 ab-field">
+                                <label>Sponsor Id</label>
+                                <asp:TextBox ID="txtsponserid" AutoPostBack="true" OnTextChanged="txtsponserid_TextChanged" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
-			</div>
-			                <div class="row form-group">
-                            <div class="col-md-2">Sr. President Name</div>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtsrpresident" CssClass="form-control " autocomplete="off" runat="server"></asp:TextBox>
+                            <div class="col-md-6 ab-field">
+                                <label>Sponsor Name</label>
+                                <asp:TextBox ID="txtsponsername" Enabled="false" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Level</label>
+                                <asp:DropDownList ID="ddlevel" CssClass="form-control" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddlevel_SelectedIndexChanged">
+                                    <asp:ListItem Value="0">Select</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Rank</label>
+                                <asp:TextBox ID="txtIncome" Enabled="false" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Team Name</label>
+                                <asp:TextBox ID="txtteamname" autocomplete="off" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Sr. President Name</label>
+                                <asp:TextBox ID="txtsrpresident" CssClass="form-control" autocomplete="off" runat="server"></asp:TextBox>
                             </div>
                         </div>
-                          <br><br>
-               
-                                 
-                        <div class="row form-group">
-                            <div class="col-md-2">Password</div>
-                            <div class="col-md-3">
+                    </div>
+                </div>
+
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-heart"></i></span>
+                        <div>
+                            <h3>Nominee Details</h3>
+                            <span>Optional nominee information</span>
+                        </div>
+                    </div>
+                    <div class="ab-section-body">
+                        <div class="row">
+                            <div class="col-md-6 ab-field">
+                                <label>Nominee Name</label>
+                                <asp:TextBox ID="txtnomineename" oninput="this.value = this.value.toUpperCase()" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Nominee Age</label>
+                                <asp:TextBox ID="txtnomineenameAge" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="col-md-6 ab-field">
+                                <label>Relationship</label>
+                                <asp:TextBox ID="txtnomineerelation" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-lock"></i></span>
+                        <div>
+                            <h3>Login &amp; Photo</h3>
+                            <span>Password and profile image</span>
+                        </div>
+                    </div>
+                    <div class="ab-section-body">
+                        <div class="row">
+                            <div class="col-md-6 ab-field">
+                                <label>Password</label>
                                 <asp:TextBox ID="txtuserpassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
-                            <div class="col-md-1"></div>
-                            <div class="col-md-2">Confirm Password</div>
-                            <div class="col-md-3">
+                            <div class="col-md-6 ab-field">
+                                <label>Confirm Password</label>
                                 <asp:TextBox ID="txtconfirmpassword" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
                             </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-md-2">Upload Image</div>
-                            <div class="col-md-3">
-                                <asp:FileUpload ID="FileUpload1" runat="server" />
+                            <div class="col-md-8 ab-field">
+                                <label>Upload Image</label>
+                                <div class="ab-file">
+                                    <div class="ab-file-preview"><i class="feather icon-image"></i></div>
+                                    <div class="ab-file-main">
+                                        <span class="ab-file-title">Profile image</span>
+                                        <span class="ab-file-hint">JPG or PNG recommended</span>
+                                        <label class="ab-file-pick">
+                                            <asp:FileUpload ID="FileUpload1" runat="server" CssClass="ab-file-input" />
+                                            <span class="ab-file-btn"><i class="feather icon-upload"></i> Choose file</span>
+                                            <span class="ab-file-name">No file selected</span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-1"></div>
-
                         </div>
-		
-                        <hr />
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <asp:Button ID="btnSubmit" OnClientClick="return validate();" CssClass="btn btn-success" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-                                <asp:Button ID="btnCancel" CssClass="btn btn-danger" runat="server" Text="Cancel" />
-                            </div>
-                        </div>
-            </div>
+                    </div>
+                    <div class="ab-actions">
+                        <asp:Button ID="btnSubmit" OnClientClick="return validate();" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                        <asp:Button ID="btnCancel" CssClass="btn btn-danger" runat="server" Text="Cancel" CausesValidation="false" />
+                    </div>
+                </div>
             </div>
         </ContentTemplate>
         <Triggers>
@@ -291,117 +234,46 @@ return document.getElementById("result").innerHTML ="Calulated Age is: " + cal_a
     </asp:UpdatePanel>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="contentScript" runat="Server">
-
     <script type="text/javascript">
         function validate() {
             if (document.getElementById("<%=txtsponserid.ClientID%>").value == "") {
-
                 toastr.warning('Warning', 'Enter Sponser Id');
                 document.getElementById("<%=txtsponserid.ClientID%>").focus();
                 return false;
             }
-         
             if (document.getElementById("<%=txtname.ClientID%>").value == "") {
-
                 toastr.warning('Warning', 'Enter Name');
                 document.getElementById("<%=txtname.ClientID%>").focus();
                 return false;
             }
             if (document.getElementById("<%=ddlevel.ClientID%>").value == "0") {
-
                 toastr.warning('Warning', 'Select level');
                 document.getElementById("<%=ddlevel.ClientID%>").focus();
                 return false;
-             }
-         <%--   if (document.getElementById("<%=txtmobile.ClientID%>").value == "") {
-
-                toastr.warning('Warning', 'Enter Mobile');
-                document.getElementById("<%=txtmobile.ClientID%>").focus();
-                return false;
             }
-            if (document.getElementById("<%=txtemail.ClientID%>").value == "") {
-
-                toastr.warning('Warning', 'Enter Email');
-                document.getElementById("<%=txtemail.ClientID%>").focus();
-                return false;
-            }
-            if (document.getElementById("<%=txtaddress.ClientID%>").value == "") {
-
-                toastr.warning('Warning', 'Enter Address');
-                document.getElementById("<%=txtaddress.ClientID%>").focus();
-                return false;
-            }--%>
             if (document.getElementById("<%=txtuserpassword.ClientID%>").value == "") {
-
                 toastr.warning('Warning', 'Enter Password');
                 document.getElementById("<%=txtuserpassword.ClientID%>").focus();
                 return false;
             }
             if (document.getElementById("<%=txtconfirmpassword.ClientID%>").value == "") {
-
                 toastr.warning('Warning', 'Enter Confirm Password');
                 document.getElementById("<%=txtconfirmpassword.ClientID%>").focus();
                 return false;
             }
-           <%-- if (document.getElementById("<%=ddcountry.ClientID%>").value == "0") {
-
-                toastr.warning('Warning', 'Select Country');
-                document.getElementById("<%=ddcountry.ClientID%>").focus();
-                return false;
-            }--%>
-           <%-- if (document.getElementById("<%=ddplan.ClientID%>").value == "0") {
-
-                toastr.warning('Warning', 'Select Plan');
-                document.getElementById("<%=ddplan.ClientID%>").focus();
-                return false;
-            }
-           if (document.getElementById("<%=ddepin.ClientID%>").value == "0") {
-
-                toastr.warning('Warning', 'Select E-Pin');
-                document.getElementById("<%=ddepin.ClientID%>").focus();
-                return false;
-            }--%>
-            <%--if (document.getElementById("<%=ddstate.ClientID%>").value == "0") {
-
-                toastr.warning('Warning', 'Select State');
-                document.getElementById("<%=ddstate.ClientID%>").focus();
-                return false;
-            }
-            if (document.getElementById("<%=txtcityname.ClientID%>").value == "") {
-
-                toastr.warning('Warning', 'City');
-                document.getElementById("<%=txtcityname.ClientID%>").focus();
-                return false;
-            }--%>
             if (document.getElementById("<%=txtadhar.ClientID%>").value == "") {
                 toastr.warning('Warning', 'Enter Adhar Number');
                 document.getElementById("<%=txtadhar.ClientID%>").focus();
                 return false;
             }
             if (document.getElementById("<%=FileUpload1.ClientID%>").value != "") {
-
-                if (document.getElementById("<%=FileUpload1.ClientID%>").value.endsWith(".jpg") || document.getElementById("<%=FileUpload1.ClientID%>").value.endsWith(".png") || document.getElementById("<%=FileUpload1.ClientID%>").value.endsWith(".jpeg")) {
-                }
-                else {
-                    toastr.warning('Warning', 'Image  should be in .jpg or .jpeg or .png format');
+                var v = document.getElementById("<%=FileUpload1.ClientID%>").value.toLowerCase();
+                if (!(v.endsWith(".jpg") || v.endsWith(".png") || v.endsWith(".jpeg"))) {
+                    toastr.warning('Warning', 'Image should be in .jpg or .jpeg or .png format');
                     document.getElementById("<%=FileUpload1.ClientID%>").focus();
-              return false;
-          }
-
-      }
-  <%--    if (document.getElementById("<%=txtpanno.ClientID%>").value == "") {
-
-                toastr.warning('Warning', 'Enter Pan No');
-                document.getElementById("<%=txtpanno.ClientID%>").focus();
-                return false;
+                    return false;
+                }
             }
-            if (document.getElementById("<%=txtuserpassword.ClientID%>").value != document.getElementById("<%=txtconfirmpassword.ClientID%>").value) {
-
-                toastr.warning('Warning', 'Password Not Match');
-                document.getElementById("<%=txtuserpassword.ClientID%>").focus();
-                return false;
-            }--%>
         }
     </script>
 </asp:Content>
-

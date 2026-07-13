@@ -244,5 +244,55 @@ namespace BusinessLogicTier
             return i;
         }
 
+        /// <summary>
+        /// Forgot-password reset: update LoginDetail by username + role (no old password).
+        /// Returns 1 = success, 2 = user not found, 0 = error.
+        /// </summary>
+        public int ResetPasswordByUserId(clsLogin objlogin, string role)
+        {
+            int i = 0;
+            SqlConnection cn;
+            SqlTransaction tr = null;
+            DataSet ds = new DataSet();
+            cn = ObjData.StartConnectionInTransaction();
+            tr = cn.BeginTransaction(IsolationLevel.Serializable);
+
+            try
+            {
+                string roleValue = string.IsNullOrEmpty(role) ? "user" : role.Replace("'", "''");
+                string user = (objlogin.username ?? "").Replace("'", "''");
+                string pwd = (objlogin.newpassword ?? "").Replace("'", "''");
+
+                ds = ObjData.RunSelectQueryTrans(
+                    "select username from LoginDetail with (nolock) where username='" + user + "' and role='" + roleValue + "'",
+                    tr);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    ObjData.RunInsUpDelQueryTrans(
+                        "update LoginDetail set password='" + pwd + "' where username='" + user + "' and role='" + roleValue + "'",
+                        tr);
+                    i = 1;
+                }
+                else
+                {
+                    i = 2;
+                }
+
+                tr.Commit();
+            }
+            catch (Exception)
+            {
+                i = 0;
+                tr.Rollback();
+            }
+            finally
+            {
+                ObjData.EndConnection();
+                tr.Dispose();
+            }
+            return i;
+        }
+
     }
 }

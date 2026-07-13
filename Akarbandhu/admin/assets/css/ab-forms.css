@@ -1,0 +1,773 @@
+﻿/* Website Management / shared admin form sections */
+.ab-wm .ab-page-head h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0 0 .25rem;
+    color: #0f1a28;
+}
+
+.ab-wm .ab-page-head p {
+    margin: 0 0 1rem;
+    color: #6b7c8f;
+    font-size: .9rem;
+}
+
+.ab-wm .ab-section {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    margin-bottom: 1.1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(11, 28, 51, .05);
+}
+
+.ab-wm .ab-section.ab-section--flush {
+    margin-bottom: 0;
+}
+
+.ab-wm .ab-section-head {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: linear-gradient(180deg, #fff, #f8fafc);
+}
+
+.ab-wm .ab-section-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: rgba(230, 126, 34, .12);
+    color: #e67e22 !important;
+    font-size: 1rem;
+}
+
+.ab-wm .ab-section-icon i {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1;
+    color: inherit;
+}
+
+.ab-wm .ab-section-head h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f1a28;
+}
+
+.ab-wm .ab-section-head > div > span {
+    display: block;
+    font-size: .78rem;
+    color: #6b7c8f;
+}
+
+.ab-wm .ab-section-body {
+    padding: 1.25rem;
+}
+
+.ab-wm .ab-section-body.ab-section-body--flush {
+    padding: 0;
+}
+
+.ab-wm .ab-field {
+    margin-bottom: 1rem;
+}
+
+.ab-wm .ab-field label {
+    display: block;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: .35rem;
+    color: #0f1a28;
+}
+
+.ab-wm .ab-field .hint {
+    display: block;
+    margin-top: .3rem;
+    font-size: .75rem;
+    color: #6b7c8f;
+}
+
+.ab-wm .ab-logo-preview {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    padding: 8px;
+}
+
+.ab-wm .ab-actions {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    padding: 1rem 1.25rem;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Password field with show/hide */
+.ab-wm .ab-password {
+    position: relative;
+}
+
+.ab-wm .ab-password .form-control {
+    padding-right: 2.75rem !important;
+}
+
+.ab-wm .ab-password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0.55rem;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: transparent;
+    color: #6b7c8f;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.ab-wm .ab-password-toggle:hover {
+    color: #e67e22;
+    background: rgba(230, 126, 34, 0.1);
+}
+
+.ab-wm .ab-password-toggle i {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.ab-wm .ab-password-narrow {
+    max-width: 420px;
+}
+
+/* Shared grid / list tables */
+.ab-wm .ab-table {
+    margin-bottom: 0;
+    border: 0;
+}
+
+.ab-wm .ab-table thead th {
+    border-top: 0;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #0f1a28;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+}
+
+.ab-wm .ab-table tbody td {
+    border-top: 1px solid #eef2f7;
+    padding: 0.8rem 1rem;
+    vertical-align: middle;
+    color: #0f1a28;
+    font-size: 0.9rem;
+}
+
+.ab-wm .ab-table.table-striped tbody tr:nth-of-type(odd) {
+    background: #fff;
+}
+
+.ab-wm .ab-table.table-striped tbody tr:nth-of-type(even) {
+    background: #fafbfc;
+}
+
+.ab-wm .ab-table tbody tr:hover {
+    background: rgba(230, 126, 34, 0.04) !important;
+}
+
+.ab-wm .ab-actions .btn,
+.ab-wm .ab-section-body .btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.55rem 1.15rem;
+}
+
+.ab-wm .ab-actions .btn-primary,
+.ab-wm .ab-section-body .btn-primary {
+    background: #e67e22;
+    border-color: #e67e22;
+}
+
+.ab-wm .ab-actions .btn-primary:hover,
+.ab-wm .ab-section-body .btn-primary:hover {
+    background: #d35400;
+    border-color: #d35400;
+}
+
+.ab-wm .ab-actions .btn-danger,
+.ab-wm .ab-section-body .btn-danger {
+    background: #fff;
+    color: #b42318;
+    border: 1px solid #f0c4c0;
+}
+
+.ab-wm .ab-actions .btn-danger:hover,
+.ab-wm .ab-section-body .btn-danger:hover {
+    background: rgba(180, 35, 24, 0.06);
+    color: #912018;
+    border-color: #e8a9a3;
+}
+
+/* Common edit action icon (all admin grids) */
+a.ab-btn-edit,
+.ab-btn-edit {
+    width: 34px;
+    height: 34px;
+    padding: 0 !important;
+    margin: 0;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px !important;
+    border: 1px solid rgba(230, 126, 34, 0.28) !important;
+    background: rgba(230, 126, 34, 0.1) !important;
+    color: #d35400 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+    vertical-align: middle;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+a.ab-btn-edit:hover,
+.ab-btn-edit:hover,
+a.ab-btn-edit:focus,
+.ab-btn-edit:focus {
+    background: #e67e22 !important;
+    border-color: #e67e22 !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+    text-decoration: none !important;
+}
+
+a.ab-btn-edit i,
+.ab-btn-edit i,
+a.ab-btn-edit:before,
+.ab-btn-edit:before {
+    font-size: 0.95rem;
+    line-height: 1;
+    margin: 0 !important;
+}
+
+/* Common delete action icon */
+a.ab-btn-delete,
+.ab-btn-delete {
+    width: 34px;
+    height: 34px;
+    padding: 0 !important;
+    margin: 0 0 0 0.35rem;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px !important;
+    border: 1px solid rgba(180, 35, 24, 0.22) !important;
+    background: rgba(180, 35, 24, 0.08) !important;
+    color: #b42318 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+    vertical-align: middle;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+a.ab-btn-delete:hover,
+.ab-btn-delete:hover,
+a.ab-btn-delete:focus,
+.ab-btn-delete:focus {
+    background: #b42318 !important;
+    border-color: #b42318 !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+    text-decoration: none !important;
+}
+
+a.ab-btn-delete i,
+.ab-btn-delete i {
+    font-size: 0.95rem;
+    line-height: 1;
+    margin: 0 !important;
+}
+
+/* Edit modal polish */
+.ab-modal .modal-dialog {
+    max-width: 760px;
+    margin: 1.25rem auto;
+}
+
+.ab-modal .modal-content {
+    border: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 28px 60px rgba(11, 28, 51, 0.22);
+    background: #fff;
+}
+
+.ab-modal .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    background: linear-gradient(135deg, #0b1c33 0%, #122847 55%, #1a3354 100%);
+    color: #fff;
+    border-bottom: 0;
+    padding: 1.15rem 1.35rem;
+    position: relative;
+}
+
+.ab-modal .modal-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #e67e22, #f39c12, transparent);
+}
+
+.ab-modal .ab-modal-head {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    min-width: 0;
+}
+
+.ab-modal .ab-modal-head-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(230, 126, 34, 0.95);
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 8px 18px rgba(230, 126, 34, 0.35);
+}
+
+.ab-modal .ab-modal-head-icon i {
+    font-size: 1.15rem;
+}
+
+.ab-modal .modal-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin: 0;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.ab-modal .ab-modal-sub {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.62);
+    font-weight: 500;
+}
+
+.ab-modal .ab-modal-id {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.45rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.ab-modal .ab-modal-close {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    opacity: 1;
+    text-shadow: none;
+    transition: background 0.15s ease;
+}
+
+.ab-modal .ab-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.ab-modal .modal-body {
+    padding: 0;
+    max-height: min(68vh, 620px);
+    overflow-y: auto;
+    background: #f8fafc;
+}
+
+.ab-modal .ab-modal-section {
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.15rem 1.35rem 0.35rem;
+}
+
+.ab-modal .ab-modal-section:last-child {
+    border-bottom: 0;
+}
+
+.ab-modal .ab-modal-section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 0.95rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #0b1c33;
+}
+
+.ab-modal .ab-modal-section-title i {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(230, 126, 34, 0.12);
+    color: #e67e22;
+    font-size: 0.85rem;
+}
+
+.ab-modal .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.65rem;
+    border-top: 1px solid #e2e8f0;
+    background: #fff;
+    padding: 0.95rem 1.35rem;
+}
+
+.ab-modal .modal-footer .btn {
+    min-width: 110px;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+}
+
+.ab-modal .ab-field {
+    margin-bottom: 1rem;
+}
+
+.ab-modal .ab-field label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #334155;
+}
+
+.ab-modal .ab-field .form-control {
+    border-radius: 10px !important;
+    border: 1px solid #dbe3ec !important;
+    min-height: 42px;
+    box-shadow: none !important;
+}
+
+.ab-modal .ab-field .form-control:focus {
+    border-color: rgba(230, 126, 34, 0.55) !important;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.12) !important;
+}
+
+.ab-modal .ab-field textarea.form-control {
+    min-height: 72px;
+}
+
+.ab-wm .btn.info,
+.ab-wm .btn-excel {
+    background: #122847;
+    border: 1px solid #122847;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.55rem 1.15rem;
+}
+
+.ab-wm .btn.info:hover,
+.ab-wm .btn-excel:hover {
+    background: #0b1c33;
+    border-color: #0b1c33;
+    color: #fff;
+}
+
+a.ab-btn-status,
+.ab-btn-status {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    padding: 0.28rem 0.7rem !important;
+    margin: 0 0.15rem;
+    border-radius: 8px !important;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    line-height: 1.2;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+a.ab-btn-status--on,
+.ab-btn-status--on {
+    background: rgba(16, 185, 129, 0.12) !important;
+    border: 1px solid rgba(16, 185, 129, 0.35) !important;
+    color: #047857 !important;
+}
+
+a.ab-btn-status--on:hover,
+.ab-btn-status--on:hover {
+    background: #059669 !important;
+    border-color: #059669 !important;
+    color: #fff !important;
+}
+
+a.ab-btn-status--off,
+.ab-btn-status--off {
+    background: rgba(180, 35, 24, 0.08) !important;
+    border: 1px solid rgba(180, 35, 24, 0.25) !important;
+    color: #b42318 !important;
+}
+
+a.ab-btn-status--off:hover,
+.ab-btn-status--off:hover {
+    background: #b42318 !important;
+    border-color: #b42318 !important;
+    color: #fff !important;
+}
+
+/* Receipt / Installment action icons */
+a.ab-btn-receipt,
+.ab-btn-receipt,
+a.ab-btn-inst,
+.ab-btn-inst {
+    width: 34px;
+    height: 34px;
+    padding: 0 !important;
+    margin: 0 0.15rem;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+    vertical-align: middle;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+a.ab-btn-receipt,
+.ab-btn-receipt {
+    border: 1px solid rgba(11, 28, 51, 0.18) !important;
+    background: rgba(11, 28, 51, 0.06) !important;
+    color: #0b1c33 !important;
+}
+
+a.ab-btn-receipt:hover,
+.ab-btn-receipt:hover {
+    background: #0b1c33 !important;
+    border-color: #0b1c33 !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+}
+
+a.ab-btn-inst,
+.ab-btn-inst {
+    border: 1px solid rgba(230, 126, 34, 0.28) !important;
+    background: rgba(230, 126, 34, 0.1) !important;
+    color: #d35400 !important;
+}
+
+a.ab-btn-inst:hover,
+.ab-btn-inst:hover {
+    background: #e67e22 !important;
+    border-color: #e67e22 !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+}
+
+a.ab-btn-receipt i,
+.ab-btn-receipt i,
+a.ab-btn-inst i,
+.ab-btn-inst i {
+    font-size: 0.95rem;
+    line-height: 1;
+    margin: 0 !important;
+}
+
+/* Pay Installment summary + form */
+.ab-pay-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+@media (max-width: 991px) {
+    .ab-pay-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575px) {
+    .ab-pay-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ab-pay-summary-item {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 0.95rem 1.05rem 0.95rem 1.15rem;
+    box-shadow: 0 6px 18px rgba(11, 28, 51, 0.04);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.ab-pay-summary-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #1a3354, #0b1c33);
+    border-radius: 14px 0 0 14px;
+}
+
+.ab-pay-summary-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(11, 28, 51, 0.08);
+    border-color: #d7e0ea;
+}
+
+.ab-pay-summary-item span {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b7c8f;
+    margin-bottom: 0.4rem;
+}
+
+.ab-pay-summary-item strong {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0b1c33;
+    word-break: break-word;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.ab-pay-summary-item strong span,
+.ab-pay-summary-item strong label {
+    display: inline;
+    font: inherit;
+    color: inherit;
+    margin: 0;
+}
+
+.ab-pay-summary-item strong .fa,
+.ab-pay-summary-item strong .fas {
+    font-size: 0.92em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.ab-pay-summary-item.ab-pay-summary-item--accent {
+    background:
+        radial-gradient(ellipse 90% 120% at 100% 0%, rgba(230, 126, 34, 0.18), transparent 55%),
+        linear-gradient(145deg, #fff8f1 0%, #fff 70%);
+    border-color: rgba(230, 126, 34, 0.35);
+    box-shadow: 0 8px 22px rgba(230, 126, 34, 0.1);
+}
+
+.ab-pay-summary-item.ab-pay-summary-item--accent::before {
+    background: linear-gradient(180deg, #e67e22, #d35400);
+}
+
+.ab-pay-summary-item.ab-pay-summary-item--accent:hover {
+    border-color: rgba(230, 126, 34, 0.5);
+    box-shadow: 0 14px 28px rgba(230, 126, 34, 0.16);
+}
+
+.ab-pay-summary-item.ab-pay-summary-item--accent > span {
+    color: #c45f12;
+}
+
+.ab-pay-summary-item.ab-pay-summary-item--accent strong,
+.ab-pay-summary-item.ab-pay-summary-item--accent strong span,
+.ab-pay-summary-item.ab-pay-summary-item--accent strong label {
+    color: #d35400;
+    font-size: 1.15rem;
+}
+
+.ab-pay-form {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem 1.1rem 0.25rem;
+}
+
+.ab-pay-form-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.95rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0b1c33;
+}
+
+.ab-pay-form-title i {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(230, 126, 34, 0.12);
+    color: #e67e22;
+    font-size: 0.85rem;
+}
+

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Villa Fund Income Report" Language="C#" MasterPageFile="adminmaster.master" AutoEventWireup="true" CodeFile="VillaFundIncomeReport.aspx.cs" Inherits="admin_UserReport" ValidateRequest="false" EnableEventValidation="false"  %>
+<%@ Page Title="Villa Fund Income Report" Language="C#" MasterPageFile="adminmaster.master" AutoEventWireup="true" CodeFile="VillaFundIncomeReport.aspx.cs" Inherits="admin_UserReport" ValidateRequest="false" EnableEventValidation="false"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -13,8 +13,9 @@
               <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
         <ProgressTemplate>
             <div class="modal2">
-                <div class="center2">
-                    <img alt="" src="loader.gif" />
+                <div class="center2 ab-ajax-loader">
+                    <div class="ab-spinner" aria-hidden="true"></div>
+                    <span class="ab-ajax-loader-text">Please wait…</span>
                 </div>
             </div>
         </ProgressTemplate>

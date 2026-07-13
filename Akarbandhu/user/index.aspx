@@ -315,6 +315,68 @@
 			border-bottom-color: var(--ab-orange);
 		}
 
+		.ab-forgot-hint {
+			display: block;
+			margin-top: 0.45rem;
+			font-size: 0.78rem;
+			color: var(--ab-muted);
+		}
+
+		.ab-forgot-steps {
+			display: flex;
+			gap: 0.5rem;
+			margin-bottom: 1rem;
+		}
+
+		.ab-forgot-steps span {
+			flex: 1;
+			text-align: center;
+			font-size: 0.72rem;
+			font-weight: 700;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			padding: 0.4rem 0.35rem;
+			border-radius: 999px;
+			background: #f1f5f9;
+			color: #94a3b8;
+		}
+
+		.ab-forgot-steps span.is-active {
+			background: rgba(230, 126, 34, 0.14);
+			color: var(--ab-orange-deep);
+		}
+
+		.ab-password {
+			position: relative;
+		}
+
+		.ab-password .form-control {
+			padding-right: 2.75rem !important;
+		}
+
+		.ab-password-toggle {
+			position: absolute;
+			top: 50%;
+			right: 0.45rem;
+			transform: translateY(-50%);
+			width: 34px;
+			height: 34px;
+			border: none;
+			background: transparent;
+			color: var(--ab-muted);
+			border-radius: 8px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			padding: 0;
+		}
+
+		.ab-password-toggle:hover {
+			color: var(--ab-orange);
+			background: rgba(230, 126, 34, 0.1);
+		}
+
 		.ab-home-link {
 			display: inline-flex;
 			align-items: center;
@@ -511,7 +573,7 @@
 
 			<asp:Button ID="btnLogin" OnClick="btnLogin_Click" runat="server" CssClass="btn-login" Text="Login" />
 
-			<p class="ab-forgot">Forgot password? <a href="javascript:void(0);" onclick="showModal();">Reset</a></p>
+			<p class="ab-forgot">Forgot password? <a href="javascript:void(0);" onclick="showForgotModal(); return false;" data-toggle="modal" data-target="#myModal">Reset</a></p>
 			<a class="ab-home-link" href="../index.aspx">
 				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
 				Back to website
@@ -521,56 +583,166 @@
 </div>
             
                 <div id="myModal" class="modal fade ab-modal">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title">Forgot Password</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity:0.6;"><span aria-hidden="true">&times;</span></button>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group ab-field" style="margin-bottom:0;">
-                                <label for="<%= txtuserid.ClientID %>">User Id</label>
-                                <asp:TextBox runat="server" class="form-control" ID="txtuserid" placeholder="Enter your user id"></asp:TextBox>
+                            <div class="ab-forgot-steps">
+                                <asp:Label ID="lblStep1" runat="server" CssClass="is-active" Text="1. Verify ID"></asp:Label>
+                                <asp:Label ID="lblStep2" runat="server" Text="2. Reset"></asp:Label>
                             </div>
+
+                            <asp:Panel ID="pnlForgotStep1" runat="server">
+                                <div class="ab-field" style="margin-bottom:0;">
+                                    <label for="<%= txtuserid.ClientID %>">User Id</label>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="txtuserid" placeholder="Enter your user id" autocomplete="username"></asp:TextBox>
+                                    <span class="ab-forgot-hint">We will send an OTP to your registered mobile number.</span>
+                                </div>
+                            </asp:Panel>
+
+                            <asp:Panel ID="pnlForgotStep2" runat="server" Visible="false">
+                                <p class="ab-forgot-hint" style="margin:0 0 0.85rem;">OTP sent to <asp:Label ID="lblMaskedMobile" runat="server" Text=""></asp:Label></p>
+                                <div class="ab-field">
+                                    <label for="<%= txtotp.ClientID %>">OTP</label>
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="txtotp" placeholder="Enter 4-digit OTP" MaxLength="6" autocomplete="one-time-code"></asp:TextBox>
+                                </div>
+                                <div class="ab-field">
+                                    <label for="<%= txtnewpassword.ClientID %>">New Password</label>
+                                    <div class="ab-password">
+                                        <asp:TextBox runat="server" CssClass="form-control" ID="txtnewpassword" TextMode="Password" placeholder="Enter new password" autocomplete="new-password"></asp:TextBox>
+                                        <button type="button" class="ab-password-toggle" data-target="<%= txtnewpassword.ClientID %>" aria-label="Show password" title="Show / hide"><i class="feather icon-eye"></i></button>
+                                    </div>
+                                </div>
+                                <div class="ab-field" style="margin-bottom:0;">
+                                    <label for="<%= txtconfirmpassword.ClientID %>">Confirm Password</label>
+                                    <div class="ab-password">
+                                        <asp:TextBox runat="server" CssClass="form-control" ID="txtconfirmpassword" TextMode="Password" placeholder="Confirm new password" autocomplete="new-password"></asp:TextBox>
+                                        <button type="button" class="ab-password-toggle" data-target="<%= txtconfirmpassword.ClientID %>" aria-label="Show password" title="Show / hide"><i class="feather icon-eye"></i></button>
+                                    </div>
+                                </div>
+                            </asp:Panel>
                         </div>
                         <div class="modal-footer">
-                            <asp:Button ID="btnSend" runat="server" formnovalidate Text="Submit" OnClientClick="return validate2();" CssClass="btn btn-success" OnClick="btnSend_Click" />
+                            <asp:Button ID="btnSendOtp" runat="server" formnovalidate Text="Send OTP" OnClientClick="return validateForgotStep1();" CssClass="btn btn-primary" OnClick="btnSendOtp_Click" />
+                            <asp:Button ID="btnResetPassword" runat="server" formnovalidate Text="Reset Password" Visible="false" OnClientClick="return validateForgotStep2();" CssClass="btn btn-primary" OnClick="btnResetPassword_Click" />
+                            <asp:Button ID="btnForgotBack" runat="server" formnovalidate Text="Back" Visible="false" CssClass="btn btn-secondary" OnClick="btnForgotBack_Click" CausesValidation="false" />
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
-                        <div class="row form-group" id="divsuccess" runat="server" visible="false">
-                            <div class="col-md-12">
-                                <div class="alert alert-success"> <strong>Success!</strong> <asp:Label ID="lblmessage" runat="server" Text="Label"></asp:Label>. </div>
-                            </div>
-                        </div>
-                       
                     </div>
                 </div>
             </div>
-	  <script src="assets/js/app.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
+	  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/plugins/bootstrap.min.js"></script>
              </ContentTemplate>
               <Triggers>
-                  <asp:PostBackTrigger ControlID="btnSend" />
+                  <asp:PostBackTrigger ControlID="btnSendOtp" />
+                  <asp:PostBackTrigger ControlID="btnResetPassword" />
+                  <asp:PostBackTrigger ControlID="btnForgotBack" />
               </Triggers>
     </asp:UpdatePanel>
           <script type="text/javascript">
-              function validate2() {
-                  if (document.getElementById("<%=txtuserid.ClientID%>").value == "") {
+              function validateForgotStep1() {
+                  if (document.getElementById("<%=txtuserid.ClientID%>").value.trim() == "") {
                       alert("Enter User Id");
                       document.getElementById("<%=txtuserid.ClientID%>").focus();
-                return false;
-            }
-        }
-    </script>
+                      return false;
+                  }
+                  return true;
+              }
+              function validateForgotStep2() {
+                  if (document.getElementById("<%=txtotp.ClientID%>").value.trim() == "") {
+                      alert("Enter OTP");
+                      document.getElementById("<%=txtotp.ClientID%>").focus();
+                      return false;
+                  }
+                  if (document.getElementById("<%=txtnewpassword.ClientID%>").value == "") {
+                      alert("Enter New Password");
+                      document.getElementById("<%=txtnewpassword.ClientID%>").focus();
+                      return false;
+                  }
+                  if (document.getElementById("<%=txtconfirmpassword.ClientID%>").value == "") {
+                      alert("Enter Confirm Password");
+                      document.getElementById("<%=txtconfirmpassword.ClientID%>").focus();
+                      return false;
+                  }
+                  if (document.getElementById("<%=txtnewpassword.ClientID%>").value != document.getElementById("<%=txtconfirmpassword.ClientID%>").value) {
+                      alert("Passwords do not match");
+                      document.getElementById("<%=txtconfirmpassword.ClientID%>").focus();
+                      return false;
+                  }
+                  return true;
+              }
+        </script>
 
     <script type="text/javascript">
-        function showModal() {
-            $('#myModal').modal({ backdrop: 'static', keyboard: false })
+        function ensureForgotBackdrop() {
+            if (!document.querySelector('.modal-backdrop')) {
+                var backdrop = document.createElement('div');
+                backdrop.className = 'modal-backdrop fade show';
+                document.body.appendChild(backdrop);
+            }
+            document.body.classList.add('modal-open');
+        }
+        function showForgotModal() {
+            var el = document.getElementById('myModal');
+            if (!el) return false;
+            try {
+                if (window.jQuery && jQuery.fn && jQuery.fn.modal) {
+                    jQuery('#myModal').modal({ backdrop: 'static', keyboard: false });
+                    return false;
+                }
+            } catch (e) { }
+            el.classList.add('show');
+            el.style.display = 'block';
+            el.removeAttribute('aria-hidden');
+            el.setAttribute('aria-modal', 'true');
+            ensureForgotBackdrop();
+            return false;
         }
         function Closepopup() {
-            $('#myModal').modal('hide');
-            $('body').removeClass('modal-open');
-            $('body').css('padding-right', '0');
-            $('.modal-backdrop').remove();
+            try {
+                if (window.jQuery && jQuery.fn && jQuery.fn.modal) {
+                    jQuery('#myModal').modal('hide');
+                }
+            } catch (e) { }
+            var el = document.getElementById('myModal');
+            if (el) {
+                el.classList.remove('show');
+                el.style.display = 'none';
+                el.setAttribute('aria-hidden', 'true');
+            }
+            document.body.classList.remove('modal-open');
+            document.body.style.paddingRight = '0';
+            var backs = document.querySelectorAll('.modal-backdrop');
+            for (var i = 0; i < backs.length; i++) backs[i].parentNode.removeChild(backs[i]);
+        }
+        function bindPasswordToggles(root) {
+            var scope = root || document;
+            scope.querySelectorAll('.ab-password-toggle').forEach(function (btn) {
+                if (btn._abPwBound) return;
+                btn._abPwBound = true;
+                btn.addEventListener('click', function () {
+                    var id = btn.getAttribute('data-target');
+                    var input = id ? document.getElementById(id) : null;
+                    if (!input) return;
+                    var show = input.type === 'password';
+                    input.type = show ? 'text' : 'password';
+                    var icon = btn.querySelector('i');
+                    if (icon) {
+                        icon.className = show ? 'feather icon-eye-off' : 'feather icon-eye';
+                    }
+                    btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+                });
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function () { bindPasswordToggles(document); });
+        if (typeof Sys !== 'undefined' && Sys.WebForms && Sys.WebForms.PageRequestManager) {
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                bindPasswordToggles(document);
+            });
         }
     </script>
     </form>

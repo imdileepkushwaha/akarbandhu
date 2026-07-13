@@ -17,795 +17,14 @@
     <meta name="author" content="Akar Bandhu Pvt Ltd" />
     <link rel="icon" type="image/png" href="../preloader.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ab-chrome.css">
+    <link rel="stylesheet" href="assets/css/ab-forms.css">
+    <link rel="stylesheet" href="assets/css/ab-file-upload.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/ab-portal.css">
 
-    <style>
-        :root {
-            --ab-navy: #0b1c33;
-            --ab-navy-mid: #122847;
-            --ab-navy-soft: #1a3354;
-            --ab-orange: #e67e22;
-            --ab-orange-deep: #d35400;
-            --ab-sky: #7eb8e8;
-            --ab-muted: #6b7c8f;
-            --ab-ink: #0f1a28;
-            --ab-surface: #f4f7fb;
-            --ab-card: #ffffff;
-            --ab-border: #e2e8f0;
-        }
-
-        body.ab-portal,
-        body.ab-portal.background-grd-green {
-            font-family: "DM Sans", sans-serif !important;
-            background: var(--ab-surface) !important;
-            color: var(--ab-ink);
-        }
-
-        body.ab-portal .loader-bg {
-            background: var(--ab-navy);
-        }
-
-        body.ab-portal .loader-fill {
-            background: linear-gradient(90deg, var(--ab-orange), var(--ab-sky));
-        }
-
-        /* Sidebar */
-        body.ab-portal .pcoded-navbar,
-        body.ab-portal .pcoded-navbar.menu-light {
-            background: linear-gradient(180deg, var(--ab-navy) 0%, #0a1628 100%) !important;
-            box-shadow: 8px 0 32px rgba(11, 28, 51, 0.18);
-        }
-
-        body.ab-portal .pcoded-navbar .navbar-wrapper,
-        body.ab-portal .pcoded-navbar .navbar-content {
-            background: transparent !important;
-        }
-
-        body.ab-portal .pcoded-navbar .main-menu-header {
-            padding: 1.25rem 1rem 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            background: transparent !important;
-        }
-
-        body.ab-portal .pcoded-navbar .main-menu-header .img-radius {
-            width: 52px;
-            height: 52px;
-            border: 2px solid rgba(230, 126, 34, 0.55);
-            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.12);
-        }
-
-        body.ab-portal .pcoded-navbar .user-details,
-        body.ab-portal .pcoded-navbar .user-details #more-details,
-        body.ab-portal .pcoded-navbar .user-details #more-details > * {
-            color: #fff !important;
-        }
-
-        body.ab-portal .pcoded-navbar #nav-user-link {
-            background: rgba(255, 255, 255, 0.04);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        body.ab-portal .pcoded-navbar #nav-user-link a {
-            color: rgba(255, 255, 255, 0.75) !important;
-        }
-
-        body.ab-portal .pcoded-navbar #nav-user-link a:hover,
-        body.ab-portal .pcoded-navbar #nav-user-link a.text-danger {
-            color: var(--ab-orange) !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-menu-caption label {
-            color: rgba(255, 255, 255, 0.38) !important;
-            font-size: 0.68rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li > a {
-            color: rgba(255, 255, 255, 0.78) !important;
-            border-radius: 8px;
-            margin: 2px 10px;
-            transition: background 0.2s ease, color 0.2s ease;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li > a .pcoded-micon i,
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li > a .pcoded-mtext {
-            color: inherit !important;
-        }
-
-                body.ab-portal .pcoded-navbar .pcoded-inner-navbar > li > a:hover {
-            background: rgba(255, 255, 255, 0.08) !important;
-            color: #fff !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar > li.active > a,
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar > li.pcoded-trigger > a {
-            background: rgb(82 82 82 / 18%) !important;
-            color: #fff !important;
-            box-shadow: inset 3px 0 0 var(--ab-orange);
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu > a:after {
-            color: rgba(255, 255, 255, 0.4) !important;
-            font-size: 0.72rem !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu.pcoded-trigger > a:after {
-            color: var(--ab-orange) !important;
-        }
-
-        /* Submenu panel */
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu {
-            display: none;
-            background: rgba(0, 0, 0, 0.22) !important;
-            margin: 4px 12px 8px !important;
-            padding: 6px !important;
-            border-radius: 10px !important;
-            border: none !important;
-            box-shadow: none !important;
-            position: relative !important;
-            overflow: hidden;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu.pcoded-trigger > .pcoded-submenu,
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu.pcoded-trigger.active > .pcoded-submenu {
-            display: block !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-submenu::before,
-        body.ab-portal .pcoded-navbar .pcoded-submenu::after,
-        body.ab-portal .pcoded-navbar .pcoded-submenu li::before,
-        body.ab-portal .pcoded-navbar .pcoded-submenu li::after,
-        body.ab-portal .pcoded-navbar .pcoded-submenu li .pcoded-submenu::after,
-        body.ab-portal .pcoded-navbar .pcoded-submenu li .pcoded-submenu > li::after {
-            display: none !important;
-            content: none !important;
-            border: none !important;
-            background: none !important;
-            box-shadow: none !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li {
-            list-style: none !important;
-            position: relative !important;
-            margin: 0 !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li + li a {
-            border-top: none !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a {
-            position: relative !important;
-            display: flex !important;
-            align-items: center !important;
-            gap: 0.55rem !important;
-            color: rgba(255, 255, 255, 0.72) !important;
-            margin: 2px 0 !important;
-            padding: 9px 12px !important;
-            border-radius: 8px !important;
-            border: none !important;
-            font-size: 0.84rem !important;
-            font-weight: 500 !important;
-            line-height: 1.35 !important;
-            background: transparent !important;
-            box-shadow: none !important;
-            text-align: left !important;
-            transition: background 0.2s ease, color 0.2s ease !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a:before,
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a:after {
-            display: none !important;
-            content: none !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a .pcoded-micon {
-            width: 1.1rem !important;
-            flex: 0 0 1.1rem !important;
-            text-align: center !important;
-            line-height: 1 !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a .pcoded-micon i {
-            font-size: 0.92rem !important;
-            color: rgba(255, 255, 255, 0.5) !important;
-            transition: color 0.2s ease !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a .title {
-            color: inherit !important;
-            font-weight: inherit !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a:hover {
-            color: #fff !important;
-            background: rgba(230, 126, 34, 0.2) !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a:hover .pcoded-micon i {
-            color: var(--ab-orange) !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li.active > a,
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a.active {
-            color: #fff !important;
-            background: rgba(230, 126, 34, 0.28) !important;
-            font-weight: 600 !important;
-        }
-
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li.active > a .pcoded-micon i,
-        body.ab-portal .pcoded-navbar .pcoded-inner-navbar li.pcoded-hasmenu .pcoded-submenu li > a.active .pcoded-micon i {
-            color: var(--ab-orange) !important;
-        }
-
-        body.ab-portal .pcoded-navbar .ab-side-brand {
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            padding: 1.1rem 1.1rem 0.85rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        body.ab-portal .pcoded-navbar .ab-side-brand svg {
-            width: 34px;
-            height: 34px;
-            color: var(--ab-orange);
-            flex-shrink: 0;
-        }
-
-        body.ab-portal .pcoded-navbar .ab-side-brand strong {
-            font-family: "Outfit", sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--ab-orange);
-            line-height: 1.15;
-            letter-spacing: -0.01em;
-        }
-
-        body.ab-portal .pcoded-navbar .ab-side-brand span {
-            display: block;
-            font-size: 0.62rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.45);
-            margin-top: 0.15rem;
-        }
-
-        /* Header */
-        body.ab-portal .pcoded-header.header-blue,
-        body.ab-portal .navbar.pcoded-header.header-blue {
-            background: #fff !important;
-            border-bottom: 1px solid var(--ab-border);
-            box-shadow: 0 4px 18px rgba(11, 28, 51, 0.06);
-        }
-
-        body.ab-portal .pcoded-header .m-header {
-            background: transparent !important;
-        }
-
-        body.ab-portal .pcoded-header .b-brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.65rem;
-            text-decoration: none !important;
-        }
-
-        body.ab-portal .pcoded-header .b-brand svg {
-            width: 30px;
-            height: 30px;
-            color: var(--ab-orange);
-        }
-
-        body.ab-portal .pcoded-header .b-brand .ab-brand-text {
-            font-family: "Outfit", sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--ab-orange) !important;
-            margin: 0;
-            letter-spacing: -0.01em;
-            line-height: 1.1;
-        }
-
-        body.ab-portal .pcoded-header .b-brand .ab-brand-sub {
-            display: block;
-            font-size: 0.58rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--ab-muted);
-            margin-top: 0.1rem;
-        }
-
-        body.ab-portal .pcoded-header .mobile-menu span,
-        body.ab-portal .pcoded-header .mobile-menu span:before,
-        body.ab-portal .pcoded-header .mobile-menu span:after {
-            background: var(--ab-navy) !important;
-        }
-
-        body.ab-portal .pcoded-header .navbar-nav > li > a,
-        body.ab-portal .pcoded-header .dropdown-toggle {
-            color: var(--ab-navy) !important;
-        }
-
-        body.ab-portal .pcoded-header .drp-user .dropdown-toggle {
-            width: 38px;
-            height: 38px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(230, 126, 34, 0.1);
-            color: var(--ab-orange) !important;
-        }
-
-        body.ab-portal .pcoded-header .profile-notification .pro-head {
-            background: linear-gradient(135deg, var(--ab-navy) 0%, var(--ab-navy-mid) 100%) !important;
-        }
-
-        body.ab-portal .pcoded-header .profile-notification .pro-body a:hover {
-            color: var(--ab-orange) !important;
-        }
-
-        /* Content area */
-        body.ab-portal .pcoded-main-container {
-            background: var(--ab-surface);
-        }
-
-        body.ab-portal .pcoded-content {
-            padding-top: 1.25rem;
-        }
-
-        body.ab-portal .page-header {
-            background: transparent !important;
-            margin-bottom: 0.75rem !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
-
-        body.ab-portal .page-header .page-header-title h5 {
-            font-family: "Outfit", sans-serif;
-            font-weight: 700;
-            color: var(--ab-ink);
-            font-size: 1.35rem;
-        }
-
-        body.ab-portal .breadcrumb {
-            background: transparent;
-            padding: 0;
-        }
-
-        body.ab-portal .breadcrumb-item,
-        body.ab-portal .breadcrumb-item a {
-            color: var(--ab-muted) !important;
-            font-size: 0.88rem;
-        }
-
-        body.ab-portal .breadcrumb-item + .breadcrumb-item::before {
-            color: #b0bac6;
-        }
-
-        body.ab-portal .pcoded-content .card .card-body h3,
-        body.ab-portal .pcoded-content .card .card-body h4,
-        body.ab-portal .pcoded-content .ibox-content h3 {
-            font-family: "Outfit", sans-serif !important;
-            font-weight: 700 !important;
-            color: var(--ab-navy) !important;
-            font-size: 1rem !important;
-            margin: 0.5rem 0 1rem !important;
-            padding-bottom: 0.45rem;
-            border-bottom: 1px solid var(--ab-border);
-        }
-
-        body.ab-portal .pcoded-content fieldset {
-            border: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        body.ab-portal .pcoded-content input[type="file"] {
-            display: block;
-            width: 100%;
-            padding: 0.45rem 0.6rem;
-            border: 1px dashed #c5d0dc;
-            border-radius: 8px;
-            background: #f8fafc;
-            color: var(--ab-muted);
-            font-size: 0.88rem;
-        }
-
-        body.ab-portal .pcoded-content .widget,
-        body.ab-portal .pcoded-content .box-inverse {
-            background: #fff !important;
-            border: 1px solid var(--ab-border) !important;
-            border-radius: 12px !important;
-            box-shadow: 0 8px 24px rgba(11, 28, 51, 0.05) !important;
-            padding: 1rem;
-            margin-bottom: 1.25rem;
-        }
-
-        /* ========== Global content UI (all Associate pages) ========== */
-
-        body.ab-portal .pcoded-content .card,
-        body.ab-portal .pcoded-content .ibox,
-        body.ab-portal .pcoded-content .box {
-            border: 1px solid var(--ab-border) !important;
-            border-radius: 12px !important;
-            box-shadow: 0 8px 24px rgba(11, 28, 51, 0.05) !important;
-            background: #fff !important;
-            overflow: hidden;
-            margin-bottom: 1.25rem !important;
-        }
-
-        body.ab-portal .pcoded-content .card .card-header,
-        body.ab-portal .pcoded-content .ibox-title,
-        body.ab-portal .pcoded-content .box-header {
-            background: linear-gradient(180deg, #fff 0%, #f8fafc 100%) !important;
-            border-bottom: 1px solid var(--ab-border) !important;
-            padding: 1rem 1.25rem !important;
-            min-height: auto !important;
-            color: var(--ab-ink) !important;
-        }
-
-        body.ab-portal .pcoded-content .card .card-header::before,
-        body.ab-portal .pcoded-content .ibox-title::before {
-            content: "";
-            display: inline-block;
-            width: 4px;
-            height: 1.1em;
-            background: linear-gradient(180deg, var(--ab-orange), var(--ab-orange-deep));
-            border-radius: 4px;
-            margin-right: 0.65rem;
-            vertical-align: -0.15em;
-        }
-
-        body.ab-portal .pcoded-content .card .card-header .title,
-        body.ab-portal .pcoded-content .card .card-header strong,
-        body.ab-portal .pcoded-content .card .card-header h2,
-        body.ab-portal .pcoded-content .card .card-header h3,
-        body.ab-portal .pcoded-content .card .card-header h4,
-        body.ab-portal .pcoded-content .card .card-header h5,
-        body.ab-portal .pcoded-content .ibox-title h5,
-        body.ab-portal .pcoded-content .ibox-title strong,
-        body.ab-portal .pcoded-content .box-header h3,
-        body.ab-portal .pcoded-content .box-title {
-            font-family: "Outfit", sans-serif !important;
-            font-weight: 700 !important;
-            color: var(--ab-ink) !important;
-            font-size: 1.05rem !important;
-            margin: 0 !important;
-            display: inline;
-        }
-
-        body.ab-portal .pcoded-content .card .card-body,
-        body.ab-portal .pcoded-content .ibox-content,
-        body.ab-portal .pcoded-content .box-body {
-            padding: 1.25rem !important;
-            background: #fff !important;
-            border: none !important;
-        }
-
-        body.ab-portal .pcoded-content .box-footer {
-            background: #f8fafc !important;
-            border-top: 1px solid var(--ab-border) !important;
-            padding: 0.85rem 1.25rem !important;
-        }
-
-        body.ab-portal .pcoded-content hr {
-            border-top: 1px solid var(--ab-border);
-            margin: 1.1rem 0;
-        }
-
-        body.ab-portal .pcoded-content .row.form-group,
-        body.ab-portal .pcoded-content .form-group {
-            margin-bottom: 0.95rem;
-        }
-
-        body.ab-portal .pcoded-content label,
-        body.ab-portal .pcoded-content .col-md-2,
-        body.ab-portal .pcoded-content .col-sm-3,
-        body.ab-portal .pcoded-content .col-md-3 {
-            color: var(--ab-ink);
-        }
-
-        body.ab-portal .pcoded-content .form-control,
-        body.ab-portal .pcoded-content select.form-control,
-        body.ab-portal .pcoded-content textarea.form-control {
-            height: 42px;
-            border: 1px solid #d5dde6 !important;
-            border-radius: 8px !important;
-            background: #fff !important;
-            color: var(--ab-ink) !important;
-            font-size: 0.92rem;
-            box-shadow: none !important;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        body.ab-portal .pcoded-content textarea.form-control {
-            height: auto;
-            min-height: 90px;
-        }
-
-        body.ab-portal .pcoded-content .form-control:focus {
-            border-color: var(--ab-orange) !important;
-            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.15) !important;
-            outline: none;
-        }
-
-        body.ab-portal .pcoded-content .form-control:disabled,
-        body.ab-portal .pcoded-content .form-control[readonly] {
-            background: #f1f5f9 !important;
-            color: var(--ab-muted) !important;
-        }
-
-        body.ab-portal .pcoded-content .btn {
-            border-radius: 8px !important;
-            font-weight: 600 !important;
-            font-family: "DM Sans", sans-serif !important;
-            padding: 0.5rem 1.15rem !important;
-            letter-spacing: 0.01em;
-            transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
-        }
-
-        body.ab-portal .pcoded-content .btn:hover {
-            transform: translateY(-1px);
-        }
-
-        body.ab-portal .pcoded-content .btn-primary,
-        body.ab-portal .pcoded-content .btn-primary:not(:disabled):not(.disabled):active,
-        body.ab-portal .pcoded-content .btn-success,
-        body.ab-portal .pcoded-content .btn-success:not(:disabled):not(.disabled):active {
-            background: linear-gradient(135deg, var(--ab-orange) 0%, var(--ab-orange-deep) 100%) !important;
-            border-color: var(--ab-orange-deep) !important;
-            color: #fff !important;
-            box-shadow: 0 8px 18px rgba(211, 84, 0, 0.22);
-        }
-
-        body.ab-portal .pcoded-content .btn-primary:hover,
-        body.ab-portal .pcoded-content .btn-success:hover {
-            filter: brightness(1.05);
-            color: #fff !important;
-            border-color: var(--ab-orange-deep) !important;
-        }
-
-        body.ab-portal .pcoded-content .btn-danger,
-        body.ab-portal .pcoded-content .btn-danger:hover {
-            background: #fff !important;
-            border: 1px solid #cbd5e1 !important;
-            color: var(--ab-navy-mid) !important;
-            box-shadow: none !important;
-        }
-
-        body.ab-portal .pcoded-content .btn-info,
-        body.ab-portal .pcoded-content .btn.info,
-        body.ab-portal .pcoded-content .btn-secondary {
-            background: var(--ab-navy-mid) !important;
-            border-color: var(--ab-navy) !important;
-            color: #fff !important;
-            box-shadow: 0 8px 18px rgba(11, 28, 51, 0.18);
-        }
-
-        body.ab-portal .pcoded-content .btn-warning {
-            background: #f59e0b !important;
-            border-color: #d97706 !important;
-            color: #fff !important;
-        }
-
-        body.ab-portal .pcoded-content .table-responsive {
-            border-radius: 10px;
-            border: 1px solid var(--ab-border);
-            background: #fff;
-        }
-
-        body.ab-portal .pcoded-content .table {
-            margin-bottom: 0 !important;
-            color: var(--ab-ink);
-            background: #fff;
-        }
-
-        body.ab-portal .pcoded-content .table thead th,
-        body.ab-portal .pcoded-content .table > thead > tr > th,
-        body.ab-portal .pcoded-content .table th {
-            background: var(--ab-navy) !important;
-            color: #fff !important;
-            border-color: rgba(255, 255, 255, 0.08) !important;
-            font-weight: 600 !important;
-            font-size: 0.82rem !important;
-            letter-spacing: 0.02em;
-            white-space: nowrap;
-            padding: 0.75rem 0.85rem !important;
-            vertical-align: middle !important;
-        }
-
-        body.ab-portal .pcoded-content .table td,
-        body.ab-portal .pcoded-content .table > tbody > tr > td {
-            border-color: var(--ab-border) !important;
-            padding: 0.7rem 0.85rem !important;
-            vertical-align: middle !important;
-            font-size: 0.9rem;
-        }
-
-        body.ab-portal .pcoded-content .table-hover tbody tr:hover,
-        body.ab-portal .pcoded-content .table-striped tbody tr:nth-of-type(odd) {
-            background-color: rgba(230, 126, 34, 0.04) !important;
-        }
-
-        body.ab-portal .pcoded-content .table-bordered,
-        body.ab-portal .pcoded-content .table-bordered td,
-        body.ab-portal .pcoded-content .table-bordered th {
-            border-color: var(--ab-border) !important;
-        }
-
-        body.ab-portal .pcoded-content .modal-content {
-            border: none;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(11, 28, 51, 0.25);
-        }
-
-        body.ab-portal .pcoded-content .modal-header {
-            background: linear-gradient(135deg, var(--ab-navy) 0%, var(--ab-navy-mid) 100%);
-            color: #fff;
-            border-bottom: none;
-        }
-
-        body.ab-portal .pcoded-content .modal-title {
-            font-family: "Outfit", sans-serif;
-            font-weight: 700;
-            color: #fff;
-        }
-
-        body.ab-portal .pcoded-content .modal-header .close {
-            color: #fff;
-            opacity: 0.85;
-            text-shadow: none;
-        }
-
-        body.ab-portal .pcoded-content .alert {
-            border-radius: 10px;
-            border: none;
-        }
-
-        body.ab-portal .pcoded-content .alert-success {
-            background: rgba(16, 185, 129, 0.12);
-            color: #047857;
-        }
-
-        body.ab-portal .pcoded-content .alert-danger,
-        body.ab-portal .pcoded-content .alert-warning {
-            background: rgba(230, 126, 34, 0.12);
-            color: var(--ab-orange-deep);
-        }
-
-        body.ab-portal .pcoded-content .content-header h1,
-        body.ab-portal .pcoded-content h3.main-title {
-            font-family: "Outfit", sans-serif;
-            font-weight: 700;
-            color: var(--ab-ink);
-        }
-
-        /* TreeView */
-        body.ab-portal .pcoded-content .treeNode,
-        body.ab-portal .pcoded-content a.treeNode {
-            color: var(--ab-navy-mid) !important;
-            font-weight: 500;
-        }
-
-        body.ab-portal .pcoded-content .rootNode,
-        body.ab-portal .pcoded-content a.rootNode {
-            color: var(--ab-orange) !important;
-            font-weight: 700 !important;
-        }
-
-        body.ab-portal .pcoded-content .leafNode,
-        body.ab-portal .pcoded-content a.leafNode {
-            color: var(--ab-muted) !important;
-        }
-
-        body.ab-portal .pcoded-content .selectNode,
-        body.ab-portal .pcoded-content a.selectNode {
-            color: var(--ab-orange-deep) !important;
-            font-weight: 700 !important;
-        }
-
-        /* iframe pages (BinaryReport) */
-        body.ab-portal .pcoded-content iframe {
-            border: 1px solid var(--ab-border) !important;
-            border-radius: 10px;
-            background: #fff;
-        }
-
-        /* DataList / plot tiles */
-        body.ab-portal .pcoded-content .datalist,
-        body.ab-portal .pcoded-content table[id*="DataList"] td {
-            vertical-align: top;
-        }
-
-        .active2 {
-            background: rgba(230, 126, 34, 0.2) none repeat scroll 0% 0% !important;
-            color: #fff !important;
-        }
-
-        .GridPager a, .GridPager span {
-            position: relative;
-            float: left;
-            padding: 6px 12px;
-            margin-left: -1px;
-            line-height: 1.42857143;
-            color: var(--ab-navy-mid);
-            text-decoration: none;
-            background-color: #fff;
-            border: 1px solid #ddd;
-        }
-
-        .GridPager a {
-            transition: all 0.3s ease-out 0s;
-        }
-
-        .GridPager a:hover {
-            background-color: #f1f5f9;
-        }
-
-        .GridPager span {
-            color: white;
-            z-index: 3;
-            cursor: default;
-            background-color: var(--ab-orange);
-            border-color: var(--ab-orange);
-        }
-
-        body .modal2 {
-            position: fixed;
-            z-index: 99999;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            background-color: rgba(11, 28, 51, 0.35);
-            filter: none;
-            opacity: 1;
-            clear: both;
-            left: 0px;
-        }
-
-        body .center2 {
-            z-index: 100000;
-            margin: 200px auto;
-            padding: 16px;
-            width: 200px;
-            background-color: White;
-            border-radius: 12px;
-            filter: alpha(opacity=100);
-            opacity: 1;
-            -moz-opacity: 1;
-            box-shadow: 0 16px 40px rgba(11, 28, 51, 0.2);
-        }
-
-        body .center2 img {
-            height: 150px;
-            width: 200px;
-        }
-
-        .WrappedText {
-            word-break: break-all;
-            word-wrap: break-word;
-            width: 250px;
-        }
-
-        @media (max-width: 991px) {
-            body.ab-portal .pcoded-header .b-brand .ab-brand-text {
-                font-size: 1rem;
-            }
-
-            body.ab-portal .pcoded-content .card .card-body,
-            body.ab-portal .pcoded-content .ibox-content {
-                padding: 1rem !important;
-            }
-        }
-    </style>
     <script type="text/javascript">
         function confirm_click() {
             return confirm("Are you sure ?");
@@ -826,8 +45,6 @@
 	<!-- [ navigation menu ] start -->
 	<nav class="pcoded-navbar menu-light ">
 		<div class="navbar-wrapper  ">
-			<div class="navbar-content scroll-div " >
-				
                 <a href="Dashboard.aspx" class="ab-side-brand">
                     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M2 27h28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -856,20 +73,36 @@
                     </div>
                 </a>
 
-				<div class="">
-					<div class="main-menu-header">
-						   <asp:Literal ID="ltimage" runat="server"></asp:Literal>
-						<div class="user-details">
-							<div id="more-details">
-                                <asp:Label ID="lblusernamemaster" runat="server" Text="Label"></asp:Label> <i class="fa fa-caret-down"></i></div>
+			<div class="navbar-content scroll-div " >
+				<div class="ab-menu-profile-wrap">
+					<div class="main-menu-header ab-menu-profile">
+						<div class="ab-menu-profile-avatar">
+							<asp:Literal ID="ltimage" runat="server"></asp:Literal>
+							<span class="ab-menu-profile-status" title="Online"></span>
+						</div>
+						<div class="user-details ab-menu-profile-meta">
+							<div class="ab-menu-profile-name">
+								<asp:Label ID="lblusernamemaster" runat="server" Text=""></asp:Label>
+							</div>
+							<span class="ab-menu-profile-role">Associate</span>
+							<span class="ab-menu-profile-id">
+								ID: <asp:Label ID="lblsidebaruserid" runat="server" Text=""></asp:Label>
+							</span>
 						</div>
 					</div>
-					<div class="collapse" id="nav-user-link">
-						<ul class="list-inline">
-							<li class="list-inline-item"><a href="AssociateEdit.aspx" data-toggle="tooltip" title="View Profile"><i class="feather icon-user"></i></a></li>
-							<li class="list-inline-item"><a href="CHangePassword.aspx"><i class="feather icon-lock" data-toggle="tooltip" title="Change Password"></i></a></li>
-							<li class="list-inline-item"><a href="logout.aspx" data-toggle="tooltip" title="Logout" class="text-danger"><i class="feather icon-power"></i></a></li>
-						</ul>
+					<div class="ab-menu-profile-actions" id="nav-user-link">
+						<a href="AssociateEdit.aspx" class="ab-menu-action" title="View Profile">
+							<i class="feather icon-user"></i>
+							<span>Profile</span>
+						</a>
+						<a href="CHangePassword.aspx" class="ab-menu-action" title="Change Password">
+							<i class="feather icon-lock"></i>
+							<span>Password</span>
+						</a>
+						<a href="logout.aspx" class="ab-menu-action ab-menu-action--danger" title="Logout">
+							<i class="feather icon-log-out"></i>
+							<span>Logout</span>
+						</a>
 					</div>
 				</div>
 				
@@ -970,22 +203,38 @@
 					
 						<li>
 							<div class="dropdown drp-user">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									<i class="feather icon-user"></i>
+								<a href="#" class="dropdown-toggle ab-user-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Account">
+									<span class="ab-user-avatar"><i class="feather icon-user"></i></span>
 								</a>
-								<div class="dropdown-menu dropdown-menu-right profile-notification">
-									<div class="pro-head">
-										<img src="assets/images/yuvraj.jpg" class="img-radius" alt="User-Profile-Image">
-										<span>
-                                            <asp:Label ID="lbluseridmaster" runat="server" Text="Label"></asp:Label></span>
-										<a href="logout.aspx" class="dud-logout" title="Logout">
-											<i class="feather icon-log-out"></i>
-										</a>
+								<div class="dropdown-menu dropdown-menu-right profile-notification ab-user-menu">
+									<div class="pro-head ab-user-head">
+										<span class="ab-user-head-avatar"><i class="feather icon-user"></i></span>
+										<span class="ab-user-head-info">
+											<span class="ab-user-head-name">
+												<asp:Label ID="lbluseridmaster" runat="server" Text=""></asp:Label>
+											</span>
+											<span class="ab-user-head-role">Associate</span>
+										</span>
 									</div>
-									<ul class="pro-body">
-										<li><a href="AssociateEdit.aspx" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
-										<li><a href="CHangePassword.aspx" class="dropdown-item"><i class="feather icon-lock"></i> Change Password</a></li>
-										<li><a href="logout.aspx" class="dropdown-item"><i class="feather icon-log-out"></i> Logout</a></li>
+									<ul class="pro-body ab-user-body">
+										<li>
+											<a href="AssociateEdit.aspx" class="dropdown-item">
+												<span class="ab-user-item-icon"><i class="feather icon-user"></i></span>
+												Profile
+											</a>
+										</li>
+										<li>
+											<a href="CHangePassword.aspx" class="dropdown-item">
+												<span class="ab-user-item-icon"><i class="feather icon-lock"></i></span>
+												Change Password
+											</a>
+										</li>
+										<li class="ab-user-logout">
+											<a href="logout.aspx" class="dropdown-item">
+												<span class="ab-user-item-icon"><i class="feather icon-log-out"></i></span>
+												Logout
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -1033,6 +282,45 @@
     <script src="assets/js/ripple.js"></script>
     <script src="assets/js/pcoded.min.js"></script>
 	<script src="assets/js/menu-setting.min.js"></script>
+    <script>
+        (function () {
+            function syncAbNavOpen() {
+                var open = !!document.querySelector('.pcoded-navbar.mob-open');
+                document.body.classList.toggle('ab-nav-open', open);
+            }
+            function closeAbNav() {
+                var nav = document.querySelector('.pcoded-navbar.mob-open');
+                if (!nav) return;
+                nav.classList.remove('mob-open');
+                document.querySelectorAll('#mobile-collapse, #mobile-collapse1, .mobile-menu').forEach(function (el) {
+                    el.classList.remove('on');
+                });
+                syncAbNavOpen();
+            }
+            document.addEventListener('click', function (e) {
+                if (!document.body.classList.contains('ab-nav-open')) return;
+                var t = e.target;
+                if (t === document.body) {
+                    closeAbNav();
+                    return;
+                }
+                if (t.closest && t.closest('.pcoded-main-container') && !t.closest('.pcoded-navbar')) {
+                    closeAbNav();
+                }
+            });
+            if (window.MutationObserver) {
+                var nav = document.querySelector('.pcoded-navbar');
+                if (nav) {
+                    new MutationObserver(syncAbNavOpen).observe(nav, { attributes: true, attributeFilter: ['class'] });
+                }
+            }
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 991) closeAbNav();
+                else syncAbNavOpen();
+            });
+            document.addEventListener('DOMContentLoaded', syncAbNavOpen);
+        })();
+    </script>
         <link href="assets/js/toastr.css" rel="stylesheet" />
         <script src="assets/js/toastr.js"></script>
         <script src="assets/js/bootstrap-datepicker.js"></script>
@@ -1064,6 +352,50 @@
 
         </script>
          <asp:ContentPlaceHolder ID="contentScript" runat="server"></asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        (function () {
+            function bindFileUploads(root) {
+                var scope = root || document;
+                scope.querySelectorAll('.ab-file').forEach(function (wrap) {
+                    var input = wrap.querySelector('input[type="file"]');
+                    var nameEl = wrap.querySelector('.ab-file-name');
+                    if (!input || input._abFileBound) return;
+                    input._abFileBound = true;
+
+                    input.addEventListener('change', function () {
+                        if (!nameEl) return;
+                        if (input.files && input.files.length) {
+                            nameEl.textContent = input.files[0].name;
+                            nameEl.classList.add('has-file');
+                        } else {
+                            nameEl.textContent = 'No file selected';
+                            nameEl.classList.remove('has-file');
+                        }
+                    });
+
+                    ['dragenter', 'dragover'].forEach(function (evt) {
+                        wrap.addEventListener(evt, function (e) {
+                            e.preventDefault();
+                            wrap.classList.add('is-dragover');
+                        });
+                    });
+                    ['dragleave', 'drop'].forEach(function (evt) {
+                        wrap.addEventListener(evt, function (e) {
+                            e.preventDefault();
+                            wrap.classList.remove('is-dragover');
+                        });
+                    });
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function () { bindFileUploads(document); });
+            if (typeof Sys !== 'undefined' && Sys.WebForms && Sys.WebForms.PageRequestManager) {
+                Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                    bindFileUploads(document);
+                });
+            }
+        })();
+    </script>
     </form>
 </body>
 </html>

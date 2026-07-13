@@ -4,140 +4,91 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentHeader" runat="Server">
     <li class="breadcrumb-item"><a href="Dashboard.aspx"><i class="feather icon-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#">Add Bank</a></li>
+    <li class="breadcrumb-item"><a href="#">Add Bank</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentData" runat="Server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
+            <div class="ab-wm">
+                <div class="ab-page-head">
+                    <h2>Bank Master</h2>
+                    <p>Add or update bank names used in account forms.</p>
+                </div>
 
-
-             <div class="card">
-        <div class="card-header">
-            <strong>Add Bank</strong>
-        </div>
-
-        <div class="card-body">
-                                <div class="row form-group">
-                                    <div class="col-md-2">Bank Name</div>
-                                    <div class="col-md-3">
-                                        <asp:TextBox ID="txtbankname" CssClass="form-control" runat="server"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <hr />
-
-                                <div class="row form-group">
-                                    <div class="col-md-12">
-                                        <asp:Button ID="btnSubmit" OnClientClick="return validate();" CssClass="btn btn-success" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-                                        <asp:Button ID="btnCancel" CssClass="btn btn-danger" runat="server" Text="Cancel" />
-                                    </div>
-                                </div>
-
-
-                            </fieldset>
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-briefcase"></i></span>
+                        <div>
+                            <h3><asp:Literal ID="ltFormTitle" runat="server" Text="Add Bank"></asp:Literal></h3>
+                            <span>Enter bank name and save</span>
                         </div>
                     </div>
+                    <div class="ab-section-body">
+                        <asp:Label ID="lblbankid" runat="server" Visible="false" Text=""></asp:Label>
+                        <div class="row">
+                            <div class="col-md-6 ab-field">
+                                <label>Bank Name</label>
+                                <asp:TextBox ID="txtbankname" CssClass="form-control" runat="server" placeholder="e.g. State Bank of India"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ab-actions">
+                        <asp:Button ID="btnSubmit" OnClientClick="return validate();" CssClass="btn btn-primary" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                        <asp:Button ID="btnCancel" CssClass="btn btn-danger" runat="server" Text="Cancel" OnClick="btnCancel_Click" CausesValidation="false" />
+                    </div>
+                </div>
 
-             <div class="card">
-        <div class="card-header">
-            <strong>Bank List</strong>
-        </div>
-
-        <div class="card-body">
-
+                <div class="ab-section">
+                    <div class="ab-section-head">
+                        <span class="ab-section-icon"><i class="feather icon-list"></i></span>
+                        <div>
+                            <h3>Bank List</h3>
+                            <span>All saved banks</span>
+                        </div>
+                    </div>
+                    <div class="ab-section-body ab-section-body--flush">
                         <div class="table-responsive">
-
-                            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-hover" Width="100%" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand">
+                            <asp:GridView ID="GridView1" runat="server" CssClass="table ab-table table-striped" Width="100%" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand" GridLines="None">
                                 <Columns>
                                     <asp:TemplateField HeaderText="#">
                                         <ItemTemplate>
-                                            <%#Container.DataItemIndex+1 %>
-                                            <asp:Label ID="lblid" runat="server" Visible="false" Text='<%#Eval("Bankid") %>'></asp:Label>
+                                            <%# Container.DataItemIndex + 1 %>
+                                            <asp:Label ID="lblid" runat="server" Visible="false" Text='<%# Eval("Bankid") %>'></asp:Label>
                                         </ItemTemplate>
+                                        <HeaderStyle Width="70px" />
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Bank Name">
                                         <ItemTemplate>
-                                            <asp:Label ID="lblbankname" runat="server" Text='<%#Eval("BankName") %>'></asp:Label>
+                                            <asp:Label ID="lblbankname" runat="server" Text='<%# Eval("BankName") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Action">
                                         <ItemTemplate>
-                                            <asp:LinkButton ID="lbEdit" CommandName="edt" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" runat="server"><i class="icon fa fa-pencil-alt" aria-hidden="true"></i></asp:LinkButton>
+                                            <asp:LinkButton ID="lbEdit" CssClass="ab-btn-edit" ToolTip="Edit" CommandName="edt" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" runat="server">
+                                                <i class="feather icon-edit-2"></i>
+                                            </asp:LinkButton>
                                         </ItemTemplate>
-
+                                        <HeaderStyle Width="90px" />
+                                        <ItemStyle HorizontalAlign="Center" />
                                     </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
-                        </div>
-
-                    </div>
-                 </div>
-        </ContentTemplate>
-    </asp:UpdatePanel>
-
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="contentScript" runat="Server">
-    <asp:UpdatePanel runat="server" ID="uplMaster" UpdateMode="Always">
-        <ContentTemplate>
-            <div id="myModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Edit Bank Details</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                Bank Name
-                            <asp:Label ID="lblbankid" Visible="false" runat="server" Text=""></asp:Label>
-
-                                <asp:TextBox runat="server" class="form-control" ID="txtbanknameedit"></asp:TextBox>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClientClick="return validate2();" CssClass="btn btn-success" OnClick="btnUpdate_Click" />
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="contentScript" runat="Server">
     <script type="text/javascript">
-
         function validate() {
-            // alert('sd');
             if (document.getElementById("<%=txtbankname.ClientID%>").value == "") {
-
-                   toastr.warning('Warning', 'Enter Bank Name');
-                   // alert("Enter Rank No"); 
-                   document.getElementById("<%=txtbankname.ClientID%>").focus();
-                   return false;
-               }
-           }
-           function validate2() {
-               // alert('sd');
-               if (document.getElementById("<%=txtbanknameedit.ClientID%>").value == "") {
-
-                   toastr.warning('Warning', 'Enter Bank Name');
-                   // alert("Enter Rank No"); 
-                   document.getElementById("<%=txtbanknameedit.ClientID%>").focus();
-                   return false;
-               }
-           }
-    </script>
-
-    <script type="text/javascript">
-        function showModal() {
-            $('#myModal').modal({ backdrop: 'static', keyboard: false })
-        }
-        function Closepopup() {
-            $('#myModal').modal('hide');
-            $('body').removeClass('modal-open');
-            $('body').css('padding-right', '0');
-            $('.modal-backdrop').remove();
+                toastr.warning('Warning', 'Enter Bank Name');
+                document.getElementById("<%=txtbankname.ClientID%>").focus();
+                return false;
+            }
         }
     </script>
 </asp:Content>
-
-
-

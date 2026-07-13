@@ -90,17 +90,15 @@ public partial class admin_AssociateReport : System.Web.UI.Page
             Literal ltimage = (Literal)e.Item.FindControl("ltimage");
             if (lblstatus.Text == "Vacant")
             {
-                ltimage.Text = @"<img src='assets/images/available.png' style=""height:50px;""/>";
+                ltimage.Text = @"<img src='assets/images/available.png' alt='Vacant' />";
             }
-            else
-                  if (lblstatus.Text == "Booked")
+            else if (lblstatus.Text == "Booked")
             {
-                ltimage.Text = @"<img src='assets/images/booked.png' style=""height:50px;""/>";
+                ltimage.Text = @"<img src='assets/images/booked.png' alt='Booked' />";
             }
-            else
-                  if (lblstatus.Text == "Sold")
+            else if (lblstatus.Text == "Sold")
             {
-                ltimage.Text = @"<img src='assets/images/sold.png' style=""height:50px;""/>";
+                ltimage.Text = @"<img src='assets/images/sold.png' alt='Sold' />";
             }
 
         }
