@@ -1,0 +1,53 @@
+
+SELECT * FROM TransactionDetail WHERE TransactionId IN (SELECT TransactionId FROM ROIDetail)
+
+DELETE FROM TransactionDetail WHERE TransactionId IN (SELECT TransactionId FROM ROIDetail)
+
+TRUNCATE TABLE ROIDetail
+
+
+
+
+UPDATE ud SET ud.balanceamount=(SELECT isnull(sum(cd.cramount),0)-isnull(sum(cd.dramount),0)
+FROM transactiondetail cd WHERE cd.UserId=ud.userid  
+) FROM userdetail ud
+
+
+
+/*
+delete FROM transactiondetail WHERE TransactionId IN (SELECT TransactionId FROM closingdetail WHERE ClosingDate IN ('11/2/2020 1:06:36 PM'
+,'11/3/2020 12:00:00 AM'
+,'11/4/2020 12:00:00 AM'
+,'11/5/2020 12:00:00 AM'))
+
+
+
+delete FROM closingdetail WHERE ClosingDate IN ('11/2/2020 1:06:36 PM'
+,'11/3/2020 12:00:00 AM'
+,'11/4/2020 12:00:00 AM'
+,'11/5/2020 12:00:00 AM')
+
+
+delete FROM closingdatedetail WHERE ClosingDate IN ('11/2/2020 1:06:36 PM'
+,'11/3/2020 12:00:00 AM'
+,'11/4/2020 12:00:00 AM'
+,'11/5/2020 12:00:00 AM')
+
+SELECT sum(cramount)-sum(dramount),td.userid,ud.BalanceAmount FROM TransactionDetail td WITH (nolock)
+LEFT JOIN userdetail ud ON ud.userid=td.UserID 
+
+GROUP BY td.UserID,ud.BalanceAmount 
+having ud.BalanceAmount!=sum(cramount)-sum(dramount) 
+
+UPDATE ud SET ud.BalanceAmount=(SELECT sum(cramount)-sum(dramount) FROM TransactionDetail td  WHERE ud.userid=td.UserID  )
+FROM UserDetail ud
+
+*/
+
+
+
+
+INSERT INTO AssociateLedger (AssociateId, cramount,dramount, TransactionId, MentionBy, Mentiondate, Remark, PaymentMode, ChequeNo, PaymentDate, TransactionType)
+
+
+SELECT userid,0,finalamount,transactionid,'admin',mentiondate,'Payout Generate of date '+convert(NVARCHAR,closingdate,103)+' of amount : '+convert(NVARCHAR,FinalAmount), 'Payout', null, mentiondate, 'Payout' FROM directincomeclosingdetail

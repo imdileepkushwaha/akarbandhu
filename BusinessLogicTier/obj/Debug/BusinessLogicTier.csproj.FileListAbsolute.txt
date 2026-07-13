@@ -1,0 +1,374 @@
+C:\Users\Assign.Assign-PC\Desktop\MicroLoan\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+C:\Users\Assign.Assign-PC\Desktop\MicroLoan\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+C:\Users\Assign.Assign-PC\Desktop\MicroLoan\BusinessLogicTier\bin\Debug\DataTier.dll
+C:\Users\Assign.Assign-PC\Desktop\MicroLoan\BusinessLogicTier\bin\Debug\DataTier.pdb
+C:\Users\Assign.Assign-PC\Desktop\MicroLoan\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+C:\Users\Assign.Assign-PC\Desktop\MicroLoan\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+C:\Users\Assign.Assign-PC\Desktop\MicroLoan\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 05012014\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 05012014\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 05012014\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit 05012014\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit 05012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit 05012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 05012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 16012014\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 16012014\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 16012014\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit 16012014\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit 16012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit 16012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 16012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 19012014\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 19012014\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 19012014\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit 19012014\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit 19012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit 19012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 19012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 20012014\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 20012014\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 20012014\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit 20012014\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit 20012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit 20012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 20012014\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Asp.net Projects\NIDHI\NidhiCredit 22-1-2014\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Asp.net Projects\NIDHI\NidhiCredit 22-1-2014\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Asp.net Projects\NIDHI\NidhiCredit 22-1-2014\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Asp.net Projects\NIDHI\NidhiCredit 22-1-2014\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Asp.net Projects\NIDHI\NidhiCredit 22-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Asp.net Projects\NIDHI\NidhiCredit 22-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Asp.net Projects\NIDHI\NidhiCredit 22-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Asp.net Projects\NIDHI\NidhiCredit 23-1-2014\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Asp.net Projects\NIDHI\NidhiCredit 23-1-2014\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Asp.net Projects\NIDHI\NidhiCredit 23-1-2014\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Asp.net Projects\NIDHI\NidhiCredit 23-1-2014\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Asp.net Projects\NIDHI\NidhiCredit 23-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Asp.net Projects\NIDHI\NidhiCredit 23-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Asp.net Projects\NIDHI\NidhiCredit 23-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 27-1-2014\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 27-1-2014\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 27-1-2014\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit 27-1-2014\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit 27-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit 27-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 27-1-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 29-01-2014\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 29-01-2014\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 29-01-2014\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit 29-01-2014\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit 29-01-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit 29-01-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 29-01-2014\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 02-02-2015\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 02-02-2015\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 02-02-2015\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit 02-02-2015\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit 02-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit 02-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 02-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 03-02-2015\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 03-02-2015\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+E:\Project\New Nidhi\NidhiCredit 03-02-2015\BusinessLogicTier\bin\Debug\DataTier.dll
+E:\Project\New Nidhi\NidhiCredit 03-02-2015\BusinessLogicTier\bin\Debug\DataTier.pdb
+E:\Project\New Nidhi\NidhiCredit 03-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+E:\Project\New Nidhi\NidhiCredit 03-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+E:\Project\New Nidhi\NidhiCredit 03-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\NidhiCredit 04-02-2015\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\NidhiCredit 04-02-2015\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\NidhiCredit 04-02-2015\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\NidhiCredit 04-02-2015\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\NidhiCredit 04-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\NidhiCredit 04-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\NidhiCredit 04-02-2015\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\E-Commerce\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\E-Commerce\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\E-Commerce\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\E-Commerce\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\E-Commerce\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\E-Commerce\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\E-Commerce\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\OnlineExam\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\OnlineExam\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\OnlineExam\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\OnlineExam\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\OnlineExam\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\OnlineExam\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\OnlineExam\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\akar data\OnlineExam\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\akar data\OnlineExam\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\akar data\OnlineExam\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\akar data\OnlineExam\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\akar data\OnlineExam\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\akar data\OnlineExam\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\akar data\OnlineExam\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Akar work\personal\MLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Akar work\personal\MLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Akar work\personal\MLM\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Akar work\personal\MLM\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Akar work\personal\MLM\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Akar work\personal\MLM\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Akar work\personal\MLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\app cure\projects\MLM\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\app cure\projects\MLM\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\app cure\projects\MLM\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\app cure\projects\MLM\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\app cure\projects\MLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\app cure\projects\MLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\app cure\projects\MLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\app cure\projects\Gharaunda\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\app cure\projects\Gharaunda\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\app cure\projects\Gharaunda\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\app cure\projects\Gharaunda\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\app cure\projects\Gharaunda\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\app cure\projects\Gharaunda\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\app cure\projects\Gharaunda\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\app cure\projects\GharaundaMLM\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\app cure\projects\GharaundaMLM\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\app cure\projects\GharaundaMLM\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\app cure\projects\GharaundaMLM\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\app cure\projects\GharaundaMLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\app cure\projects\GharaundaMLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\app cure\projects\GharaundaMLM\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\VikasDeep\VikashDeepSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\VikasDeep\VikashDeepSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\VikasDeep\VikashDeepSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\VikasDeep\VikashDeepSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\VikasDeep\VikashDeepSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\VikasDeep\VikashDeepSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\VikasDeep\VikashDeepSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\JiyaFuture\JiyaFutureSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\JiyaFuture\JiyaFutureSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\JiyaFuture\JiyaFutureSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\JiyaFuture\JiyaFutureSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\JiyaFuture\JiyaFutureSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\JiyaFuture\JiyaFutureSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\JiyaFuture\JiyaFutureSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\HoldingHands\HoldingHandsSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\HoldingHands\HoldingHandsSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\HoldingHands\HoldingHandsSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\HoldingHands\HoldingHandsSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\HoldingHands\HoldingHandsSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\HoldingHands\HoldingHandsSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\HoldingHands\HoldingHandsSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\MentorsForIndia\MentorsForIndiaSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\MentorsForIndia\MentorsForIndiaSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\MentorsForIndia\MentorsForIndiaSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\MentorsForIndia\MentorsForIndiaSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\MentorsForIndia\MentorsForIndiaSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\MentorsForIndia\MentorsForIndiaSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\MentorsForIndia\MentorsForIndiaSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\OnlineCertificate\OnlineCertificate\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\OnlineCertificate\OnlineCertificate\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\OnlineCertificate\OnlineCertificate\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\OnlineCertificate\OnlineCertificate\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\OnlineCertificate\OnlineCertificate\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\OnlineCertificate\OnlineCertificate\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\OnlineCertificate\OnlineCertificate\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\HunarBaaz\HunarBaazSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\HunarBaaz\HunarBaazSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\HunarBaaz\HunarBaazSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\HunarBaaz\HunarBaazSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\HunarBaaz\HunarBaazSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\HunarBaaz\HunarBaazSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\HunarBaaz\HunarBaazSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\MobileKranti\MobileKrantiSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\MobileKranti\MobileKrantiSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\MobileKranti\MobileKrantiSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\MobileKranti\MobileKrantiSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\MobileKranti\MobileKrantiSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\MobileKranti\MobileKrantiSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\MobileKranti\MobileKrantiSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\ANVMedia\AVNMediaSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\ANVMedia\AVNMediaSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\ANVMedia\AVNMediaSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\ANVMedia\AVNMediaSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\ANVMedia\AVNMediaSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\ANVMedia\AVNMediaSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\ANVMedia\AVNMediaSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\bin\Debug\ARA_StringHunt.dll
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\bin\Debug\CyberPlatOpenSSL.dll
+D:\Roundpay\ITRCommunication\ITRCommunicationSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\bin\Debug\ARA_StringHunt.dll
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\bin\Debug\CyberPlatOpenSSL.dll
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Roundpay\myDBS\myDBSSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\bin\Debug\ARA_StringHunt.dll
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\bin\Debug\CyberPlatOpenSSL.dll
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Roundpay\HealthyPayDigital\HealthyPaySoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\GivToPik\GivToPikSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\GivToPik\GivToPikSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\GivToPik\GivToPikSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\GivToPik\GivToPikSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\personal\GivToPik\GivToPikSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\GivToPik\GivToPikSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\GivToPik\GivToPikSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\GivToPik\GivToPikSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\FutureLifeSecure\FutureLifeSecureSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\FutureLifeSecure\FutureLifeSecureSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\FutureLifeSecure\FutureLifeSecureSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\FutureLifeSecure\FutureLifeSecureSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\personal\FutureLifeSecure\FutureLifeSecureSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\FutureLifeSecure\FutureLifeSecureSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\FutureLifeSecure\FutureLifeSecureSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\FutureLifeSecure\FutureLifeSecureSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\ADEnterprises\AdEnterprisesSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\ADEnterprises\AdEnterprisesSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\ADEnterprises\AdEnterprisesSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\ADEnterprises\AdEnterprisesSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\personal\ADEnterprises\AdEnterprisesSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\ADEnterprises\AdEnterprisesSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\ADEnterprises\AdEnterprisesSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\ADEnterprises\AdEnterprisesSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\smartlitezone\SmartLiteZoneSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\smartlitezone\SmartLiteZoneSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\smartlitezone\SmartLiteZoneSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\smartlitezone\SmartLiteZoneSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\personal\smartlitezone\SmartLiteZoneSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\smartlitezone\SmartLiteZoneSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\smartlitezone\SmartLiteZoneSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\smartlitezone\SmartLiteZoneSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\bin\Debug\ARA_StringHunt.dll
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\bin\Debug\CyberPlatOpenSSL.dll
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Roundpay\LandmarkTraders\LandmarkTradersSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\personal\SecurePaySystems\SecurePaySystemsSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\personal\SecurePaySystems\SecurePaySystemsSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\personal\SecurePaySystems\SecurePaySystemsSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\personal\SecurePaySystems\SecurePaySystemsSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\personal\SecurePaySystems\SecurePaySystemsSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\personal\SecurePaySystems\SecurePaySystemsSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\personal\SecurePaySystems\SecurePaySystemsSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\personal\SecurePaySystems\SecurePaySystemsSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Personal\FutureGrowth\FutureGrowthSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Personal\FutureGrowth\FutureGrowthSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Personal\FutureGrowth\FutureGrowthSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Personal\FutureGrowth\FutureGrowthSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Personal\FutureGrowth\FutureGrowthSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Personal\FutureGrowth\FutureGrowthSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Personal\FutureGrowth\FutureGrowthSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Personal\PrideandProperty\PrideAndPropertySoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Personal\PrideandProperty\PrideAndPropertySoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Personal\PrideandProperty\PrideAndPropertySoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Personal\PrideandProperty\PrideAndPropertySoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Personal\PrideandProperty\PrideAndPropertySoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Personal\PrideandProperty\PrideAndPropertySoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Personal\PrideandProperty\PrideAndPropertySoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Personal\NatureWishInfra\NatureWishInfraSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Personal\NatureWishInfra\NatureWishInfraSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Personal\NatureWishInfra\NatureWishInfraSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Personal\NatureWishInfra\NatureWishInfraSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Personal\NatureWishInfra\NatureWishInfraSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Personal\NatureWishInfra\NatureWishInfraSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Personal\NatureWishInfra\NatureWishInfraSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Personal\MyManglayaRealestate\MyMangalyaRealEstateSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Personal\MyManglayaRealestate\MyMangalyaRealEstateSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Personal\MyManglayaRealestate\MyMangalyaRealEstateSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Personal\MyManglayaRealestate\MyMangalyaRealEstateSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Personal\MyManglayaRealestate\MyMangalyaRealEstateSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Personal\MyManglayaRealestate\MyMangalyaRealEstateSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Personal\MyManglayaRealestate\MyMangalyaRealEstateSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojAssemblyReference.cache
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csproj.CoreCompileInputs.cache
+D:\Personal\prideandPorpertyLevel\PrideAndPorpertyLevelSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csproj.CopyComplete
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojAssemblyReference.cache
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csproj.CoreCompileInputs.cache
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.csproj.CopyComplete
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Personal\Surilaland\SurilaLandSoft\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+F:\web\yuvrajconstruction\SurilaLandSoft (1)\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+F:\web\yuvrajconstruction\SurilaLandSoft (1)\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+F:\web\yuvrajconstruction\SurilaLandSoft (1)\BusinessLogicTier\bin\Debug\DataTier.dll
+F:\web\yuvrajconstruction\SurilaLandSoft (1)\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+F:\web\yuvrajconstruction\SurilaLandSoft (1)\BusinessLogicTier\bin\Debug\DataTier.pdb
+F:\web\yuvrajconstruction\SurilaLandSoft (1)\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+F:\web\yuvrajconstruction\SurilaLandSoft (1)\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+F:\web\yuvrajconstruction\SurilaLandSoft (1)\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+H:\web\RVPsoft\rvp\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+H:\web\RVPsoft\rvp\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+H:\web\RVPsoft\rvp\BusinessLogicTier\bin\Debug\DataTier.dll
+H:\web\RVPsoft\rvp\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+H:\web\RVPsoft\rvp\BusinessLogicTier\bin\Debug\DataTier.pdb
+H:\web\RVPsoft\rvp\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+H:\web\RVPsoft\rvp\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+H:\web\RVPsoft\rvp\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Web\RVP_SOFT\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Web\RVP_SOFT\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Web\RVP_SOFT\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Web\RVP_SOFT\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Web\RVP_SOFT\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Web\RVP_SOFT\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Web\RVP_SOFT\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Web\RVP_SOFT\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Web\AV ENTERPRISES REAL ESTATE\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Web\AV ENTERPRISES REAL ESTATE\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Web\AV ENTERPRISES REAL ESTATE\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Web\AV ENTERPRISES REAL ESTATE\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Web\AV ENTERPRISES REAL ESTATE\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Web\AV ENTERPRISES REAL ESTATE\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Web\AV ENTERPRISES REAL ESTATE\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Web\AV ENTERPRISES REAL ESTATE\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Web\Alkizenreal\Alkizen\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Web\Alkizenreal\Alkizen\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Web\Alkizenreal\Alkizen\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Web\Alkizenreal\Alkizen\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Web\Alkizenreal\Alkizen\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Web\Alkizenreal\Alkizen\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Web\Alkizenreal\Alkizen\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Web\Alkizenreal\Alkizen\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
+D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
+D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\bin\Debug\DataTier.dll
+D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\bin\Debug\Newtonsoft.Json.dll
+D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\bin\Debug\DataTier.pdb
+D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
+D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+D:\Web\akarbandhu\Akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
+C:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
+C:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb

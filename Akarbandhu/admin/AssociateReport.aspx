@@ -1,0 +1,392 @@
+﻿<%@ Page Title="Associate Report" Language="C#" MasterPageFile="adminmaster.master" AutoEventWireup="true" CodeFile="AssociateReport.aspx.cs" Inherits="admin_UserReport"  ValidateRequest="false" EnableEventValidation="false" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentHeader" runat="Server">
+    <li class="breadcrumb-item"><a href="Dashboard.aspx"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">Associate Report</a></li>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contentData" runat="Server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+     <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+        <ProgressTemplate>
+            <div class="modal2">
+                <div class="center2">
+                    <img alt="" src="loader.gif" />
+                </div>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+
+            <div class="card">
+        <div class="card-header">
+            <strong>Search Criteria</strong>
+        </div>
+        <div class="card-body">
+                                <div class="row form-group">
+                                    <div class="col-md-2">Name</div>
+                                    <div class="col-md-2">
+                                        <asp:TextBox ID="txtname" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-2">Mobile</div>
+                                    <div class="col-md-2">
+                                        <asp:TextBox ID="txtmobile" onkeypress="return isNumber(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-2">Email</div>
+                                    <div class="col-md-2">
+                                        <asp:TextBox ID="txtemail" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+                                 <div class="row form-group">
+                                    <div class="col-md-2">From Date</div>
+                                    <div class="col-md-2">
+                                        <asp:TextBox ID="txtfromdate" CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-2">To Date</div>
+                                    <div class="col-md-2">
+                                        <asp:TextBox ID="txttodate"  CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
+                                    </div>
+                                        <div class="col-md-2">Select Country</div>
+                                    <div class="col-md-2">
+                                        <asp:DropDownList ID="ddcountry" AutoPostBack="true" CssClass="form-control" runat="server" OnSelectedIndexChanged="ddcountry_SelectedIndexChanged">
+                                            <asp:ListItem Value="0"> Select Country</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-2">Select State</div>
+                                    <div class="col-md-2">
+                                        <asp:DropDownList ID="ddstate" CssClass="form-control" runat="server" >
+                                            <asp:ListItem Value="0"> Select State</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="col-md-2">Select City</div>
+                                    <div class="col-md-2">
+                                       <asp:TextBox ID="txtcityname" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                     <div class="col-md-2">Select Area</div>
+                                    <div class="col-md-2">
+                                        <asp:DropDownList ID="ddarea" CssClass="form-control" runat="server">
+                                            <asp:ListItem Value="0"> Select Area</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                                  <div class="row form-group">
+                                    <div class="col-md-2">Associate Id</div>
+                                    <div class="col-md-2">
+                                        <asp:TextBox ID="txtuserid" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                 </div><hr />
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <asp:Button ID="btnSubmit"  CssClass="btn btn-success" runat="server" Text="Search" OnClick="btnSubmit_Click" />
+                                        <asp:Button ID="btnCancel" CssClass="btn btn-danger" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                                         <asp:Button ID="btnExcel" CssClass="btn info" runat="server" Text="Excel" OnClick="btnExcel_Click" />
+                                    </div>
+                                </div>
+               
+            </div>
+                </div>
+
+          <div class="card">
+        <div class="card-header">
+            <strong>Associate List</strong>
+        </div>
+        <div class="card-body">
+
+                        <div class="table-responsive">
+
+                            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-hover" AllowPaging="true" PageSize="40" OnPageIndexChanging="GridView1_PageIndexChanging" Width="100%" OnRowDataBound="GridView1_RowDataBound" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="#">
+                                        <ItemTemplate>
+                                            <%#Container.DataItemIndex+1 %>                                          
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                     <asp:TemplateField HeaderText="Associate ID">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lbluserid" runat="server" Text='<%#Eval("Associateid") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Name">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblusername" runat="server" Text='<%#Eval("Associatename") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                     <asp:TemplateField HeaderText="Sponser Id">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblsponserid" runat="server" Text='<%#Eval("sponserid") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Mobile">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblmobile" runat="server" Text='<%#Eval("mobile") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Email">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblemail" runat="server" Text='<%#Eval("email") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="City">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lbladdress" runat="server" Text='<%#Eval("cityname") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                      <asp:TemplateField HeaderText="Level No">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lbllevelno" runat="server" Text='<%#Eval("levelno") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                   <%-- <asp:TemplateField HeaderText="Wallet Balance">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblewalletbalance" runat="server" Text='<%#Eval("balanceamount") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>--%>
+                                      <asp:TemplateField HeaderText="Password">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblpassword" runat="server" Text='<%#Eval("password") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Date">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lbldate" runat="server" Text='<%#Eval("mentiondate","{0:dd/MM/yyyy}") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                       <asp:TemplateField HeaderText="Active Status">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblactivestatus" runat="server" Text='<%#Eval("activestatus") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Action">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lbEdit" CommandName="edt" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" runat="server"><i class="icon fa fa-pencil-alt" aria-hidden="true"></i></asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                        </div>
+                    </div>
+                </div>
+        </ContentTemplate>
+           <Triggers>
+            <asp:PostBackTrigger ControlID="btnExcel" />
+        </Triggers>
+    </asp:UpdatePanel>
+
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="contentScript" runat="Server">
+        <asp:UpdatePanel runat="server" ID="uplMaster" UpdateMode="Always">
+        <ContentTemplate>
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Edit Associate Details (Associate Id: <asp:Label runat="server" ID="lbluseridedit"></asp:Label>)</h4>
+                        </div>
+                        <div class="modal-body">
+                        <div class="row">
+                                    <div class="col-md-2">Name</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtnameedit" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2">Mobile</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtmobileedit" onkeypress="return isNumber(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">Email</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtemailedit" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2">Gender</div>
+                                    <div class="col-md-3">
+                                        <asp:DropDownList ID="ddgenderedit" CssClass="form-control" runat="server">
+                                            <asp:ListItem Value="0">Select Gender</asp:ListItem>
+                                            <asp:ListItem Value="Male">Male</asp:ListItem>
+                                            <asp:ListItem Value="Female">Female</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">Address</div>
+                                    <div class="col-md-9">
+                                        <asp:TextBox ID="txtaddressedit" TextMode="MultiLine" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">Select Country</div>
+                                    <div class="col-md-3">
+                                        <asp:DropDownList ID="ddcountryedit" AutoPostBack="true" CssClass="form-control" runat="server" OnSelectedIndexChanged="ddcountryedit_SelectedIndexChanged">
+                                            <asp:ListItem Value="0"> Select Country</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2">Select State</div>
+                                    <div class="col-md-3">
+                                        <asp:DropDownList ID="ddstateedit"  CssClass="form-control" runat="server">
+                                            <asp:ListItem Value="0"> Select State</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">Select City</div>
+                                    <div class="col-md-3">
+                                       <asp:TextBox ID="txtcitynamedit" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2">Age</div>
+                                    <div class="col-md-3">
+                                       <asp:TextBox ID="txtareaname" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">Pincode</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtpincodeedit" onkeypress="return isNumber(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                     <div class="col-md-2">Date of Birth</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtdateofbirthedit" CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                              <div class="row">
+                                    <div class="col-md-2">Aadhar Number</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtadhar" onkeypress="return isNumber(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                     <div class="col-md-2">Pan Number</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtpancard" CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
+                                    </div>
+                                </div
+                                  </DIV>
+
+                          <div class="row">
+                            <div class="col-md-2"> Level</div>
+                            <div class="col-md-3">
+                                <asp:DropDownList ID="ddleveledit"  CssClass="form-control"  runat="server" >
+                                    <asp:ListItem Value="0">Select </asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                             </div>
+                              <div class="row">
+                                    <div class="col-md-2">Team Name</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtteamname"  CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                     <div class="col-md-2">Sr. President Name</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtsrpresident" CssClass="form-control form_date" autocomplete="off" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                            <h6>Nominee Detail</h6>
+                               <div class="row">
+                                    <div class="col-md-2">Nominee Name</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtnomineenameedit" onkeypress="return isNumber(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                     <div class="col-md-2">Nominee Age</div>
+                                     <div class="col-md-3">
+                                        <asp:TextBox ID="txtagenomineedit" onkeypress="return isNumber(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                               <div class="row">
+                                    <div class="col-md-2">Nominee Relation</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="TxtNomineerelatioedit" onkeypress="return isNumber(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    
+                                </div>
+
+                            <h6>Bank Detail</h6>
+                               <div class="row">
+                                    <div class="col-md-2">Bank Name</div>
+                                    <div class="col-md-3">
+                                         <asp:DropDownList ID="DDBANK"  CssClass="form-control" runat="server" >
+                                            <asp:ListItem Value="0"> Select Bank</asp:ListItem>
+                                        </asp:DropDownList>  </div>
+                                    <div class="col-md-1"></div>
+                                     <div class="col-md-2">IFSC Code</div>
+                                     <div class="col-md-3">
+                                        <asp:TextBox ID="txtIFSCEdit"  CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                               <div class="row">
+                                    <div class="col-md-2">Account Number</div>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtaccountedit" onkeypress="return isNumber(event)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                    
+                                </div>
+                                  <div class="row">
+                                    <div class="col-md-2">Select Image</div>
+                                    <div class="col-md-3">
+                                        <asp:FileUpload ID="FileUpload1" runat="server" />
+                                        <asp:Label ID="lblimagename" Visible="false" runat="server" Text=""></asp:Label>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClientClick="return validate2();" CssClass="btn btn-success" OnClick="btnUpdate_Click" />
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ContentTemplate>
+               <Triggers>
+            <asp:PostBackTrigger ControlID="btnUpdate" />
+        </Triggers>
+    </asp:UpdatePanel>
+       <script type="text/javascript">
+           function validate2() {
+               if (document.getElementById("<%=txtnameedit.ClientID%>").value == "") {
+
+                toastr.warning('Warning', 'Enter Name');
+                document.getElementById("<%=txtnameedit.ClientID%>").focus();
+                  return false;
+              }
+              if (document.getElementById("<%=txtmobileedit.ClientID%>").value == "") {
+
+                toastr.warning('Warning', 'Enter Mobile');
+                document.getElementById("<%=txtmobileedit.ClientID%>").focus();
+                return false;
+            }
+          
+          
+        }
+    </script>
+    <script type="text/javascript">
+
+
+        function showModal() {
+            $('#myModal').modal({ backdrop: 'static', keyboard: false })
+        }
+        function Closepopup() {
+            $('#myModal').modal('hide');
+            $('body').removeClass('modal-open');
+            $('body').css('padding-right', '0');
+            $('.modal-backdrop').remove();
+            
+
+        }
+    </script>
+</asp:Content>
+

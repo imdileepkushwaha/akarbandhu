@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox49">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>New Booking Receipt</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox49</rd:DefaultName>
+        <Top>2.65014in</Top>
+        <Left>0.61536in</Left>
+        <Height>0.27292in</Height>
+        <Width>6.57912in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>BOOKING DATE:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox24</rd:DefaultName>
+        <Top>3.00225in</Top>
+        <Left>3.91618in</Left>
+        <Height>0.21389in</Height>
+        <Width>1.52579in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>RECIEPT NO:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>2.98836in</Top>
+        <Left>0.51686in</Left>
+        <Height>0.23611in</Height>
+        <Width>1.34006in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!TransactionId.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>3.00225in</Top>
+        <Left>1.93053in</Left>
+        <Height>0.22222in</Height>
+        <Width>1.96203in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ADDRESS:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>3.77443in</Top>
+        <Left>0.51687in</Left>
+        <Height>0.21042in</Height>
+        <Width>1.31505in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox43">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Address.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>3.7786in</Top>
+        <Left>1.93262in</Left>
+        <Height>0.21042in</Height>
+        <Width>5.76187in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox30">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!BookingDate.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>3.00225in</Top>
+        <Left>5.56141in</Left>
+        <Height>0.22222in</Height>
+        <Width>2.1537in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PLOT SIZE:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>4.28069in</Top>
+        <Left>4.02659in</Left>
+        <Height>0.21121in</Height>
+        <Width>1.1994in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PLOT NO :</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>10.86234cm</Top>
+        <Left>1.27577cm</Left>
+        <Height>0.54708cm</Height>
+        <Width>3.4408cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!PlotNo.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>10.87998cm</Top>
+        <Left>4.86651cm</Left>
+        <Height>0.52944cm</Height>
+        <Width>4.95181cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!PlotArea.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>4.29745in</Top>
+        <Left>5.54682in</Left>
+        <Height>0.19444in</Height>
+        <Width>2.1537in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PLOT AMOUNT:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>4.53913in</Top>
+        <Left>4.02867in</Left>
+        <Height>0.21121in</Height>
+        <Width>1.1994in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PLOT AREA :</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>11.51878cm</Top>
+        <Left>1.28105cm</Left>
+        <Height>0.54708cm</Height>
+        <Width>3.4408cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!PlotSize.Value, "DataSet1").ToString()</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>11.53642cm</Top>
+        <Left>4.87179cm</Left>
+        <Height>0.52944cm</Height>
+        <Width>4.95181cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox33">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!PlotAmount.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>4.54339in</Top>
+        <Left>5.5489in</Left>
+        <Height>0.20694in</Height>
+        <Width>2.1537in</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PAID AMOUNT :</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>12.2178cm</Top>
+        <Left>1.27577cm</Left>
+        <Height>0.54708cm</Height>
+        <Width>3.4408cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox25">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!BookingAmount.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>12.23544cm</Top>
+        <Left>4.86651cm</Left>
+        <Height>0.52944cm</Height>
+        <Width>4.95181cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>AMOUNT IN WORDS</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox19</rd:DefaultName>
+        <Top>5.0866in</Top>
+        <Left>0.50227in</Left>
+        <Height>0.2375in</Height>
+        <Width>1.35278in</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.RupeesToWord(Fields!BookingAmount.Value)</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>5.0866in</Top>
+        <Left>1.89949in</Left>
+        <Height>0.2375in</Height>
+        <Width>5.795in</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>USER ID:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>3.51055in</Top>
+        <Left>0.51446in</Left>
+        <Height>0.21042in</Height>
+        <Width>1.31505in</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox44">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!UserId.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox5</rd:DefaultName>
+        <Top>3.51472in</Top>
+        <Left>1.93021in</Left>
+        <Height>0.21042in</Height>
+        <Width>1.96235in</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>USER NAME:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>3.51472in</Top>
+        <Left>3.90367in</Left>
+        <Height>0.21121in</Height>
+        <Width>1.5244in</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox35">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!UserName.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>3.53148in</Top>
+        <Left>5.5489in</Left>
+        <Height>0.19444in</Height>
+        <Width>2.1537in</Width>
+        <ZIndex>22</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox36">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ASSOCIATE ID :</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>8.30328cm</Top>
+        <Left>1.30168cm</Left>
+        <Height>0.54708cm</Height>
+        <Width>3.4408cm</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox37">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!SponserId.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>8.32092cm</Top>
+        <Left>4.89242cm</Left>
+        <Height>0.52944cm</Height>
+        <Width>4.95181cm</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox39">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PROJECT NAME :</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>10.21295cm</Top>
+        <Left>1.28105cm</Left>
+        <Height>0.54708cm</Height>
+        <Width>3.4408cm</Width>
+        <ZIndex>25</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox40">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!ProjectName.Value, "DataSet1")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox18</rd:DefaultName>
+        <Top>10.23059cm</Top>
+        <Left>4.87179cm</Left>
+        <Height>0.52944cm</Height>
+        <Width>4.95181cm</Width>
+        <ZIndex>26</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>            * </Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Once plot no.get canceled, customer can choose another vacant plot no. in any existing project as per                    on same receipt 
+            * Subject to encashment of cheque/ draft realization.</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>            * All the Terms &amp; Conditions shall be applicable as per the company policy.</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           * Pre location charges will be applied if applicable.
+           * Cheque/DD Payment is subject of realization in company account.
+           * This is computer generated receipt, signature not required.
+             </Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Tollfree No -5442356292</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">
+</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>15.6972cm</Top>
+        <Left>1.5367cm</Left>
+        <Height>4.00783cm</Height>
+        <Width>17.78505cm</Width>
+        <ZIndex>27</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox31">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Authorised Signature</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox19</rd:DefaultName>
+        <Top>5.7675in</Top>
+        <Left>6.25421in</Left>
+        <Height>0.18194in</Height>
+        <Width>1.35278in</Width>
+        <ZIndex>28</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox34">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Note:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox28</rd:DefaultName>
+        <Top>5.94945in</Top>
+        <Left>0.605in</Left>
+        <Height>0.19861in</Height>
+        <Width>1.34006in</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>7.82384in</Height>
+    <Style />
+  </Body>
+  <Width>8.04238in</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="dsReceipt">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>485804a0-9931-4072-b9ba-de707bc2feeb</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>dsReceipt</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AccountNo">
+          <DataField>AccountNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Id">
+          <DataField>Id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserId">
+          <DataField>UserId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SponserId">
+          <DataField>SponserId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlanId">
+          <DataField>PlanId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlotId">
+          <DataField>PlotId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlotNo">
+          <DataField>PlotNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlotAmount">
+          <DataField>PlotAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BookingAmount">
+          <DataField>BookingAmount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TransactionId">
+          <DataField>TransactionId</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PaymentMode">
+          <DataField>PaymentMode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BookingDate">
+          <DataField>BookingDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectName">
+          <DataField>ProjectName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserName">
+          <DataField>UserName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlotArea">
+          <DataField>PlotArea</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlotSize">
+          <DataField>PlotSize</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FatherName">
+          <DataField>FatherName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsReceipt</rd:DataSetName>
+        <rd:SchemaPath>D:\Personal\PrideandProperty\PrideAndPropertySoft\PrideAndPropertySoft\App_Code\dsReceipt.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable1</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code>Function RupeesToWord(ByVal MyNumber)
+Dim Temp
+Dim Rupees, Paisa As String
+Dim DecimalPlace, iCount
+Dim Hundreds, Words As String
+Dim place(9) As String
+place(0) = " Thousand "
+place(2) = " Lakh "
+place(4) = " Crore "
+place(6) = " Arab "
+place(8) = " Kharab "
+On Error Resume Next
+' Convert MyNumber to a string, trimming extra spaces.
+MyNumber = Trim(Str(MyNumber))
+
+' Find decimal place.
+DecimalPlace = InStr(MyNumber, ".")
+
+' If we find decimal place...
+If DecimalPlace &gt; 0 Then
+' Convert Paisa
+Temp = Left(Mid(MyNumber, DecimalPlace + 1) &amp; "00", 2)
+'Paisa = " and " &amp; ConvertTens(Temp) &amp; " Paisa"
+Paisa = ""
+
+' Strip off paisa from remainder to convert.
+MyNumber = Trim(Left(MyNumber, DecimalPlace - 1))
+End If
+
+'===============================================================
+Dim TM As String ' If MyNumber between Rs.1 To 99 Only.
+TM = Right(MyNumber, 2)
+
+If Len(MyNumber) &gt; 0 And Len(MyNumber) &lt;= 2 Then
+If Len(TM) = 1 Then
+Words = ConvertDigit(TM)
+RupeesToWord = "Rupees " &amp; Words &amp; Paisa &amp; " Only"
+
+Exit Function
+
+Else
+If Len(TM) = 2 Then
+Words = ConvertTens(TM)
+RupeesToWord = "Rupees " &amp; Words &amp; Paisa &amp; " Only"
+Exit Function
+
+End If
+End If
+End If
+'===============================================================
+
+
+' Convert last 3 digits of MyNumber to ruppees in word.
+Hundreds = ConvertHundreds(Right(MyNumber, 3))
+' Strip off last three digits
+MyNumber = Left(MyNumber, Len(MyNumber) - 3)
+
+iCount = 0
+Do While MyNumber &lt;&gt; ""
+'Strip last two digits
+Temp = Right(MyNumber, 2)
+If Len(MyNumber) = 1 Then
+
+
+If Trim(Words) = "Thousand" Or _
+Trim(Words) = "Lakh Thousand" Or _
+Trim(Words) = "Lakh" Or _
+Trim(Words) = "Crore" Or _
+Trim(Words) = "Crore Lakh Thousand" Or _
+Trim(Words) = "Arab Crore Lakh Thousand" Or _
+Trim(Words) = "Arab" Or _
+Trim(Words) = "Kharab Arab Crore Lakh Thousand" Or _
+Trim(Words) = "Kharab" Then
+
+Words = ConvertDigit(Temp) &amp; place(iCount)
+MyNumber = Left(MyNumber, Len(MyNumber) - 1)
+
+Else
+
+Words = ConvertDigit(Temp) &amp; place(iCount) &amp; Words
+MyNumber = Left(MyNumber, Len(MyNumber) - 1)
+
+End If
+Else
+
+If Trim(Words) = "Thousand" Or _
+Trim(Words) = "Lakh Thousand" Or _
+Trim(Words) = "Lakh" Or _
+Trim(Words) = "Crore" Or _
+Trim(Words) = "Crore Lakh Thousand" Or _
+Trim(Words) = "Arab Crore Lakh Thousand" Or _
+Trim(Words) = "Arab" Then
+
+
+Words = ConvertTens(Temp) &amp; place(iCount)
+
+
+MyNumber = Left(MyNumber, Len(MyNumber) - 2)
+Else
+
+'=================================================================
+' if only Lakh, Crore, Arab, Kharab
+
+If Trim(ConvertTens(Temp) &amp; place(iCount)) = "Lakh" Or _
+Trim(ConvertTens(Temp) &amp; place(iCount)) = "Crore" Or _
+Trim(ConvertTens(Temp) &amp; place(iCount)) = "Arab" Then
+
+Words = Words
+MyNumber = Left(MyNumber, Len(MyNumber) - 2)
+Else
+Words = ConvertTens(Temp) &amp; place(iCount) &amp; Words
+MyNumber = Left(MyNumber, Len(MyNumber) - 2)
+End If
+
+End If
+End If
+
+iCount = iCount + 2
+Loop
+
+RupeesToWord = "Rupees " &amp; Words &amp; Hundreds &amp; Paisa &amp; " Only"
+End Function
+
+' Conversion for hundreds
+'*****************************************
+Private Function ConvertHundreds(ByVal MyNumber)
+Dim Result As String
+
+' Exit if there is nothing to convert.
+If Val(MyNumber) = 0 Then Exit Function
+
+' Append leading zeros to number.
+MyNumber = Right("000" &amp; MyNumber, 3)
+
+' Do we have a hundreds place digit to convert?
+If Left(MyNumber, 1) &lt;&gt; "0" Then
+Result = ConvertDigit(Left(MyNumber, 1)) &amp; " Hundreds "
+End If
+
+' Do we have a tens place digit to convert?
+If Mid(MyNumber, 2, 1) &lt;&gt; "0" Then
+Result = Result &amp; ConvertTens(Mid(MyNumber, 2))
+Else
+' If not, then convert the ones place digit.
+Result = Result &amp; ConvertDigit(Mid(MyNumber, 3))
+End If
+
+ConvertHundreds = Trim(Result)
+End Function
+
+' Conversion for tens
+'*****************************************
+Private Function ConvertTens(ByVal MyTens)
+Dim Result As String
+
+' Is value between 10 and 19?
+If Val(Left(MyTens, 1)) = 1 Then
+Select Case Val(MyTens)
+Case 10 : Result = "Ten"
+Case 11 : Result = "Eleven"
+Case 12 : Result = "Twelve"
+Case 13 : Result = "Thirteen"
+Case 14 : Result = "Fourteen"
+Case 15 : Result = "Fifteen"
+Case 16 : Result = "Sixteen"
+Case 17 : Result = "Seventeen"
+Case 18 : Result = "Eighteen"
+Case 19 : Result = "Nineteen"
+Case Else
+End Select
+Else
+' .. otherwise it's between 20 and 99.
+Select Case Val(Left(MyTens, 1))
+Case 2 : Result = "Twenty "
+Case 3 : Result = "Thirty "
+Case 4 : Result = "Forty "
+Case 5 : Result = "Fifty "
+Case 6 : Result = "Sixty "
+Case 7 : Result = "Seventy "
+Case 8 : Result = "Eighty "
+Case 9 : Result = "Ninety "
+Case Else
+End Select
+
+' Convert ones place digit.
+Result = Result &amp; ConvertDigit(Right(MyTens, 1))
+End If
+
+ConvertTens = Result
+End Function
+
+Private Function ConvertDigit(ByVal MyDigit)
+Select Case Val(MyDigit)
+Case 1 : ConvertDigit = "One"
+Case 2 : ConvertDigit = "Two"
+Case 3 : ConvertDigit = "Three"
+Case 4 : ConvertDigit = "Four"
+Case 5 : ConvertDigit = "Five"
+Case 6 : ConvertDigit = "Six"
+Case 7 : ConvertDigit = "Seven"
+Case 8 : ConvertDigit = "Eight"
+Case 9 : ConvertDigit = "Nine"
+Case Else : ConvertDigit = ""
+End Select
+End Function
+
+
+
+</Code>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>5bf6359d-dfaa-4da8-b286-bbd4c1d80165</rd:ReportID>
+</Report>
