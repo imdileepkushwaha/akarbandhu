@@ -4,3 +4,7 @@ D:\personal\MentorsForIndia\MentorsForIndiaSoft\DataTier\obj\Release\DataTier.dl
 D:\personal\MentorsForIndia\MentorsForIndiaSoft\DataTier\obj\Release\DataTier.pdb
 C:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\obj\Release\DataTier.dll
 C:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\obj\Release\DataTier.pdb
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\bin\Release\DataTier.dll
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\bin\Release\DataTier.pdb
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\obj\Release\DataTier.csproj.AssemblyReference.cache
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\obj\Release\DataTier.csproj.CoreCompileInputs.cache
