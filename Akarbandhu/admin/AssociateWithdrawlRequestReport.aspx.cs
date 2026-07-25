@@ -209,7 +209,7 @@ public partial class admin_UserReport : System.Web.UI.Page
     protected void lbView_Click(object sender, EventArgs e)
     {
         GridViewRow gvRow = (GridViewRow)(sender as Control).Parent.Parent;
-        Label lbluserid = (Label)gvRow.FindControl("lbluserid");
+        Label lbluserid = (Label)gvRow.FindControl("associateid");
         loaddata(lbluserid.Text);
         ScriptManager.RegisterStartupScript(this, this.GetType(), "Pop", "showModal();", true);
         

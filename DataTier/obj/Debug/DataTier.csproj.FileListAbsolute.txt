@@ -226,3 +226,9 @@ c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\obj\Debug\DataTier.csproj.As
 c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\obj\Debug\DataTier.csproj.CoreCompileInputs.cache
 c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\obj\Debug\DataTier.dll
 c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\DataTier\obj\Debug\DataTier.pdb
+d:\Web\akarbandhu\Akarbandhu\akarbandhu\DataTier\bin\Debug\DataTier.dll
+d:\Web\akarbandhu\Akarbandhu\akarbandhu\DataTier\bin\Debug\DataTier.pdb
+d:\Web\akarbandhu\Akarbandhu\akarbandhu\DataTier\obj\Debug\DataTier.dll
+d:\Web\akarbandhu\Akarbandhu\akarbandhu\DataTier\obj\Debug\DataTier.pdb
+d:\Web\akarbandhu\Akarbandhu\akarbandhu\DataTier\obj\Debug\DataTier.csproj.AssemblyReference.cache
+d:\Web\akarbandhu\Akarbandhu\akarbandhu\DataTier\obj\Debug\DataTier.csproj.CoreCompileInputs.cache

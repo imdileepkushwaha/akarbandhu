@@ -310,7 +310,7 @@
                         <span class="ab-stat-icon"><i class="feather icon-award"></i></span>
                     </div>
                     <h3 class="ab-stat-value"><asp:Label ID="LblReward" runat="server" Text="Status"></asp:Label></h3>
-                    <a class="ab-stat-link" href="RewardReport.aspx">View rewards <i class="feather icon-arrow-right"></i></a>
+                    <a class="ab-stat-link" href="RewardIncomeReport.aspx">View rewards <i class="feather icon-arrow-right"></i></a>
                 </article>
             </div>
         </section>

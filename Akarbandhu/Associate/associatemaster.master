@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="associatemaster.master.cs" Inherits="admin_MasterPage" %>
 
+
 <!DOCTYPE html>
 
 <html>
@@ -140,7 +141,8 @@
 						<ul class="pcoded-submenu">
                                     <li class="nav-item"><a class="nav-link" href="LevelIncomeReport.aspx"><span class="pcoded-micon"><i class="feather icon-bar-chart-2"></i></span><span class="title">Level Income Report</span></a></li>
                                     <li class="nav-item"><a class="nav-link" href="TransactionReport.aspx"><span class="pcoded-micon"><i class="feather icon-list"></i></span><span class="title">Transaction Report</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="RewardReport.aspx"><span class="pcoded-micon"><i class="feather icon-award"></i></span><span class="title">Reward Report</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="RewardIncomeReport.aspx"><span class="pcoded-micon"><i class="feather icon-award"></i></span><span class="title">Reward Report</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="RewardIncomeReport.aspx"><span class="pcoded-micon"><i class="feather icon-gift"></i></span><span class="title">Reward Income Report</span></a></li>
 						</ul>
 					</li>
                     <li class="nav-item pcoded-hasmenu">
