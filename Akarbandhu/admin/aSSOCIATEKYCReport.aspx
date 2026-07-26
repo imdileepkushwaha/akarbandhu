@@ -109,7 +109,7 @@
                                            <asp:Label ID="lblpanno" Font-Bold="true" runat="server" Text='<%#Eval("PanCardNo") %>'></asp:Label>
                                              <asp:Label ID="lblpancardstatus"  runat="server" Text='<%#Eval("PanCardStatus") %>'></asp:Label>
                                             <br />
-                                        <a href='../user/KYCDetails/<%#Eval("pancardimagename") %>' target="_blank">    <img src="../user/KYCDetails/<%#Eval("pancardimagename") %>" style="height:80px;margin-top:5px;margin-bottom:5px;" /></a>
+                                        <a href='userimage/<%#Eval("pancardimagename") %>' target="_blank">    <img src="userimage/<%#Eval("pancardimagename") %>" style="height:80px;margin-top:5px;margin-bottom:5px;" /></a>
                                             <br />
                                              <asp:LinkButton ID="btnApprovePan" CssClass="btn btn-xs btn-success" CommandName="approve" OnClick="btnApprovePan_Click" runat="server"> Approve</asp:LinkButton> 
                                              <asp:LinkButton ID="btnRejectPan" CssClass="btn btn-xs btn-danger" CommandName="reject" OnClick="btnRejectPan_Click" runat="server">Reject</asp:LinkButton>
@@ -120,7 +120,10 @@
                                            <asp:Label ID="lblaadharno" Font-Bold="true" runat="server" Text='<%#Eval("AadharCardNo") %>'></asp:Label>
                                              <asp:Label ID="lbladharcardstatus"  runat="server" Text='<%#Eval("AadharCardStatus") %>'></asp:Label>
                                             <br />
-                                             <a href='../user/KYCDetails/<%#Eval("aadharcardimagename") %>' target="_blank">   <img src="../user/KYCDetails/<%#Eval("Aadharcardimagename") %>" style="height:80px;margin-top:5px;margin-bottom:5px;" /></a>
+                                             <a href='userimage/<%#Eval("aadharcardimagename") %>' target="_blank">   <img src="userimage/<%#Eval("Aadharcardimagename") %>" style="height:80px;margin-top:5px;margin-bottom:5px;" /></a>
+                                               <a href='userimage/<%#Eval("AadharCardImageNameBack") %>' target="_blank">   <img src="userimage/<%#Eval("Aadharcardimagename") %>" style="height:80px;margin-top:5px;margin-bottom:5px;" /></a>
+
+                                              
                                             <br />
                                              <asp:LinkButton ID="btnApproveAadhar" CssClass="btn btn-xs btn-success" CommandName="approve" OnClick="btnApproveAadhar_Click" runat="server"> Approve</asp:LinkButton> 
                                              <asp:LinkButton ID="btnRejectAadhar" CssClass="btn btn-xs btn-danger" CommandName="reject" OnClick="btnRejectAadhar_Click" runat="server">Reject</asp:LinkButton>
@@ -131,7 +134,7 @@
                                            <asp:Label ID="lbladdressproof" Font-Bold="true" runat="server" Text='<%#Eval("bankproofNo") %>'></asp:Label>
                                              <asp:Label ID="lbladdressproofstatus"  runat="server" Text='<%#Eval("bankproofStatus") %>'></asp:Label>
                                             <br />
-                                             <a href='../user/KYCDetails/<%#Eval("bankproofimagename") %>' target="_blank">   <img src="../user/KYCDetails/<%#Eval("bankproofimagename") %>" style="height:80px;margin-top:5px;margin-bottom:5px;" /></a>
+                                             <a href='userimage/<%#Eval("bankproofimagename") %>' target="_blank">   <img src="userimage/<%#Eval("bankproofimagename") %>" style="height:80px;margin-top:5px;margin-bottom:5px;" /></a>
                                             <br />
                                              <asp:LinkButton ID="btnApproveAddress" CssClass="btn btn-xs btn-success" CommandName="approve" OnClick="btnApproveAddress_Click" runat="server"> Approve</asp:LinkButton> 
                                              <asp:LinkButton ID="btnRejectAddress" CssClass="btn btn-xs btn-danger" CommandName="reject" OnClick="btnRejectAddress_Click" runat="server">Reject</asp:LinkButton>

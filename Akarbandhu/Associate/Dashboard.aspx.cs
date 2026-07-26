@@ -72,14 +72,76 @@ public partial class admin_Dashboard : System.Web.UI.Page
                 LblActivationdate.Text = Convert.ToString(row["DateOfActivation"]);
                 LblTeamBusiness.Text = Convert.ToString(row["teambusiness"]);
                 LblSelfBusiness.Text = Convert.ToString(row["business"]);
-                LblReward.Text = string.IsNullOrWhiteSpace(Convert.ToString(row["reward"])) ? "-" : Convert.ToString(row["reward"]);
                 lbllevel.Text = Convert.ToString(row["Levelno"]);
                 LblSlefLevel.Text = Convert.ToString(row["totlselflevel"]);
             }
         }
 
+        // Reward Status = same RewardName as Reward Income Report (not old dashboard SP reward)
+        BindRewardStatus(Session["associateid"].ToString());
+
         // Recalculate team counts so Dashboard matches Downline / Direct reports
         BindTeamCounts(Session["associateid"].ToString());
+    }
+
+    private void BindRewardStatus(string associateId)
+    {
+        try
+        {
+            objaccount.UserId = associateId;
+            DataTable dt = objaccount.getRewardIncomeReport(objaccount, string.Empty, string.Empty);
+
+            // Fallback: achievement + master (same RewardName as report)
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                string sql = @"SELECT TOP 1 rl.RewardName
+                    FROM RewardLevelAchievementDetail cd WITH (NOLOCK)
+                    INNER JOIN RewardLevelMaster rl WITH (NOLOCK) ON rl.LevelNo = cd.LevelNo
+                    WHERE cd.AssociateId = '" + associateId.Replace("'", "''") + @"'
+                    ORDER BY cd.ToDate DESC, ISNULL(rl.Business,0) DESC";
+                ObjData.StartConnection();
+                try { dt = ObjData.RunDataTable(sql); }
+                finally { ObjData.EndConnection(); }
+            }
+
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                LblReward.Text = "-";
+                return;
+            }
+
+            // Latest closing period, then highest qualifying target (same source as RewardIncomeReport)
+            DataRow best = dt.Rows[0];
+            if (dt.Columns.Contains("ToDate") && dt.Columns.Contains("TargetBusiness"))
+            {
+                DateTime bestTo = DateTime.MinValue;
+                decimal bestTarget = decimal.MinValue;
+                foreach (DataRow r in dt.Rows)
+                {
+                    DateTime toDate;
+                    if (!DateTime.TryParse(Convert.ToString(r["ToDate"]), out toDate))
+                        toDate = DateTime.MinValue;
+
+                    decimal target;
+                    if (!decimal.TryParse(Convert.ToString(r["TargetBusiness"]), out target))
+                        target = 0;
+
+                    if (toDate > bestTo || (toDate == bestTo && target > bestTarget))
+                    {
+                        bestTo = toDate;
+                        bestTarget = target;
+                        best = r;
+                    }
+                }
+            }
+
+            string rewardName = Convert.ToString(best["RewardName"]);
+            LblReward.Text = string.IsNullOrWhiteSpace(rewardName) ? "-" : rewardName;
+        }
+        catch
+        {
+            LblReward.Text = "-";
+        }
     }
 
     private void BindTeamCounts(string associateId)

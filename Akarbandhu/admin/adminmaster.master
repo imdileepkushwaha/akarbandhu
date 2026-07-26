@@ -115,7 +115,13 @@
                                        <li class="nav-item"><a class="nav-link" href="AssociatePayment.aspx"><span class="pcoded-micon"><i class="feather icon-plus-circle"></i></span><span class="title">Advance Payment</span></a></li>
                                     <li class="nav-item"><a class="nav-link" href="AssociateRepayment.aspx"><span class="pcoded-micon"><i class="feather icon-rotate-ccw"></i></span><span class="title">Advance Repayment</span></a></li>
                                     <li class="nav-item"><a class="nav-link" href="AssociateLedgerReport.aspx"><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="title">Associate Ledger</span></a></li>
-						</ul>
+                                    <li class="nav-item"><a class="nav-link" href="RewardIncomeReport.aspx"><span class="pcoded-micon"><i class="feather icon-award"></i></span><span class="title">Reward Report</span></a></li>
+                                   <li class="nav-item"><a class="nav-link" href="AssociateKYCReport.aspx"><span class="pcoded-micon"><i class="feather icon-calendar"></i></span><span class="title">Associate KYC Report</span></a></li>
+                              <li class="nav-item"><a class="nav-link" href="ClosingGenerate.aspx"><span class="pcoded-micon"><i class="feather icon-calendar"></i></span><span class="title">Generate Level Closing</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="LevelIncomeReport.aspx"><span class="pcoded-micon"><i class="feather icon-calendar"></i></span><span class="title">Closing Report</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="RewardClosingGenerate.aspx"><span class="pcoded-micon"><i class="feather icon-calendar"></i></span><span class="title">Generate Reward Closing</span></a></li>
+						 
+                        </ul>
 					</li>
                     <li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-shopping-cart"></i></span><span class="pcoded-mtext">Product Sale</span></a>
@@ -144,12 +150,14 @@
                                     <li class="nav-item"><a class="nav-link" href="FlexiReport.aspx"><span class="pcoded-micon"><i class="feather icon-list"></i></span><span class="title">Flexi Booking Report</span></a></li>
                                      <li class="nav-item"><a class="nav-link" href="IpBookingReverse.aspx"><span class="pcoded-micon"><i class="feather icon-rotate-ccw"></i></span><span class="title">Reverse Installment Booking</span></a></li>
                                     <li class="nav-item"><a class="nav-link" href="IPReverseReport.aspx"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="title">Reverse Installment Booking Report</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="CouponVoucherGenerate.aspx"><span class="pcoded-micon"><i class="feather icon-gift"></i></span><span class="title">Jeevan Bhumi Coupon / Voucher</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="CouponVoucherReport.aspx"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="title">Coupon / Voucher Report</span></a></li>
 						</ul>
 					</li>
                     <li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pocket"></i></span><span class="pcoded-mtext">Withdrawl</span></a>
 						<ul class="pcoded-submenu">
-                                <li class="nav-item"><a class="nav-link" href="WithdrawlRequestReport.aspx"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="title">Withdrawl Request Report</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="AssociateWithdrawlRequestReport.aspx"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="title">Withdrawl Request Report</span></a></li>
 						</ul>
 					</li>
                     <li class="nav-item pcoded-hasmenu">
@@ -430,4 +438,3 @@
     </form>
 </body>
 </html>
-

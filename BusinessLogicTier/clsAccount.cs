@@ -417,6 +417,27 @@ namespace BusinessLogicTier
             ObjData.EndConnection();
             return dt;
         }
+        public DataTable getRewardIncomeReport(clsAccount objaccount, string Fromfdate, string Todate)
+        {
+            DataTable dt = null;
+            ObjData.StartConnection();
+            try
+            {
+                string s2 = "sp_GetRewardIncomeReport";
+                SqlParameter[] parameter = {
+                    new SqlParameter("@fromdate", string.IsNullOrEmpty(Fromfdate) ? (object)DBNull.Value : Fromfdate),
+                    new SqlParameter("@todate", string.IsNullOrEmpty(Todate) ? (object)DBNull.Value : Todate),
+                    new SqlParameter("@AssociateId", string.IsNullOrEmpty(objaccount.UserId) ? (object)DBNull.Value : objaccount.UserId)
+                };
+                dt = ObjData.RunDataTableProcedure(s2, parameter);
+            }
+            catch (Exception ex)
+            {
+                dt = null;
+            }
+            ObjData.EndConnection();
+            return dt;
+        }
         public DataTable getLevelIncomeSubadmin(clsAccount objaccount)
         {
             string str_query = "select  (SELECT count(id) FROM userdetail ud2 WHERE ud2.SponserId=cd.UserId) AS directsponser,  cd.PaymentMode,cd.OnlineTransactionId,  isnull(cd.paymentstatus,'Unpaid') as paymentstatus2,cd.*,cd.CommissionAmount-cd.TDS-cd.AdminDeduction AS finalamount,ud.username,ud.AccountHolderName,ud.AccountNo,ud.IFSCCode,ud.BankName,ud.BranchName,ud.PanNumber from ClosingDetail  cd left join userdetail ud on cd.userid=ud.userid where 1=1 and cd.CommissionAmount>0 and cd.userid!='INDIA01' ";

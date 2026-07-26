@@ -23,10 +23,18 @@
       
        <div class="card">
         <div class="card-header">
-            <strong>Generate Closing</strong>
+            <strong>Generate Reward Closing (Power / Weaker Leg)</strong>
         </div>
 
         <div class="card-body">
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <p style="margin-bottom:12px;">
+                                    Rules: Power leg ≥ 60% of target · Weaker legs combined ≥ 40% · Only new period business (not accumulate). No self-business condition.<br />
+                                    Closing twice a month: <b>1–15</b> and <b>16–month end</b>. Example To Date: 15/MM/YYYY or last day of month.
+                                </p>
+                            </div>
+                        </div>
                         <div class="row form-group">
                             <div class="col-md-2">From Date</div>
                             <div class="col-md-3">

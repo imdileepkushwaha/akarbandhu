@@ -429,7 +429,8 @@ namespace BusinessLogicTier
 
             try
             {
-                s2 = "sp_generateRewardClosing";
+                // Power/Weaker leg reward closing (self 12L, 60%/40%, period-only business)
+                s2 = "sp_generateRewardClosingPowerLeg";
                 SqlParameter[] parameter = {
                 new SqlParameter("@fromdate",objclosing.FromDate),
                 new SqlParameter("@todate",objclosing.ToDate),
