@@ -15,3 +15,5 @@ c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Release\DataTie
 c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Release\Newtonsoft.Json.dll
 c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Release\DataTier.pdb
 c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\obj\Release\Business.2FDD14DE.Up2Date
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Release\ARA_StringHunt.dll
+c:\Data\Work\Deepak\Akar Bandhu\akarbandhu\BusinessLogicTier\bin\Release\CyberPlatOpenSSL.dll
