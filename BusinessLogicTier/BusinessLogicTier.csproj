@@ -61,6 +61,7 @@
     <Compile Include="clsClosing.cs" />
     <Compile Include="clsEPin.cs" />
     <Compile Include="clsFranchise.cs" />
+    <Compile Include="clsJeevanBhumi.cs" />
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsMoneyTransfer.cs" />
     <Compile Include="clsNews.cs" />

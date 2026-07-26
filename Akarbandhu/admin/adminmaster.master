@@ -150,6 +150,8 @@
                                     <li class="nav-item"><a class="nav-link" href="FlexiReport.aspx"><span class="pcoded-micon"><i class="feather icon-list"></i></span><span class="title">Flexi Booking Report</span></a></li>
                                      <li class="nav-item"><a class="nav-link" href="IpBookingReverse.aspx"><span class="pcoded-micon"><i class="feather icon-rotate-ccw"></i></span><span class="title">Reverse Installment Booking</span></a></li>
                                     <li class="nav-item"><a class="nav-link" href="IPReverseReport.aspx"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="title">Reverse Installment Booking Report</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="CouponVoucherGenerate.aspx"><span class="pcoded-micon"><i class="feather icon-gift"></i></span><span class="title">Jeevan Bhumi Coupon / Voucher</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="CouponVoucherReport.aspx"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="title">Coupon / Voucher Report</span></a></li>
 						</ul>
 					</li>
                     <li class="nav-item pcoded-hasmenu">
