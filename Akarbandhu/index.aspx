@@ -98,7 +98,7 @@
 
                 <div class="hero-stats-grid">
                     <div class="hero-stat-card reveal-up" data-delay="350">
-                        <span class="stat-num" data-count="7">0</span>
+                        <span class="stat-num" data-count="4">0</span>
                         <span class="stat-label">Core Services</span>
                     </div>
                     <div class="hero-stat-card reveal-up" data-delay="400">
@@ -137,108 +137,195 @@
         </div>
     </section>
 
-    <!-- About -->
+    <!-- Leadership -->
     <section class="section about" id="about">
         <div class="about-deco"></div>
         <div class="container">
             <div class="about-header reveal-up">
                 <span class="section-tag">About Us</span>
-                <h2>Leadership & <span class="gradient-text">Vision</span></h2>
-                <p>Driving Bihar's infrastructure growth with integrity, innovation and excellence since 2022</p>
+                <h2>Our <span class="gradient-text">Leadership</span></h2>
+                <p>Guiding excellence in construction, infrastructure and real estate</p>
             </div>
 
-            <div class="about-showcase">
-                <div class="about-leader-panel reveal-left" data-delay="80">
-                    <div class="leader-card">
-                        <div class="leader-card-visual">
-                            <div class="leader-photo-wrap">
-                                <img src="assets/images/md-photo.png"
-                                     alt="Mr. ALOK KUMAR SINHA - Founder & CMD">
-                                <div class="leader-photo-shade"></div>
-                            </div>
-                            <span class="leader-ribbon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                CMD & Founder
-                            </span>
-                            <div class="leader-years-chip">
-                                <strong>4+</strong>
-                                <span>Years Leading</span>
-                            </div>
-                            <div class="leader-card-body">
-                                <span class="leader-eyebrow">Founder & Chairman</span>
-                                <h3>Mr. ALOK KUMAR SINHA</h3>
-                                <p class="leader-subtitle">ALOK KUMAR</p>
-                                <div class="leader-meta">
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                        Patna, Bihar
-                                    </span>
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-                                        ESTD 2022                                    </span>
-                                </div>
-                                <div class="leader-accent-bar" aria-hidden="true">
-                                    <span></span><span></span><span></span>
-                                </div>
-                            </div>
+            <div class="about-layout">
+                <div class="about-leaders-col reveal-up" data-delay="80">
+                    <article class="leader-block">
+                        <div class="leader-block-photo">
+                            <img src="assets/images/md-photo.png"
+                                 alt="Mr. ALOK KUMAR SINHA - Founder &amp; CMD">
+                            <span class="leader-block-ribbon">CMD &amp; Founder</span>
                         </div>
-                    </div>
+                        <div class="leader-block-copy">
+                            <span class="leader-eyebrow">Founder &amp; Chairman</span>
+                            <h3>Mr. ALOK KUMAR SINHA</h3>
+                            <p class="leader-subtitle">ALOK KUMAR · ESTD 2022 · Patna, Bihar</p>
+                            <p class="leader-para">
+                                As Founder &amp; CMD of AKAR BANDHU PVT. LTD., Mr. Alok Kumar Sinha leads with a clear vision for quality infrastructure and transparent growth across Bihar.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="leader-block">
+                        <div class="leader-block-photo">
+                            <img src="assets/images/barjesh-kumar-singh.png"
+                                 alt="Barjesh Kumar Singh - Managing Director, Akar Bandhu">
+                            <span class="leader-block-ribbon">MD</span>
+                        </div>
+                        <div class="leader-block-copy">
+                            <span class="leader-eyebrow">Managing Director</span>
+                            <h3>Barjesh Kumar Singh</h3>
+                            <p class="leader-subtitle">MD · Since 2003 · Patna, Bihar</p>
+                            <p class="leader-para">
+                                <strong>Barjesh Kumar Singh</strong>, Managing Director of AKAR BANDHU PVT. LTD., is a trusted name in the construction and real estate sector.
+                                With over two decades of excellence (since 2003), we specialize in delivering high-quality construction,
+                                government infrastructure projects, and reliable material supply services.
+                                Our work is defined by precision, durability, and a commitment to building long-term value.
+                            </p>
+                        </div>
+                    </article>
                 </div>
 
-                <div class="about-content-panel reveal-right">
-                    <div class="about-quote-block">
-                        <div class="quote-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.29l1.27 1.991C6.531 8.19 4.962 10.698 4.962 13.011c0 1.357.41 2.594 1.123 3.61l-1.502 1.7zM12.583 17.321c-1.03-1.094-1.583-2.321-1.583-4.31 0-3.5 2.457-6.637 6.03-8.29l1.27 1.991c-2.769 1.178-4.338 3.686-4.338 5.999 0 1.357.41 2.594 1.123 3.61l-1.502 1.7z"/></svg>
+                <aside class="about-highlights-col reveal-up" data-delay="160">
+                    <div class="about-highlights about-highlights--row">
+                        <div class="about-highlight">
+                            <span class="highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
+                            </span>
+                            <div>
+                                <strong>High-Quality Construction</strong>
+                                <span>Precision-built residential &amp; commercial work</span>
+                            </div>
                         </div>
-                        <p class="about-quote">
-                            We are committed to building world-class infrastructure for Bihar - every bridge,
-                            every road, and every project reflects our dedication to quality, transparency,
-                            and nation-building.
-                        </p>
-                    </div>
-
-                    <p class="about-text">
-                        <strong>AKAR BANDHU PVT. LTD.</strong> is a diversified enterprise headquartered in Patna, Bihar,
-                        specializing in government construction, infrastructure development, material supply,
-                        railway contracts, and real estate consultancy. With a strong commitment to social
-                        impact and community leadership, we are building the foundations of a prosperous Bihar.
-                    </p>
-
-                    <div class="about-highlights">
                         <div class="about-highlight">
                             <span class="highlight-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                             </span>
                             <div>
-                                <strong>Govt. Registered</strong>
-                                <span>CIN: <%= Server.HtmlEncode(((SiteMaster)Master).Settings.Cin) %></span>
+                                <strong>Government Infrastructure</strong>
+                                <span>Projects delivered to standard specs &amp; timelines</span>
                             </div>
                         </div>
                         <div class="about-highlight">
                             <span class="highlight-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                             </span>
                             <div>
-                                <strong>7 Core Services</strong>
-                                <span>Construction to Real Estate</span>
-                            </div>
-                        </div>
-                        <div class="about-highlight">
-                            <span class="highlight-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            </span>
-                            <div>
-                                <strong>Registered Office</strong>
-                                <span><%= Server.HtmlEncode(((SiteMaster)Master).Settings.Address) %></span>
+                                <strong>Material Supply</strong>
+                                <span>Reliable, timely supply of high-grade materials</span>
                             </div>
                         </div>
                     </div>
-
                     <a href="#contact" class="about-cta">
                         Work With Us
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="section vision" id="vision">
+        <div class="vision-glow vision-glow--left" aria-hidden="true"></div>
+        <div class="vision-glow vision-glow--right" aria-hidden="true"></div>
+        <div class="container">
+            <div class="vision-panel reveal-up">
+                <div class="vision-panel-top">
+                    <span class="section-tag section-tag--light">Our Vision</span>
+                    <h2 class="vision-headline">
+                        We do not just build structures;<br />
+                        <span class="gradient-text">we build trust.</span>
+                    </h2>
                 </div>
+
+                <p class="vision-lead">
+                    Our blend of experience in government-regulated projects and modern private-sector development
+                    has established us as a market leader. We remain dedicated to achieving excellence in every
+                    project we undertake.
+                </p>
+
+                <div class="vision-pillars">
+                    <div class="vision-pillar">
+                        <span class="vision-pillar-num">01</span>
+                        <h3>Trust</h3>
+                        <p>Every project is built on transparency, accountability and lasting relationships.</p>
+                    </div>
+                    <div class="vision-pillar">
+                        <span class="vision-pillar-num">02</span>
+                        <h3>Experience</h3>
+                        <p>Proven strength across government-regulated and private-sector development.</p>
+                    </div>
+                    <div class="vision-pillar">
+                        <span class="vision-pillar-num">03</span>
+                        <h3>Excellence</h3>
+                        <p>Dedicated to delivering quality outcomes in every project we undertake.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Partner -->
+    <section class="section why-partner" id="why-partner">
+        <div class="container">
+            <div class="about-header reveal-up">
+                <span class="section-tag">Partnership</span>
+                <h2>Why Partner <span class="gradient-text">With Us?</span></h2>
+                <p>Four reasons clients choose AKAR BANDHU for lasting construction partnerships</p>
+            </div>
+
+            <div class="why-partner-grid">
+                <article class="why-card reveal-up" data-delay="0">
+                    <div class="why-card-top">
+                        <span class="why-card-num">01</span>
+                        <div class="why-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Extensive Experience <span>(2003–2026)</span></h3>
+                    <p>Over 23 years of proven expertise and industry knowledge.</p>
+                </article>
+
+                <article class="why-card reveal-up" data-delay="70">
+                    <div class="why-card-top">
+                        <span class="why-card-num">02</span>
+                        <div class="why-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>We use only premium-quality materials and employ skilled labor to ensure superior results.</p>
+                </article>
+
+                <article class="why-card reveal-up" data-delay="140">
+                    <div class="why-card-top">
+                        <span class="why-card-num">03</span>
+                        <div class="why-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Timely Execution</h3>
+                    <p>Meeting project deadlines is our priority, ensuring cost-effectiveness and efficiency for our clients.</p>
+                </article>
+
+                <article class="why-card reveal-up" data-delay="210">
+                    <div class="why-card-top">
+                        <span class="why-card-num">04</span>
+                        <div class="why-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Integrity &amp; Trust</h3>
+                    <p>We believe in complete transparency, maintaining honest and professional relationships with all our clients and stakeholders.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -250,30 +337,31 @@
             <div class="services-top reveal-up">
                 <div class="services-intro">
                     <span class="section-tag">What We Do</span>
-                    <h2>Core Business <span class="gradient-text">Operations</span></h2>
-                    <p>Seven pillars of excellence - serving government sectors and communities across Bihar with integrity and scale.</p>
+                    <h2>Core <span class="gradient-text">Services</span></h2>
+                    <p>We provide comprehensive, end-to-end solutions for all construction needs.</p>
                 </div>
                 <div class="services-highlight">
                     <div class="services-highlight-num">
-                        <span class="gradient-text">07</span>
+                        <span class="gradient-text">04</span>
                     </div>
                     <span>Core Services</span>
-                    <small>Govt. · Railway · Real Estate</small>
+                    <small>Govt. · Real Estate · Construction · Materials</small>
                 </div>
             </div>
 
             <div class="services-bento">
-                                <div class="service-card reveal-up" data-delay="0" style="--accent: #2563eb">
+                <div class="service-card featured reveal-up" data-delay="0" style="--accent: #2563eb">
                     <div class="service-card-bg"></div>
                     <div class="service-card-top">
                         <span class="service-num">01</span>
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M18 18h-8M10 6h8v4h-8z"/>                            </svg>
+                                <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/>
+                            </svg>
                         </div>
                     </div>
-                    <h3>Newspaper Publication</h3>
-                    <p>Trusted media presence across Bihar</p>
+                    <h3>Government Infrastructure</h3>
+                    <p>Expertise in the construction of government buildings and public infrastructure, strictly adhering to standard specifications and timelines.</p>
                     <div class="service-card-foot">
                         <span class="service-tag">AKAR BANDHU</span>
                         <span class="service-arrow">
@@ -281,17 +369,18 @@
                         </span>
                     </div>
                 </div>
-                                <div class="service-card featured reveal-up" data-delay="70" style="--accent: #c9952e">
+                <div class="service-card reveal-up" data-delay="70" style="--accent: #c9952e">
                     <div class="service-card-bg"></div>
                     <div class="service-card-top">
                         <span class="service-num">02</span>
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 6V2M6 12h.01M10 12h.01M14 12h.01M18 12h.01"/>                            </svg>
+                                <rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/>
+                            </svg>
                         </div>
                     </div>
-                    <h3>Govt. Construction</h3>
-                    <p>Building & Road - State & Central projects</p>
+                    <h3>Real Estate Development</h3>
+                    <p>Professional planning and development of residential and commercial properties.</p>
                     <div class="service-card-foot">
                         <span class="service-tag">AKAR BANDHU</span>
                         <span class="service-arrow">
@@ -299,17 +388,18 @@
                         </span>
                     </div>
                 </div>
-                                <div class="service-card reveal-up" data-delay="140" style="--accent: #16a34a">
+                <div class="service-card reveal-up" data-delay="140" style="--accent: #16a34a">
                     <div class="service-card-bg"></div>
                     <div class="service-card-top">
                         <span class="service-num">03</span>
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>                            </svg>
+                                <path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01"/>
+                            </svg>
                         </div>
                     </div>
-                    <h3>Material Supply</h3>
-                    <p>State & Central Govt. sectors</p>
+                    <h3>Building Construction</h3>
+                    <p>Delivering modern, robust residential and commercial structures with a focus on structural integrity.</p>
                     <div class="service-card-foot">
                         <span class="service-tag">AKAR BANDHU</span>
                         <span class="service-arrow">
@@ -317,17 +407,18 @@
                         </span>
                     </div>
                 </div>
-                                <div class="service-card reveal-up" data-delay="210" style="--accent: #7c3aed">
+                <div class="service-card featured reveal-up" data-delay="210" style="--accent: #0891b2">
                     <div class="service-card-bg"></div>
                     <div class="service-card-top">
                         <span class="service-num">04</span>
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M9 15h6M9 19l-2 2M15 19l2 2M12 3v4"/>                            </svg>
+                                <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
                         </div>
                     </div>
-                    <h3>Railway Contracts</h3>
-                    <p>Contract work & material supply</p>
+                    <h3>Material Supply</h3>
+                    <p>Reliable and timely supply of high-grade construction materials (cement, steel, aggregates, etc.) to ensure seamless project execution.</p>
                     <div class="service-card-foot">
                         <span class="service-tag">AKAR BANDHU</span>
                         <span class="service-arrow">
@@ -335,61 +426,7 @@
                         </span>
                     </div>
                 </div>
-                                <div class="service-card reveal-up" data-delay="280" style="--accent: #db2777">
-                    <div class="service-card-bg"></div>
-                    <div class="service-card-top">
-                        <span class="service-num">05</span>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/>                            </svg>
-                        </div>
-                    </div>
-                    <h3>Social Impact</h3>
-                    <p>NGO co-operation in Rural Bihar</p>
-                    <div class="service-card-foot">
-                        <span class="service-tag">AKAR BANDHU</span>
-                        <span class="service-arrow">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </span>
-                    </div>
-                </div>
-                                <div class="service-card reveal-up" data-delay="350" style="--accent: #0891b2">
-                    <div class="service-card-bg"></div>
-                    <div class="service-card-top">
-                        <span class="service-num">06</span>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>                            </svg>
-                        </div>
-                    </div>
-                    <h3>Community Leadership</h3>
-                    <p>Vice President - Community initiatives</p>
-                    <div class="service-card-foot">
-                        <span class="service-tag">AKAR BANDHU</span>
-                        <span class="service-arrow">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </span>
-                    </div>
-                </div>
-                                <div class="service-card featured reveal-up" data-delay="420" style="--accent: #ea580c">
-                    <div class="service-card-bg"></div>
-                    <div class="service-card-top">
-                        <span class="service-num">07</span>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01M8 18h.01M16 18h.01M12 18h.01"/>                            </svg>
-                        </div>
-                    </div>
-                    <h3>Real Estate</h3>
-                    <p>Development & Consultancy</p>
-                    <div class="service-card-foot">
-                        <span class="service-tag">AKAR BANDHU</span>
-                        <span class="service-arrow">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </span>
-                    </div>
-                </div>
-                            </div>
+            </div>
         </div>
     </section>
 
@@ -719,15 +756,17 @@
             <div class="section-header reveal-up">
                 <span class="section-tag">Reach Us</span>
                 <h2>Get in <span class="gradient-text">Touch</span></h2>
-                <p>Partnerships, government projects & business enquiries - we're here to help</p>
+                <p>Contact Information — Real Estate &amp; Building Construction</p>
             </div>
 
             <div class="contact-layout">
                 <div class="contact-panel reveal-left">
                     <div class="contact-panel-inner">
                         <div class="contact-panel-head">
-                            <h3>Let's Build Together</h3>
-                            <p>Connect with AKAR BANDHU for infrastructure, construction & consultancy across Bihar.</p>
+                            <span class="contact-person-label">Contact Information</span>
+                            <h3>Barjesh Kumar Singh</h3>
+                            <p class="contact-person-role">Real Estate &amp; Building Construction Specialist</p>
+                            <p class="contact-person-tagline">Building the foundation of the future with reliability and excellence.</p>
                         </div>
 
                         <div class="contact-methods">
@@ -736,26 +775,26 @@
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 </div>
                                 <div>
-                                    <span class="method-label">Visit Us</span>
+                                    <span class="method-label">Address</span>
                                     <strong><%= Server.HtmlEncode(((SiteMaster)Master).Settings.Address) %></strong>
                                 </div>
                             </div>
-                            <a href="<%= ((SiteMaster)Master).Settings.EmailHref %>" class="contact-method">
-                                <div class="contact-method-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                                </div>
-                                <div>
-                                    <span class="method-label">Email Us</span>
-                                    <strong><%= Server.HtmlEncode(((SiteMaster)Master).Settings.Email) %></strong>
-                                </div>
-                            </a>
                             <a href="<%= ((SiteMaster)Master).Settings.MobileHref %>" class="contact-method">
                                 <div class="contact-method-icon">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
                                 </div>
                                 <div>
-                                    <span class="method-label">Call Us</span>
+                                    <span class="method-label">Phone</span>
                                     <strong><%= Server.HtmlEncode(((SiteMaster)Master).Settings.Mobile) %></strong>
+                                </div>
+                            </a>
+                            <a href="<%= ((SiteMaster)Master).Settings.EmailHref %>" class="contact-method">
+                                <div class="contact-method-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </div>
+                                <div>
+                                    <span class="method-label">Email</span>
+                                    <strong><%= Server.HtmlEncode(((SiteMaster)Master).Settings.Email) %></strong>
                                 </div>
                             </a>
                             <% if (!string.IsNullOrWhiteSpace(((SiteMaster)Master).Settings.WhatsApp)) { %>
@@ -802,6 +841,16 @@
                             <div class="form-group">
                                 <input type="email" name="email" id="email" placeholder=" " required>
                                 <label for="email">Email Address</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" name="mobile" id="mobile" placeholder=" " required pattern="[0-9+\-\s]{10,15}" maxlength="15">
+                                <label for="mobile">Mobile Number</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" id="subject" placeholder=" " required>
+                                <label for="subject">Subject</label>
                             </div>
                         </div>
                         <div class="form-group">

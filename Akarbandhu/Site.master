@@ -95,7 +95,10 @@
 </svg>
                     </span>
                     <% } %>
-                    <span class="nav-brand-name"><%= Server.HtmlEncode(Settings.BrandName) %></span>
+                    <span class="nav-brand-text">
+                        <span class="nav-brand-name"><%= Server.HtmlEncode(Settings.BrandName) %></span>
+                        <span class="nav-brand-tagline"><%= Server.HtmlEncode(Settings.Tagline) %></span>
+                    </span>
                 </a>
 
                 <div class="nav-vdivider"></div>
@@ -130,7 +133,10 @@
 </svg>
                             </span>
                             <% } %>
-                            <span><%= Server.HtmlEncode(Settings.BrandName) %></span>
+                            <span class="nav-brand-text">
+                                <span class="nav-brand-name"><%= Server.HtmlEncode(Settings.BrandName) %></span>
+                                <span class="nav-brand-tagline"><%= Server.HtmlEncode(Settings.Tagline) %></span>
+                            </span>
                         </a>
                         <button type="button" class="nav-drawer-close" id="navClose" aria-label="Close menu">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -250,7 +256,10 @@
     <path d="M27.5 5.5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
                         </span>
-                        <span class="footer-logo-name"><%= Server.HtmlEncode(Settings.BrandName) %></span>
+                        <span class="nav-brand-text">
+                            <span class="footer-logo-name"><%= Server.HtmlEncode(Settings.BrandName) %></span>
+                            <span class="footer-logo-tagline"><%= Server.HtmlEncode(Settings.Tagline) %></span>
+                        </span>
                     </a>
                     <div class="footer-socials">
                         <a href="<%= Server.HtmlEncode(Settings.FacebookUrl) %>" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener">

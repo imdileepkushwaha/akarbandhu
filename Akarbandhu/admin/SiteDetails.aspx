@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-md-6 ab-field">
                                 <label>Tagline</label>
-                                <asp:TextBox ID="txtTagline" CssClass="form-control" runat="server" placeholder="Building Bihar's Future"></asp:TextBox>
+                                <asp:TextBox ID="txtTagline" CssClass="form-control" runat="server" placeholder="Real Estate & Building Construction"></asp:TextBox>
                             </div>
                             <div class="col-md-6 ab-field">
                                 <label>Browser Title</label>

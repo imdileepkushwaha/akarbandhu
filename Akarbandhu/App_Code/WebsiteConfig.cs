@@ -84,7 +84,7 @@ public class WebsiteConfig
         {
             BrandName = "Akar Bandhu",
             CompanyName = "AKAR BANDHU PVT. LTD.",
-            Tagline = "Building Bihar's Future",
+            Tagline = "Real Estate & Building Construction",
             SiteTitle = "AKAR BANDHU PVT. LTD. | Infrastructure & Construction",
             MetaDescription = "AKAR BANDHU PVT. LTD. — Govt. Construction, Infrastructure, Material Supply & Real Estate in Bihar",
             LogoPath = "",
